@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run python dump_transcript.py",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

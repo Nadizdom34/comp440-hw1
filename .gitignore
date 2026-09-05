@@ -1,0 +1,15 @@
+# MovieLens data (large, downloadable)
+data/
+# Python
+__pycache__/
+*.pyc
+.venv/
+.idea/
+# Instructor-only: complete solution + exemplars (see reference/README.md)
+reference/
+# Personal permission allowlist (references instructor material)
+.claude/settings.local.json
+# Scratch output from analysis runs
+tmp/
+# macOS
+.DS_Store
