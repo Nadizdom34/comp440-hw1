@@ -1,0 +1,13 @@
+# The results viewer's page: rebuild it with `uv run python results_viewer.py`.
+movie_results.html
+# Python
+__pycache__/
+*.pyc
+.venv/
+.idea/
+# Personal permission allowlist
+.claude/settings.local.json
+# Scratch output from analysis runs
+tmp/
+# macOS
+.DS_Store

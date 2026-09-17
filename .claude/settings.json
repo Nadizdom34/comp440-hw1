@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(git show:*)",
+      "Bash(ls:*)",
+      "Bash(uv sync)",
+      "Bash(uv run python load_data.py)",
+      "Bash(uv run python run_all.py)",
+      "Bash(uv run python part1_data.py)",
+      "Bash(uv run python part2_tags.py)",
+      "Bash(uv run python part3_users.py)",
+      "Bash(uv run python agreement.py)",
+      "Bash(uv run python results_viewer.py:*)",
+      "Bash(uv run python dump_transcript.py)",
+      "Bash(uv run python judge/judge.py:*)",
+      "Bash(git remote:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
