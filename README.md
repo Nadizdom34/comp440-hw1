@@ -284,7 +284,7 @@ with thin decisions earns about a C; the weights say why.
 **You notice something is odd or confusing.** This assignment is new this year.
 
 **The template changes after launch.** If I have to fix something in it, I will say so in
-`#comp440-f26`. Claude can merge the change into your fork when you ask.
+`#comp440-f26`. Claude also checks for changes every few turns and asks before merging them.
 
 **You would rather not use Claude.** Talk to me by Tue Sep 22; there is no grade effect.
 

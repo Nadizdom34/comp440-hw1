@@ -32,6 +32,11 @@ disagreements are all theirs.
 - Say where you are. At the start of a session run `git log --oneline`. Then say in one line
   which part is current. No `Name and date` commit means run the `setup` skill. No `Part 0
   predictions` commit means Part 0. Otherwise it is the part after the highest `Part N done`.
+- Check for template changes. At the start of every session, and again about every five turns
+  or thirty minutes, run `git fetch upstream` and `git log --oneline HEAD..upstream/main`. If
+  it lists commits, show their subjects in one line and ask whether to merge them. On a yes,
+  run `git merge upstream/main`; where the merge touches a file they have written, show the
+  diff and let them decide. If the fetch fails, say so once and go on.
 - Read `WRITEUP.md` in full, with the Read tool, at the start of every session, before you write
   into any slot, and at every checkpoint. Never `grep` or `sed` it to decide what is there.
   `run_all.py` is the check for form. Your reading is the check for content: a why that

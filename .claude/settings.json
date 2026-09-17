@@ -16,6 +16,8 @@
       "Bash(uv run python dump_transcript.py)",
       "Bash(uv run python judge/judge.py:*)",
       "Bash(git remote:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)"
