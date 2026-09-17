@@ -81,8 +81,8 @@ commitment: you pick your Part 2 movie in Part 2.
 Your own rule comes first. Before you read anything about how this file was built, give Claude
 your rule for cutting 32 million ratings to 5 million, and why.
 
-Then **read `data/README.md`**. Tell Claude one interesting thing you found, for `WRITEUP.md`,
-and tell Claude how the six-step rule there differs from yours.
+Then **read `data/README.md`** and the script it describes, `data/make_compact.py`. Tell Claude
+one interesting thing you found, for `WRITEUP.md`, and how the script's rule differs from yours.
 
 Then have Claude report how much data there is and how ratings and tags are spread across
 people and movies. Also the most-used tags counted two ways: times added, and people who
