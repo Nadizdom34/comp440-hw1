@@ -119,8 +119,8 @@ tags of each, in random order. Those nine plus the movie from step 1 are your te
 the ten, and your order of each tag list by how well *you* think the tags describe the movie,
 without looking at any data.
 
-**5. The tag judge.** The judge is Claude, reading a paragraph you write and rating the tags on
-those movies against it. That paragraph is your criterion, and it is a different thing from your
+**5. The tag judge.** The judge is Claude Sonnet, reading a paragraph you write and rating the
+tags on those movies against it. That paragraph is your criterion, and it is a different thing from your
 `score()`.
 
 Tell Claude your paragraph on what makes a tag one that best describes a movie, or write it into
@@ -130,8 +130,9 @@ file is still the paragraph the template shipped.
 The judge is two prompts. One is a **system prompt** that says how to answer; it is the same for
 everybody in the class. The other is a **user prompt** built fresh for each movie: your criterion,
 a blank line, the movie, then the tags people put on it. The script sends that pair to Claude once
-per movie, for the 100 movies it ships with plus your ten, five at a time. The judge never sees a
-count, so a criterion about how popular a tag is cannot be applied.
+per movie, for the 100 movies it ships with plus your ten, five at a time, on Sonnet with no
+reasoning. The judge never sees a count, so a criterion about how popular a tag is cannot be
+applied.
 
 One thing the paragraph must not be: your `score()` written out in words. If the judge is
 applying your own rule, it agrees with you by construction and the agreement number stops
