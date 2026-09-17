@@ -15,8 +15,8 @@ It is two prompts and a loop.
   and writes down what comes back.
 
 So the only thing that differs between two students' judges is the paragraph each of them
-wrote. That is what makes one person's number comparable with another's, and it is why
-**nothing in this directory is yours to edit except the two criterion files.**
+wrote. That is what makes one person's number comparable with another's, and it is why the
+two criterion files are the only things in this directory you edit.
 
 ## The files
 
@@ -35,8 +35,8 @@ wrote. That is what makes one person's number comparable with another's, and it 
 
 `movies.csv` has one row per movie. `description` is the title, its year and its genres.
 `tags` is the vocabulary tags that appear on that movie, joined with `|` and sorted
-**alphabetically** — alphabetically, not by popularity, because the order of that list must
-not tell the judge which tag is common. For the same reason the file carries no counts.
+alphabetically rather than by popularity, because the order of that list must not tell the
+judge which tag is common. For the same reason the file carries no counts.
 
 The hundred span the famous and the obscure: all 4,000 movies in the compact set were split
 into five equal groups by rating count and 20 were drawn from each, under seed 440. Every

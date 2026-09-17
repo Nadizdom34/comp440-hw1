@@ -9,11 +9,11 @@ prints a report:
   * the figure files each part's docstring promised, and whether they are in `figures/`;
   * the labeled slots in `WRITEUP.md` still holding `XXXX`, listed under the part they sit in;
   * the files a reached part should have produced: Part 2's `scores.csv` and
-    `judge/ratings_movies.csv` and `agreement.csv`, Part 3's `judge/users.csv` and
-    `judge/ratings_users.csv`;
+    `judge/ratings_movies.csv` and `agreement.csv`, Part 3's `judge/users.csv`,
+    `judge/ratings_users.csv` and `user_results.py`;
   * whether either judge criterion is still the paragraph the template shipped, which is a
     file you have to write;
-  * nothing about whether any of it is right.
+  * presence and form only; nothing here says whether an answer is right.
 
 A part counts as reached once you have deleted the "unimplemented" line from its script.
 Parts you have not reached are listed as "not started" and are never counted against you, so
@@ -51,7 +51,7 @@ PART_FILES = {
 # Other files a reached part is expected to have produced.
 PART_OUTPUTS = {
     2: ["scores.csv", "judge/ratings_movies.csv", "agreement.csv"],
-    3: ["judge/users.csv", "judge/ratings_users.csv"],
+    3: ["judge/users.csv", "judge/ratings_users.csv", "user_results.py"],
 }
 
 # The two criterion files, and the part each one belongs to. Both are yours to write, and a

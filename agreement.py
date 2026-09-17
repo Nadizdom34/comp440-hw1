@@ -38,6 +38,8 @@ def my_order_lines(writeup: Path = None) -> dict[int, list[str]]:
     slot = path.read_text(encoding="utf-8").split("**My own order")[-1]
     out: dict[int, list[str]] = {}
     for line in slot.split("\n**")[0].splitlines():
+        if "**" in line:      # the tail of the label itself, or a bolded answer; never a line
+            continue          # of tags, and "...from step 4:**" parses as movie 4 otherwise
         found = MY_LINE.match(line)
         if found:
             tags = [t.strip().lower() for t in found.group(2).split(",") if t.strip()]

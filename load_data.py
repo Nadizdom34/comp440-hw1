@@ -14,10 +14,8 @@ or all four at once:
 
     ratings, tags, movies, links = load_all()
 
-HW0's loader handed you plain Python records as well as DataFrames, so that a DataFrame was
-one way of holding the data rather than the data itself. There are no records here: five
-million ratings is too many rows to hold as five million objects, so pandas is the only way
-in this time.
+Everything here comes back as a pandas DataFrame. Five million ratings is too many rows to
+hold as five million Python objects, so there is no record-by-record view of this data.
 
 Two things this loader does that pandas would not do on its own, both of which change the
 answers:

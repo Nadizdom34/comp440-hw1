@@ -42,10 +42,9 @@ watch", "seen it", "own it on dvd" and "netflix queue" rate low. Rate a tag 5 wh
 of the first things you would say about the movie, 3 when it is true but would not make your
 short list, and 1 when it is wrong, empty, or about the person who wrote it rather than the
 film.""",
-    "criterion_users.md": """A tag best describes a person when it tells you — and the rest of this file is a placeholder.
-Replace all of it with your own paragraph about what makes a tag describe a person's taste.
-It is yours, it is graded, and the movie paragraph in `judge/criterion.md` will not do: that
-one is about films, and it rates tags on people badly.""",
+    "criterion_users.md": """Placeholder. Replace all of it with your own paragraph on what makes a tag describe a
+person's taste. It is yours, it is graded, and the movie paragraph in `judge/criterion.md`
+will not do: that one is about films, and it rates tags on people badly.""",
 }
 
 

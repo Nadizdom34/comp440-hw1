@@ -44,13 +44,13 @@ and what it must write:
 
         one row per movie-tag pair, higher score meaning the tag describes the movie better.
         Print its top 15 rows for your chosen movie, and the number of rows and distinct
-        movies it returned over the whole set. Families the handout names, none preferred:
-        distinct users who applied the tag; a rarity weight, the count times how few movies
-        carry the tag; a damped version of either; something of your own. Whatever you
-        choose, `WRITEUP.md` gets what you chose, what you rejected, and why.
+        movies it returned over the whole set. Families you could use, none of them
+        preferred: distinct users who applied the tag; a rarity weight, the count times how
+        few movies carry the tag; a damped version of either; something of your own. Whatever
+        you choose, `WRITEUP.md` gets what you chose, what you rejected, and why.
 
     == (4) cleaning ==
-        Whatever cleaning your definition does, and its size: how many raw tag strings went
+        Whatever cleaning your `score()` does, and its size: how many raw tag strings went
         in, how many distinct tags came out, and the five mergers that absorbed the most
         applications. If you clean nothing, print that and say why in `WRITEUP.md`.
         Merging `Sci-Fi`, `sci-fi` and `scifi` is a decision, and so is not merging them.
@@ -76,7 +76,7 @@ and what it must write:
             the counts: the ten most-used tags, by how many times each was applied;
             your own order, from the `WRITEUP.md` slot you filled before seeing any data;
             the judge's order, from `judge/ratings_movies.csv`;
-            the data's order under your `score`.
+            your `score()`'s order.
 
         Print each list under its own heading, best first. `results_viewer.py` builds the same
         four lists as a page you can read. Which tag is the artifact, and what the

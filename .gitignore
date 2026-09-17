@@ -1,5 +1,6 @@
-# The results viewer's page: rebuild it with `uv run python results_viewer.py`.
+# The viewers' pages: rebuild them by running the scripts that write them.
 movie_results.html
+user_results.html
 # Python
 __pycache__/
 *.pyc

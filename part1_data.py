@@ -3,8 +3,8 @@ Part 1: whose data is this?
 
     uv run python part1_data.py
 
-Write your own cut rule and your two checks before you run anything here; the order is the
-part. What this script must print, under the labels shown:
+Write your own cut rule and your two checks before you run anything here. Doing it in that
+order is what Part 1 is asking for. What this script must print, under the labels shown:
 
     == (a) how much ==
         Rows in each of the four files, distinct users, distinct movies, and the share of

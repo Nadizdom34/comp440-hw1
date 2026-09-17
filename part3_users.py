@@ -15,8 +15,8 @@ What this script must print, under the labels shown:
     == (1) my ratings ==
         How many ratings were read out of your slot, how many lines it could not read a
         rating from, and how many rows the ratings table has with yours in it. Twenty
-        ratings is what the handout asks for; the script prints what it found and does not
-        argue with you about the number.
+        ratings is what the handout asks for; the script reports what it found and leaves
+        the count to you.
 
     == (2) score(user, tag) ==
         Your `score(user, tag)` over the users you are looking at, your own row included.

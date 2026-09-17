@@ -15,9 +15,9 @@ step, and the part is not done until it is filled.
    are in `TRANSCRIPT.md` and whether this session is one of them. If the script fails on their
    machine, say so and go on: it costs them nothing. Run it before every commit you make, not
    only the ones here: nothing else writes that file.
-4. If they have not already said to commit this part, ask whether they are ready, and wait. On a
-   yes — now, or earlier in the message that asked for this checkpoint — and only on a yes, make
-   the commit yourself:
+4. If they have not already said to commit this part, ask whether they are ready, and wait.
+   Only on a yes, said now or earlier in the message that asked for this checkpoint, make the
+   commit yourself:
 
    ```
    git add -A

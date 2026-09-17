@@ -74,29 +74,25 @@ details below come from. Say which script made them.
 
 XXXX
 
-### Four rankings
+### The judge
 
-**My ten movies** (one per line, the movieId first, then the title. No bullets and no numbering: `296, Pulp Fiction (1994)`. `judge/judge.py` and `results_viewer.py` read the movieId off the front of each line)**:**
+The two slots below are read by scripts, so write them as bare lines: one item to a line, the
+movieId first, no bullets and no numbering. A movie line looks like `296, Pulp Fiction (1994)`.
+An order line looks like `296: nonlinear, hit men, dark comedy, ...`, the tags best first.
+
+**My ten movies:**
 
 XXXX
 
-**My own order of the ten most-used tags: my own movie from step 1, then my nine others from step 4** (each written before looking at any data. One line per movie, no bullets and no numbering: the movieId, then a colon, then your ten tags, best first, as in `296: nonlinear, hit men, dark comedy, ...`. `agreement.py` and `results_viewer.py` read the movieId off the front of each line to join your order to the judge's)**:**
+**My own order of the ten most-used tags, written before looking at any data: my movie from step 1, then my nine others from step 4:**
 
 XXXX
 
 **One criterion I considered for the judge and rejected, and why** (the one I used is in `judge/criterion.md`)**:** XXXX
 
-**Agreement. The number `agreement.py` gives for each of the three ways of ranking a movie's tags — your `score()`, popularity, and your own order — and which of the three came closest:** XXXX
+**Agreement. The number `agreement.py` gives for your `score()`, for popularity and for your own order, and which of the three came closest to the judge:** XXXX
 
-**How the judge skill is built: the files it is made of and what each one does (about 150 words):**
-
-XXXX
-
-**What happens when I run `/judge`, from the first check to the CSV (about 150 words):**
-
-XXXX
-
-**Why a skill: what a skill like this gives you that a script or a prompt alone does not, and where you would use one next (about 100 words):**
+**How the judge skill is built, what running `/judge` does from the first check to the CSV, and what a skill gives you that a script or a prompt alone does not (about 150 words):**
 
 XXXX
 
@@ -113,8 +109,8 @@ change, and what the changed page shows that the first draft did not.
 
 **Improvement 3:** XXXX
 
-Then the three disagreements. A disagreement is a movie and a tag where your method and the
-judge are furthest apart. For each: the movie and the tag, where your method put it and where
+Then the three disagreements. A disagreement is a movie and a tag where your `score()` and the
+judge are furthest apart. For each: the movie and the tag, where your `score()` put it and where
 the judge put it, and what you think accounts for the gap.
 
 **Disagreement 1:** XXXX
@@ -133,7 +129,10 @@ the judge put it, and what you think accounts for the gap.
 
 Code: `part3_users.py`.
 
-**My 20 ratings** (one per line, the movieId first, then the title, then your rating. No bullets and no numbering: `296, Pulp Fiction (1994), 4.5`. `part3_users.py` reads the movieId off the front of each line and the rating off the end)**:**
+The slot below is read by a script, so write it as bare lines: one rating to a line, no bullets
+and no numbering, the movieId first and the rating last, as in `296, Pulp Fiction (1994), 4.5`.
+
+**My 20 ratings:**
 
 XXXX
 
@@ -141,7 +140,7 @@ XXXX
 
 XXXX
 
-**What my score says about me: my top ten tags, and whether they are right (about 100 words):**
+**What my score says about me: my top ten tags, and whether they describe my taste (about 100 words):**
 
 XXXX
 
@@ -153,11 +152,11 @@ XXXX
 
 XXXX
 
-**My criterion for people, in a sentence: what it asks the judge to do that the movie criterion did not (about 60 words):**
+**My criterion for people: what it asks the judge to do that the movie criterion did not (about 60 words):**
 
 XXXX
 
-**The pairs I chose to judge, how many, and why those (about 100 words):**
+**The user-tag pairs I chose to judge, how many, and why those (about 100 words):**
 
 XXXX
 
