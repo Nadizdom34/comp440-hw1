@@ -92,7 +92,15 @@ XXXX
 
 **Agreement. The number `agreement.py` gives for your `score()`, for popularity and for your own order, and which of the three came closest to the judge:** XXXX
 
-**How the judge skill is built, what running `/judge` does from the first check to the CSV, and what a skill gives you that a script or a prompt alone does not (about 150 words):**
+**How the judge skill is built: the files it is made of and what each one does (about 150 words):**
+
+XXXX
+
+**What happens when I run `/judge`, from the first check to the CSV (about 150 words):**
+
+XXXX
+
+**Why a skill: what a skill like this gives you that a script or a prompt alone does not, and where you would use one next (about 100 words):**
 
 XXXX
 

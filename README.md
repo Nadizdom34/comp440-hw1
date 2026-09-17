@@ -186,19 +186,21 @@ You should go about this similarly to how you proceeded in Part 2. The Part 3 sl
 
     * Decide what the judge needs to see about a person, then write `judge/users.csv` in the
       same three columns the movie file uses, `id, description, tags`, and run the same judge
-      on it: `uv run python judge/judge.py judge/users.csv`. What goes in the description column
-      is your design and is a graded decision. The judge rates exactly the tags you put in the
-      file, so which tags they are is your call too; your `score(user, tag)` is not restricted
-      either way. **Part 3 has its own criterion**, and the judge picks it by the name of the
-      items file. A file named `judge/users.csv` is rated against `judge/criterion_users.md`.
-      A file named anything else is rated against `judge/criterion.md`, the movie paragraph
-      you wrote in Part 2. So name the file `judge/users.csv`. Tell Claude your paragraph for
-      people, or write `judge/criterion_users.md` yourself. The movie paragraph is about films,
-      and it rates tags on people badly. The script says which criterion it read and how many
-      tag ratings it is about to ask for, before it asks for them. **A few hundred tag ratings
-      is plenty.** 1,000 is about 5% of your Claude allowance and far more than you need. Be
-      strategic about which ones you choose: the ones your score is most confident about, the
-      ones near your cut, and your own.
+      on it: `uv run python judge/judge.py judge/users.csv`. Run it the way the movie judge
+      runs, on Sonnet with no reasoning; `judge/judge.py` shows the exact command. What goes in
+      the description column is your design and is a graded decision. The judge rates exactly
+      the tags you put in the file, so which tags they are is your call too; your
+      `score(user, tag)` is not restricted either way. **Part 3 has its own criterion**, and
+      the judge picks it by the name of the items file. A file named `judge/users.csv` is rated
+      against `judge/criterion_users.md`. A file named anything else is rated against
+      `judge/criterion.md`, the movie paragraph you wrote in Part 2. So name the file
+      `judge/users.csv`. Tell Claude your paragraph for people, or write
+      `judge/criterion_users.md` yourself. The movie paragraph is about films, and it rates
+      tags on people badly. The script says which criterion it read and how many tag ratings it
+      is about to ask for, before it asks for them. **A few hundred tag ratings is plenty.**
+      1,000 is about 5% of your Claude allowance and far more than you need. Be strategic about
+      which ones you choose: the ones your score is most confident about, the ones near your
+      cut, and your own.
 
     * Ask for a way to put your `score(user, tag)` and your judge's rating side by side on the
       pairs you judged. Part 2 had `agreement.py` for this; Part 3 does not, so it is a thing
