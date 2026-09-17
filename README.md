@@ -78,11 +78,11 @@ commitment: you pick your Part 2 movie in Part 2.
 
 ### Part 1 — Whose data is this?
 
-**Read `data/README.md`** and tell Claude one interesting thing you found, for `WRITEUP.md`.
+Your own rule comes first. Before you read anything about how this file was built, give Claude
+your rule for cutting 32 million ratings to 5 million, and why.
 
-Your own rule comes first. Before opening `data/make_compact.py`, give Claude your rule for
-cutting 32 million ratings to 5 million, and why. Then read the script and tell Claude how its
-rule differs from yours.
+Then **read `data/README.md`**. Tell Claude one interesting thing you found, for `WRITEUP.md`,
+and tell Claude how the six-step rule there differs from yours.
 
 Then have Claude report how much data there is and how ratings and tags are spread across
 people and movies. Also the most-used tags counted two ways: times added, and people who
@@ -95,12 +95,15 @@ took and whether it matched. The `WRITEUP.md` slot names one good target.
 
 **1. Pick a movie** with at least 500 ratings and 30 tags. Before you see any counts, have Claude
 print its ten most-used tags in random order, and give Claude your order of them for the
-"My own order" slot. Then have Claude list all its tags by how many times each was added. How do these tags fall
-short of "best describing the movie"? Tell Claude the most misleading entry and why.
+"My own order" slot, and say in one sentence what your order means by "best". That meaning is
+yours; nothing in this assignment defines it for you. Then have Claude list all its tags by how
+many times each was added. How do these tags fall short of "best describing the movie"? Tell
+Claude the most misleading entry and why.
 
 Then make a MovieLens account at movielens.org, rate the movie you picked, and add one tag to it.
 Tell Claude what you noticed about how the site collects ratings and tags: what it suggested,
-what it asked you for, and what it did with your tag.
+what it asked you for, and what it did with your tag. You can make this visit any time before
+Part 2 is committed; if you cannot get to it tonight, keep going.
 
 **2. Study the movie tagging.** Who added the tags, and when? Ask Claude for one figure showing
 when the tags and the ratings arrived, and give Claude a sentence before you see it and one
@@ -211,8 +214,12 @@ You should go about this similarly to how you proceeded in Part 2. The Part 3 sl
 4. Use the tools above to support two improvements **to the scoring function**, and tell Claude
    what you changed and what showed it. Both improvements change `score(user, tag)`; changing
    the viewer or the judge is how you find one, not one of the two. The evidence for an
-   improvement is what your judge and your viewer show on the pairs you chose. Everyone's
-   judge is their own, so nobody's number is compared with anybody else's.
+   improvement is what your judge and your viewer show on the pairs you chose. The judge only
+   ever rates the tags you put in `judge/users.csv`, and every tag in `judge/vocabulary.txt`
+   was used by at least 310 different people. So a change that drops rare tags will move your
+   viewer and leave your judge's numbers exactly where they were. That is a real result and
+   worth writing up; it is just not the one that moves the number. Everyone's judge is their
+   own, so nobody's number is compared with anybody else's.
 
 ### Part 4 — Working with Claude
 

@@ -6,8 +6,10 @@ movie it takes that method's top five tags among the ones the judge rated and co
 many of the five the judge rated 4 or 5, then averages that over every movie the judge rated.
 The three do not draw their five from the same number of tags, so the count of tags
 compared is printed beside each number. It writes `agreement.csv` and never
-says whether a number is good. There is no `--users` version: your Part 3 score file is
-your own design, so pairing it with `judge/ratings_users.csv` is yours to specify too.
+says whether a number is good. It does print the best a perfect ranking could have scored,
+because a number out of five that can never reach two is not readable without it.
+There is no `--users` version: your Part 3 score file is your own design, so pairing it
+with `judge/ratings_users.csv` is yours to specify too.
 """
 import re, sys
 from pathlib import Path
@@ -88,6 +90,12 @@ def main() -> None:
         print(f"  {name:<16} {part['top_five_4_or_5'].mean():.2f} of 5, over {len(part)} "
               f"movies, {part['tags_rated'].median():.0f} tags compared on the middle one"
               if len(part) else f"  {name:<16} nothing to compare")
+    # The ceiling, printed because a number out of five that can never reach two is not
+    # readable without it: per movie, its tags the judge rated 4 or 5, capped at five,
+    # since no top five can hold six tags or more 4s and 5s than the judge gave.
+    best = rated.groupby("id")["rating"].apply(lambda r: min(int((r >= 4).sum()), 5))
+    print(f"  {'best possible':<16} {best.mean():.2f} of 5, over {len(best)} movies; "
+          "no ranking can beat this")
     print("\nwrote agreement.csv: one row per movie and method.")
 
 if __name__ == "__main__":

@@ -28,11 +28,11 @@ think so.
 
 Code: `part1_data.py`.
 
-**One interesting thing from `data/README.md`:** XXXX
-
 **My rule for cutting 32 million ratings to 5 million** (written before reading `data/make_compact.py`)**:** XXXX
 
 **One rule I considered and rejected, and why:** XXXX
+
+**One interesting thing from `data/README.md`:** XXXX
 
 **How the script's rule differs from mine, and what each keeps that the other drops:** XXXX
 
