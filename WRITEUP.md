@@ -44,23 +44,23 @@ Code: `part1_data.py`.
 
 Code: `part2_tags.py`.
 
-**My movie, and why I picked it:** XXXX
+**My movie, and why I picked it:** White Chicks. I picked it because it is one of my favorite movies, and I think it's hilarious how they incorporated such a girly theme into an action-ish concept for a movie.
 
-**Its most misleading tag in the count-ordered list, and why it misleads:** XXXX
+**Its most misleading tag in the count-ordered list, and why it misleads:** The most misleading tag is Terry Crews, because why would someone put the actors name as a Tag, I expected tags to be mainly descriptive factors of the movies or acting style, or theme, instead of the actor's names.
 
-**What I learned about how MovieLens collects ratings and tags, from rating and tagging my movie myself (about 100 words):** XXXX
+**What I learned about how MovieLens collects ratings and tags, from rating and tagging my movie myself (about 100 words):** I learned from going onto the movielens myself that to rate the movie you just click on the number of stars that you think it's worth. Next when attaching tags to the movie you are able to observe the community tags through an organized view of top tags or all tags, along with sorting them alphabetically or in different ways. Once you type in the tag you want it pops up the little text box along with the number of times that that tag has been used which is interesting that they allow you to see other tags before adding your own, as I feel like it might influence some users perspective of what tag to associate a movie with if they are able to see other users tags. I think it's interesting that I can make my own tag instead of having a pre-selected options of tag I can associate something with, and that when I started typing it provides suggestions to fill the word for the tag I'm trying to write.
 
 ### Up close
 
 One sentence on the figure written before you saw it and one after. The two tables are where the
 details below come from. Say which script made them.
 
-**The figure, when the tags and the ratings arrived. What I expected:** XXXX
-**The figure, what it shows:** XXXX
+**The figure, when the tags and the ratings arrived. What I expected:** I believe that the ratings did not come into play until at least a year after the movie was released, because people could not have readily accessed the movie on their phone or laptop back then, so they would have to have waited until it was out on DVD unless they went to the theatre. So I expected there to be a slow amount of ratings until the most recent years and for the tags I think that feature appeared years after the movie, so it most likely did not start getting tagged in slow increments until the 2010s.
+**The figure, what it shows:** In the figure I notice that the ratings slowly started around 20 rating beginning in 2004 and slowly increased and then decreased a few years after released, until about 2015 where the amount of ratings skyrocketed to around 100 ratings before then starting a decreasing trend until 2023. Then in the tag ratings it is very scattered and mainly empty until the first activity of tagging in 2006 and then disappears until 2009 and 2010 with a very few amount of tags lower than 5, and 0 tags for the years 2011 and 2012 until 2013 a boost of activity, and the highest boom of tags are until 2018 where there was a boom of over 10 tag applications. Overall I notice that the amount of ratings for the movie are noticeably higher than the tag applications.
 
-**Two interesting details I learned up close that the counts did not show:** XXXX
+**Two interesting details I learned up close that the counts did not show:** The first detail that stands out to me in the figures is the appearance of a boom in ratings/tag applications, I did not expect there to be a peak popularity of number of tags/ratings almost more than a decade of the movies release. The second detail that stands out is the appearance of what I had mentioned of a few users being the ones who made the most number of associated tags to the movies, though the number of top taggers is lower than I expected.
 
-**Anything up close that contradicted something I had already written down. Which one, what the data showed, and what you now think. Or "nothing yet":** XXXX
+**Anything up close that contradicted something I had already written down. Which one, what the data showed, and what you now think. Or "nothing yet":** The contradiction shown is the number of tags that the movie/ number of ratings as I had thought there would be a much higher number of rating since I associated the movie White Chicks to be very popular, but the actual number is very low. Also contradicts the pattern I predicted of the slow movement of number of ratings/tag applications as it shows boom in activity for both. One of the contradiction besides the slow movement was not expected anything of ratings until a year later, yet the figure shows ratings in the first years. Now I can see that the pattern is more random and dispersed especially for tag applications as there are some years that there is no activity.
 
 ### My definition
 
@@ -86,7 +86,7 @@ XXXX
 
 **My own order of the ten most-used tags, written before looking at any data: my movie from step 1, then my nine others from step 4:**
 
-XXXX
+8531: comedy, disguise, black comedy, silly, fbi, undercover, black men dressed up like white women, buddy cop, cross dressing, Terry Crews
 
 **One criterion I considered for the judge and rejected, and why** (the one I used is in `judge/criterion.md`)**:** XXXX
 

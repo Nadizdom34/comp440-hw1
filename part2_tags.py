@@ -83,15 +83,80 @@ and what it must write:
         disagreements mean, is your paragraph in `WRITEUP.md`.
 """
 
-from load_data import load_all
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import pandas as pd
+
+from load_data import REPO, load_all
+
+MY_MOVIE = 8531   # White Chicks (2004), the student's claim for Part 2
+
+
+def when_figure(by_year, title):
+    """figures/part2_when.png: ratings per year above, tag applications per year below.
+
+    Two panels on one shared time axis, since the two counts are on different scales."""
+    fig, (top, bottom) = plt.subplots(2, 1, sharex=True, figsize=(9, 6))
+    for ax, col, color in [(top, "ratings", "#eb6834"), (bottom, "tag applications", "#2a78d6")]:
+        ax.bar(by_year.index, by_year[col], color=color, width=0.8)
+        ax.set_ylabel(f"{col} per year")
+        ax.set_title(f"{col.capitalize()} of {title}", loc="left", fontsize=10)
+        ax.spines[["top", "right"]].set_visible(False)
+        ax.grid(axis="y", color="#e5e5e5", linewidth=0.8)
+        ax.set_axisbelow(True)
+        ax.yaxis.get_major_locator().set_params(integer=True)
+    bottom.set_xlabel("calendar year of the rating or tag application")
+    bottom.set_xticks(by_year.index)
+    bottom.tick_params(axis="x", rotation=90)
+    fig.suptitle(f"When did the ratings and the tags on {title} arrive?", fontsize=12)
+    fig.tight_layout()
+    out = REPO / "figures" / "part2_when.png"
+    out.parent.mkdir(exist_ok=True)
+    fig.savefig(out, dpi=150)
+    plt.close(fig)
+    print(f"wrote {out.relative_to(REPO)}")
 
 
 def part2_tags(ratings, tags, movies, links):
-    print("part 2 unimplemented")  # delete this line when you start
-
     print("== (1) the obvious answer ==")
+    title = movies.set_index("movieId").loc[MY_MOVIE, "title"]
+    mine = tags[tags["movieId"] == MY_MOVIE]
+    print(f"{title}: {(ratings['movieId'] == MY_MOVIE).sum():,} ratings, {len(mine):,} tag applications")
+    # Raw tag strings, exactly as typed: no lowercasing, no trimming.
+    print(mine["tag"].value_counts().to_string())
 
     print("== (2) up close ==")
+    rated = ratings[ratings["movieId"] == MY_MOVIE]
+    years = lambda ts: pd.to_datetime(ts, unit="s").dt.year
+    by_year = pd.DataFrame({
+        "ratings": years(rated["timestamp"]).value_counts(),
+        "tag applications": years(mine["timestamp"]).value_counts(),
+    }).fillna(0).astype(int).sort_index()
+    by_year = by_year.reindex(range(by_year.index.min(), by_year.index.max() + 1), fill_value=0)
+    print("-- ratings and tag applications per calendar year --")
+    print(by_year.to_string())
+    when_figure(by_year, title)
+
+    print("-- who added each tag --")
+    who = mine.groupby("userId").agg(applications=("tag", "size"), distinct_tags=("tag", "nunique"))
+    who["share of movie's applications"] = (who["applications"] / len(mine)).map("{:.1%}".format)
+    print(f"{len(who)} users tagged this movie; every one of them, most applications first")
+    print(who.sort_values("applications", ascending=False).to_string())
+
+    print("-- how the taggers rated it --")
+    top10 = mine["tag"].value_counts().head(10).index
+    stars = rated.set_index("userId")["rating"]
+    rows = []
+    for tag in top10:
+        appliers = mine.loc[mine["tag"] == tag, "userId"].unique()
+        theirs = stars[stars.index.isin(appliers)]
+        rest = stars[~stars.index.isin(appliers)]
+        rows.append({"tag": tag, "appliers": len(appliers), "appliers who rated it": len(theirs),
+                     "their mean rating": theirs.mean(), "everyone else, n": len(rest),
+                     "everyone else, mean": rest.mean()})
+    print("raw tag strings; the ten most-applied, most applied first")
+    print(pd.DataFrame(rows).set_index("tag").round(2).to_string())
 
     print("== (3) my definition ==")
 
