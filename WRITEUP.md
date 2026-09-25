@@ -12,17 +12,17 @@ here; the words are yours.
 Give these to Claude before any analysis runs. One sentence each, plus one sentence on why you
 think so.
 
-**(1) A movie you know well, and what its three most-used tags will be:** XXXX
+**(1) A movie you know well, and what its three most-used tags will be:** The movie White Chicks, and its associated tags would be comedy, action, and drama.
 
-**(1) Why you think so:** XXXX
+**(1) Why you think so:** The movie is very funny and includes two FBI agents as the main characters who have alot of action scenes throughout the film which are pretty dramatic.
 
-**(2) Out of every 100 people who rated movies here, how many ever added a tag?** XXXX
+**(2) Out of every 100 people who rated movies here, how many ever added a tag?** My guess is 22 people.
 
-**(2) Why you think so:** XXXX
+**(2) Why you think so:** I believe less than half of the people would take the time to associate a tag, and from that half (50) some people are indecisive and may decide to not add a tag, so the number could drop to 22.
 
-**(3) Can one person's tags take over a movie's tag list? Yes or no:** XXXX
+**(3) Can one person's tags take over a movie's tag list? Yes or no:** Yes.
 
-**(3) Why you think so:** XXXX
+**(3) Why you think so:** It is possible if a movie has very few user associated tags to begin with, therefore one user's many tags could override the movies tags.
 
 ## Part 1. Whose data is this?
 
