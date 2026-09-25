@@ -28,17 +28,17 @@ think so.
 
 Code: `part1_data.py`.
 
-**My rule for cutting 32 million ratings to 5 million** (written before reading `data/make_compact.py`)**:** XXXX
+**My rule for cutting 32 million ratings to 5 million** (written before reading `data/make_compact.py`)**:** My rule is that I would get rid of all ratings below 1, as I feel they are not as descriptive, and get rid of all ratings that are 1.5, 2.5, 4.5 as I feel they are not adding to the value of the rating.
 
-**One rule I considered and rejected, and why:** XXXX
+**One rule I considered and rejected, and why:** I thought about dropping the rating values 2, 4, and only have the extreme rating scale of 1, 3, 5 to show the ratings associated with bad, okay, and great movies as this would make it easier to decode movies. I rejected it though, because it is too extreme, and I'm unsure if many movies have a 5 star ratings that outbalance their okay ratings so it might not be fair.
 
-**One interesting thing from `data/README.md`:** XXXX
+**One interesting thing from `data/README.md`:** I found it interesting that it is stated that a user is only eligible if they have at least 20 ratings, as I had a similar thought of only keeping users who had at least a certain threshold of ratings.
 
-**How the script's rule differs from mine, and what each keeps that the other drops:** XXXX
+**How the script's rule differs from mine, and what each keeps that the other drops:** The rule differs from mine as it describes to only keep a certain amount of the top movies and filters a lot more by a certain threshold of user unique ratings made, along with adding a uniform random sample of the remaining eligible users. Meanwhile mine, drops all the ratings below 1 and all of the half step ratings besides the 3.5 ratings, so mine is missing a lot more of the filtering in order to get from 32M rating to 5M ratings. In my rule the users survive because I did not put a certain number threshold for the amount of ratings a user needs, and also all of the half step ratings are possible to survive in their version of rules, meanwhile mine gets rid of all but one half step ratings (3.5).
 
-**First check. Which of Claude's numbers, the different route you took, and whether it matched** (one good target: 6 tags are the literal text `NA`, which pandas drops unless told not to)**:** XXXX
+**First check. Which of Claude's numbers, the different route you took, and whether it matched** (one good target: 6 tags are the literal text `NA`, which pandas drops unless told not to)**:** The number I checked was the "tag applications", the different route I took was reading the data/README.md and both numbers matched to be 1,244,210 for part1_data.py section (d).
 
-**Second check. Which of Claude's numbers, the different route you took, and whether it matched:** XXXX
+**Second check. Which of Claude's numbers, the different route you took, and whether it matched:** I checked the movies with at least one tag for the second check, the different route I took was using a different reader for the file and instead of using .nunique() I did a len(.groupby("movieId")) to group the tags by movie and then count the number of movies (with at least one tag), both numbers matched 3,999 for part1_data section (d).
 
 ## Part 2. What tags best describe a movie?
 
