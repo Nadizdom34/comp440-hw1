@@ -93,6 +93,28 @@ from load_data import REPO, load_all
 MY_MOVIE = 8531   # White Chicks (2004), the student's claim for Part 2
 
 
+def clean_tag(raw):
+    """The student's rule for what counts as one tag: ignore case and ignore every space,
+    so `Cross Dressing`, `cross  dressing ` and `crossdressing` are one tag."""
+    return raw.str.lower().str.replace(r"\s+", "", regex=True)
+
+
+def tag_labels(tags_df):
+    """A readable name for each cleaned tag: its most-applied raw spelling (ties go to the
+    alphabetically first). Display only; the key is what is counted."""
+    counts = tags_df.assign(key=clean_tag(tags_df["tag"])).groupby(["key", "tag"]).size()
+    counts = counts.reset_index(name="n").sort_values(["key", "n", "tag"], ascending=[True, False, True])
+    return counts.drop_duplicates("key").set_index("key")["tag"]
+
+
+def score(tags_df, ratings_df, movies_df):
+    """The student's score(movie, tag): how many distinct users applied the tag to the movie,
+    after cleaning. A user who applied it twice counts once."""
+    cleaned = tags_df.assign(tag=clean_tag(tags_df["tag"]))
+    return (cleaned.groupby(["movieId", "tag"])["userId"].nunique()
+            .reset_index(name="score"))
+
+
 def when_figure(by_year, title):
     """figures/part2_when.png: ratings per year above, tag applications per year below.
 
@@ -159,8 +181,25 @@ def part2_tags(ratings, tags, movies, links):
     print(pd.DataFrame(rows).set_index("tag").round(2).to_string())
 
     print("== (3) my definition ==")
+    scores = score(tags, ratings, movies)
+    labels = tag_labels(tags)
+    top = scores[scores["movieId"] == MY_MOVIE].sort_values(["score", "tag"], ascending=[False, True]).head(15)
+    top = top.assign(label=top["tag"].map(labels))
+    print(f"top 15 for {title} (tag is the cleaned key, label its most-applied raw spelling)")
+    print(top[["tag", "label", "score"]].to_string(index=False))
+    print(f"{len(scores):,} movie-tag rows over {scores['movieId'].nunique():,} movies")
 
     print("== (4) cleaning ==")
+    key = clean_tag(tags["tag"])
+    print(f"{tags['tag'].nunique():,} raw tag strings in, {key.nunique():,} distinct tags out")
+    groups = tags.assign(key=key).groupby("key").agg(
+        raw_spellings=("tag", "nunique"), applications=("tag", "size"))
+    merged = groups[groups["raw_spellings"] > 1].sort_values("applications", ascending=False).head(5)
+    print("-- the five mergers that absorbed the most applications --")
+    for k, row in merged.iterrows():
+        spellings = tags.loc[key == k, "tag"].value_counts()
+        print(f"{k}: {row['applications']:,} applications from {row['raw_spellings']} raw spellings, "
+              f"e.g. " + ", ".join(repr(s) for s in spellings.index[:4]))
 
     print("== (5) scores.csv ==")
 

@@ -64,15 +64,15 @@ details below come from. Say which script made them.
 
 ### My definition
 
-**My `score(movie, tag)`** (one or two sentences, precise enough that a classmate could code it)**:** XXXX
+**My `score(movie, tag)`** (one or two sentences, precise enough that a classmate could code it)**:** I want to count the distinct users who used that tag and weight that tag higher if there's more distinct users than for a tag that has less distinct users.
 
-**One definition I considered and rejected, and why:** XXXX
+**One definition I considered and rejected, and why:** One definition I considered was weighing all tags by a score of 10 and then multiplying this by 5 every time another user also put this tag application. I rejected this definition because if many users also put this tag application then, the number could grow very very large easily, and then it would not be a very fair or similar scale to compare tags.
 
-**Which tags I merged as the same tag, which I kept apart, and why:** XXXX
+**Which tags I merged as the same tag, which I kept apart, and why:** I think everything that has the same spelling disregarding lower/upper case sensitive should be the same and everything else should stay separate, because then we would be double counting such as the word "fbi" and "FBI" tag applications. Also disregarding the spacing between two words or if there is a space in the beginnning or after the word, consider these the same if the words are the same.
 
 **Why my definition, in about 150 words. Name one thing it gains and one thing it loses:**
 
-XXXX
+I chose counting distinct users because I think it is valuable to assess the quantity of users who wrote the tags, especially if we base off popularity then if a tag is used by 100 different users instead of just 5 then I would think it is more likely to represent the movie better. One thing it lacks is not being able to compare within the other tags a user put for the same movie. Therefore if a user used multiple tag it won't distinguish or punish a user who put 10 tags for a movie versus only 3 tags, though I think this is also an important metric to weigh into a tag's scoring.
 
 ### The judge
 
@@ -82,7 +82,16 @@ An order line looks like `296: nonlinear, hit men, dark comedy, ...`, the tags b
 
 **My ten movies:**
 
-XXXX
+8531, White Chicks (2004)
+586, Home Alone (1990)
+4306, Shrek (2001)
+296, Pulp Fiction (1994)
+50872, Ratatouille (2007)
+81847, Tangled (2010)
+130073, Cinderella (2015)
+2572, 10 Things I Hate About You (1999)
+6155, How to Lose a Guy in 10 Days (2003)
+60069, WALL·E (2008)
 
 **My own order of the ten most-used tags, written before looking at any data: my movie from step 1, then my nine others from step 4:**
 
