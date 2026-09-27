@@ -96,6 +96,15 @@ An order line looks like `296: nonlinear, hit men, dark comedy, ...`, the tags b
 **My own order of the ten most-used tags, written before looking at any data: my movie from step 1, then my nine others from step 4:**
 
 8531: comedy, disguise, black comedy, silly, fbi, undercover, black men dressed up like white women, buddy cop, cross dressing, Terry Crews
+586: Christmas, family, funny, humor, childhood classics, nostalgia, children, for kids, christmas, Macaulay Culkin
+4306: Funny, fairy tale, animation, comedy, witty, Dreamworks, parody, funny, satire, Eddie Murphy
+296: drugs, dark comedy, cult film, violence, Samuel L. Jackson, good dialogue, Quentin Tarantino, stylized, nonlinear, multiple storylines
+50872: pixar, food, cooking, imagination, funny, Disney, clever, animation, inspirational, Pixar
+81847: fairy tale, Disney, disney, singing, songs, animation, comedy, visually appealing, mother daughter relationship, musical
+130073: Disney, costumes, fairy tale, ballroom dancing, visual stunning, royalty, cheesy, boring, Lily James, Richard Madden
+2572: coming of age, romantic, teen, Julia Stiles, high school, comedy, feminism, Heath Ledger, Joseph Gordon-Levitt, guilty pleasure
+6155: chick flick, romantic comedy, girlie movie, funny, classic chick flick, Kate Hudson, battle of the sexes, Good Romantic Comedies, Matthew McConaughey, not funny
+60069: Sci-Fi, robots, Animation, dystopia, post-apocalyptic, pixar, artificial intelligence, social commentary, Post apocalyptic, space
 
 **One criterion I considered for the judge and rejected, and why** (the one I used is in `judge/criterion.md`)**:** XXXX
 
