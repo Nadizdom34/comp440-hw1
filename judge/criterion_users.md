@@ -1,3 +1,1 @@
-Placeholder. Replace all of it with your own paragraph on what makes a tag describe a
-person's taste. It is yours, it is graded, and the movie paragraph in `judge/criterion.md`
-will not do: that one is about films, and it rates tags on people badly.
+My criterion for the people is that the tag best describes a person if it is in their top 10 tags based on my scoring, since it would be most reflective of their tastes.

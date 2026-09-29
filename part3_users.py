@@ -140,6 +140,54 @@ def score(ratings: pd.DataFrame, tags: pd.DataFrame, movies: pd.DataFrame):
                      ignore_index=True)
 
 
+USERS_SEED = 440        # which 100 people go in judge/users.csv: any fixed number
+USERS_N = 100           # how many people the judge is asked about; you are not one of them
+DESC_TOP = 3            # how many tags and how many genres the description lists
+JUDGE_TOP = 10          # how many of a person's tags the judge rates: their top 10 by score
+
+
+def top_counted(df: pd.DataFrame, n: int = DESC_TOP) -> list[str]:
+    """The n most frequent values in df["value"], ties at the cutoff broken by the seeded
+    shuffle, the same rule `top_n` uses."""
+    counts = df["value"].value_counts().reset_index()
+    counts.columns = ["value", "n"]
+    counts["shuffle"] = np.random.default_rng(SEED).random(len(counts))
+    return list(counts.sort_values(["n", "shuffle"], ascending=[False, True])["value"].head(n))
+
+
+def write_users_csv(ratings, tags, movies, scores, path=REPO / "judge" / "users.csv"):
+    """judge/users.csv: id, description, tags, for USERS_N people drawn at random.
+
+    description: the person's number of ratings, first and most recent rating date, and the
+    DESC_TOP most common genres and most-applied tags (by everyone, cleaned) over the movies
+    they rated KEEP_AT or higher. tags: their JUDGE_TOP tags by score(user, tag), ties
+    alphabetical as on the user viewer, shown by each tag's most-used spelling."""
+    import datetime
+    day = lambda t: datetime.datetime.fromtimestamp(int(t), datetime.UTC).strftime("%Y-%m-%d")
+    labels = tag_labels(tags)
+    cleaned = tags.assign(tag=clean_tag(tags["tag"]))
+    genres = movies.set_index("movieId")["genres"]
+    people = sorted(set(ratings["userId"]) - {ME})
+    picked = sorted(np.random.default_rng(USERS_SEED).choice(people, USERS_N, replace=False).tolist())
+    rows = []
+    for user in picked:
+        rated = ratings[ratings["userId"] == user]
+        kept = rated[rated["rating"] >= KEEP_AT]["movieId"]
+        g = pd.DataFrame({"value": genres.reindex(kept).dropna().str.split("|").explode()})
+        t = pd.DataFrame({"value": cleaned.loc[cleaned["movieId"].isin(kept), "tag"]})
+        top_tags = [labels.get(x, x) for x in top_counted(t)]
+        desc = (f"A MovieLens user with {len(rated)} ratings, the first on {day(rated['timestamp'].min())} "
+                f"and the most recent on {day(rated['timestamp'].max())}. Over the movies they rated "
+                f"{KEEP_AT:g} or higher, the most common genres are {', '.join(top_counted(g))} and the "
+                f"most-applied tags are {', '.join(top_tags)}.")
+        mine = scores[scores["userId"] == user].sort_values(["score", "tag"], ascending=[False, True])
+        judged = [labels.get(x, x) for x in mine["tag"].head(JUDGE_TOP)]
+        rows.append({"id": user, "description": desc, "tags": "|".join(judged)})
+    out = pd.DataFrame(rows)
+    out.to_csv(path, index=False)
+    return out
+
+
 def part3_users(ratings, tags, movies, links):
     print("== (1) my ratings ==")
     mine, skipped = read_my_ratings()
@@ -165,6 +213,37 @@ def part3_users(ratings, tags, movies, links):
     print(me.head(10).assign(label=lambda d: d["tag"].map(labels))[["tag", "label", "score"]]
           .to_string(index=False))
     print(f"{len(scores):,} rows over {scores['userId'].nunique():,} distinct users")
+
+    print("== (3) judge/users.csv ==")
+    users = write_users_csv(ratings, tags, movies, scores)
+    n_tags = users["tags"].str.split("|").str.len().where(users["tags"] != "", 0)
+    print(f"{len(users)} people, {int(n_tags.sum()):,} tags to rate; "
+          f"{int((n_tags < JUDGE_TOP).sum())} with fewer than {JUDGE_TOP}")
+    print("first row:", users.iloc[0].to_dict())
+
+    print("== (4) my score against the judge ==")
+    rated_path = REPO / "judge" / "ratings_users.csv"
+    if not rated_path.exists():
+        print("judge/ratings_users.csv is not there yet; run the judge on judge/users.csv first")
+        return
+    judged = pd.read_csv(rated_path, keep_default_na=False).rename(columns={"id": "userId"})
+    judged["key"] = clean_tag(judged["tag"].astype(str))
+    asked = users.assign(tag=users["tags"].str.split("|")).explode("tag")[["id", "tag"]]
+    asked = asked[asked["tag"].astype(bool)].rename(columns={"id": "userId"})
+    asked["key"] = clean_tag(asked["tag"])
+    both = (asked.merge(scores.rename(columns={"tag": "key"}), on=["userId", "key"], how="left")
+                 .merge(judged[["userId", "key", "rating"]], on=["userId", "key"], how="left"))
+    both["difference"] = (both["score"] - both["rating"]).abs()
+    both = both.rename(columns={"score": "my score", "rating": "judge rating"})
+    both[["userId", "tag", "my score", "judge rating", "difference"]].to_csv(
+        REPO / "user_agreement.csv", index=False)
+    extra = judged.merge(asked, on=["userId", "key"], how="left", indicator=True)
+    print(f"{len(asked):,} user-tag pairs asked; {both['judge rating'].notna().sum():,} have a judge "
+          f"rating; {int((extra['_merge'] == 'left_only').sum())} judge rows match no asked tag")
+    print(f"mean |my score - judge rating| over the pairs with both: {both['difference'].mean():.2f}")
+    print("wrote user_agreement.csv: one row per asked pair, in users.csv order. The first person:")
+    first = both[both["userId"] == both["userId"].iloc[0]]
+    print(first[["userId", "tag", "my score", "judge rating", "difference"]].to_string(index=False))
 
 
 if __name__ == "__main__":

@@ -191,19 +191,19 @@ My top ten tags are animation, atmospheric, comedy, funny, black comedy, dark, d
 
 **What my user viewer shows and why I chose that (about 100 words):**
 
-XXXX
+My user viewer displays an organized manner of my top ten tags in a table along with their score, and when and where those tags came from (the movie and date), then the rest of the page similarly includes these aspects for a random selection of users where their top 10 tags are also shown, and I chose a dropdown with the movies and dates because it is a cleaner and more organized view of their history of tags rather than restricting the movie to only be the tag and the score, it gives more information on the user and the type of movies they can be characterized by. I picked a separate table for me because I do not want to clutter the users results with my own as I am my own user. The dropdown shows when the user tagged the movie and which movie, which allows you to see the users option if they were the ones that tagged a movie versus going off the ratings path.
 
 **What I put in the description column for a person, and why (about 150 words):**
 
-XXXX
+The description should say the most common tags associated with the user, the most common 3 genres of the movie from that user's ratings of movies, and number of total ratings that user has given, also if applicable the date of their first ratings versus their most recent to give some graphics on the user history. The reason that I chose these is because it provides information to the judge about the user based on my scoring and their most common associated genres which may be able to describe the user's taste in movies, additionally I think it is interesting to the how long they have been rating movies and/or placing tags on movies, since a user with a longer history is more likely to have rated more movies.
 
 **My criterion for people: what it asks the judge to do that the movie criterion did not (about 60 words):**
 
-XXXX
+What the movie criterion did not show is more of the information of whether or not those tags were only on movies that the person rated 3 or higher and NOT just any movies, specifically ones that the people rated lowly as they are less likely to reflect the person's taste since they rated it low.
 
 **The user-tag pairs I chose to judge, how many, and why those (about 100 words):**
 
-XXXX
+I want a random seed of 100 users to be in users.csv to ensure a random variety of users are chosen because I do not think it is fair to only select users with ratings and no tags or only users with tags. The judge should rate the top 10 tags just as we just had for the user_viewer page for each user.
 
 **Improvement 1: what I changed in the scoring function, what the judge and the viewer showed before and after (about 150 words):**
 
