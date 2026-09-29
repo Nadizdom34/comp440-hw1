@@ -112,15 +112,15 @@ An order line looks like `296: nonlinear, hit men, dark comedy, ...`, the tags b
 
 **How the judge skill is built: the files it is made of and what each one does (about 150 words):**
 
-XXXX
+The files it is made out of is a first a short file that explains to Claude to look at the judge readme and execute what it states, then the judge readme file that has the rules for running the judge, third the judge system file which has the system prompt that is the same for everyone. The fourth file is the judge criterion which includes my paragraph that is provided to the user prompt, then the judge file itself that has the loop which sends the one request per movie. Then we have the movies and vocabulary files that has the movies themselves, and the vocabulary which has all possible tags (300) that the judge can rate. Finally we have the ratings_movies csv and log where we store what the run records. Therefore the skill has a set of instruction that run a given script that then prompts claude.
 
 **What happens when I run `/judge`, from the first check to the CSV (about 150 words):**
 
-XXXX
+When you run this command, it first checks if the items file is there, then if the rating CSV already exists, and then it picks the criterion file only if it is not missing or it is not the template version, and then it reads the system file and the movie which it then adds my ten choices to. Next it sends multiple movies at once, with each request being my criterion with the movie and the tags, which can be asked again if there are less ratings than the tags that were sent. Finally it writes the ratings_movies csv and also prints the count, and the cost and time which it saves to the log.
 
 **Why a skill: what a skill like this gives you that a script or a prompt alone does not, and where you would use one next (about 100 words):**
 
-XXXX
+The session where the skill exists provides Claude with the setup of the judge and criterion and the rules it should follow. Without it, the chronological order and creation of the csv or log would not happen or be automated. I would use a skill next for comparison between my favorite places to visit and have them rank by them.
 
 ### The viewer and the disagreements
 
