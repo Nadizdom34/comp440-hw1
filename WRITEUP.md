@@ -219,17 +219,17 @@ Give these to Claude the way you gave it the rest. Graded on the catch and the c
 making Claude look good or bad.
 
 **A moment where Claude was wrong or overconfident, how you caught it, and where it
-happened. Name the part and the step, so the moment can be found:** XXXX
+happened. Name the part and the step, so the moment can be found:** One moment where Claude was wrong was when it said in Part 3 Step 2 that six White Chicks tags tie at 2 applications, but it was wrong because under my cleaning rule the tie at 5th place is black comedy and fbi with 3 each and Claude caught itself but I noticed in the viewer.
 
-**One call where you overrode Claude, and why:** XXXX
+**One call where you overrode Claude, and why:** I chose not to change what my score says about me response as the top ten slot no longer matched what the script printed after my two improvements because I'm interpreting this question to come BEFORE I make any improvements therefore I overrode Claude to not change anything as that is my raw response.
 
-**What you would hand to Claude sooner next time:** XXXX
+**What you would hand to Claude sooner next time:** A decision that I had to do myself because I think I am very indecisive with picking movies therefore I should have told Claude to generate me with a random selection of movies which I could rate from.
 
-**Did Claude name the misleading tag in Part 2 step 1 before you did? What happened:** XXXX
+**Did Claude name the misleading tag in Part 2 step 1 before you did? What happened:** Yes Claude technically named the misleading tag before me because they printed out the count list for the movie White Chicks and the tag "Terry Crews" was included, which is what I later stated was a misleading tag.
 
 **The figure. Would asking Claude "what does this show?" have produced your sentence, and what
-would have been missing from it:** XXXX
+would have been missing from it:** I think Claude answer would be very similar to mine in noticing the patterns in the bar trends as these are only observed descriptions of the figure.
 
-**Hours spent:** XXXX
+**Hours spent:** I probably spent between 6-9 hours.
 
-**Anyone who helped you, or "no one":** XXXX
+**Anyone who helped you, or "no one":** No one helped me outside of Claude.
