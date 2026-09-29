@@ -1,7 +1,7 @@
 id,tag,rating
 1451,action,4
 1451,adventure,5
-1451,animation,3
+1451,animation,2
 1451,atmospheric,2
 1451,classic,5
 1451,comedy,4
@@ -12,13 +12,13 @@ id,tag,rating
 3552,Pixar,5
 3552,animation,5
 3552,comedy,5
+3552,coming of age,3
 3552,family,4
 3552,friendship,3
 3552,funny,5
-3552,magic,2
-3552,music,2
-3552,quirky,3
-3552,sci-fi,2
+3552,magic,3
+3552,quirky,2
+3552,sci-fi,1
 3891,Angelina Jolie,1
 3891,Brad Pitt,1
 3891,action,5
@@ -27,37 +27,40 @@ id,tag,rating
 3891,comedy,2
 3891,comic book,4
 3891,good acting,2
+3891,good script,2
 3891,sci-fi,5
-3891,special effects,4
-6124,David Lynch,4
-6124,Lynchianoir,2
-6124,art house,3
+6124,David Lynch,5
+6124,Lynchianoir,3
+6124,art house,4
 6124,atmospheric,5
 6124,dark,4
 6124,disturbing,4
 6124,dreamlike,4
-6124,hallucinatory,4
-6124,mindfuck,4
+6124,enigmatic,4
 6124,nonlinear,4
+6124,thriller,4
 6783,Ben Kingsley,1
 6783,action,3
 6783,adventure,5
-6783,animated,4
+6783,animated,3
 6783,animation,5
-6783,anime,3
+6783,anime,2
 6783,atmospheric,3
-6783,beautiful scenery,3
-6783,beautifully filmed,3
+6783,beautiful scenery,2
+6783,beautifully filmed,2
+6783,comedy,4
 6783,fantasy,5
+6783,sci-fi,4
+6783,thought-provoking,4
 9046,007,3
 9046,Alfred Hitchcock,2
 9046,Audrey Hepburn,1
 9046,action,5
-9046,adventure,4
-9046,aliens,3
+9046,adventure,3
+9046,aliens,4
 9046,animation,2
 9046,anime,2
-9046,artificial intelligence,3
+9046,artificial intelligence,4
 9046,atmospheric,5
 11160,Bruce Willis,2
 11160,action,4
@@ -66,18 +69,18 @@ id,tag,rating
 11160,comedy,4
 11160,dystopia,3
 11160,funny,3
-11160,parody,3
+11160,parody,2
 11160,sci-fi,5
 11160,time travel,5
 11818,Arnold Schwarzenegger,3
 11818,Bruce Willis,3
 11818,action,5
-11818,adventure,5
+11818,adventure,4
 11818,aliens,3
 11818,animation,2
 11818,atmospheric,5
-11818,classic,3
-11818,comedy,5
+11818,classic,2
+11818,comedy,4
 11818,comic book,3
 11864,007,3
 11864,1980s,2
@@ -85,37 +88,37 @@ id,tag,rating
 11864,Adam Sandler,3
 11864,Akira Kurosawa,3
 11864,Al Pacino,4
-11864,Alfred Hitchcock,5
-11864,action,2
+11864,Alfred Hitchcock,4
+11864,action,3
 11864,adventure,2
 11864,aliens,4
-13868,alternate reality,3
+13868,Leonardo DiCaprio,3
+13868,alternate reality,4
 13868,cute,2
 13868,deception,3
 13868,dreams,3
 13868,entertaining,2
 13868,funny,2
-13868,ghosts,3
-13868,ghosts/afterlife,3
-13868,mindfuck,3
-13868,surreal,3
-13868,thought-provoking,3
+13868,mindfuck,5
+13868,romance,3
+13868,thought-provoking,5
 13868,twist ending,5
+13868,visually appealing,3
+14277,David Lynch,3
 14277,alternate reality,3
 14277,atmospheric,5
 14277,beautiful animation,2
 14277,controversy,2
 14277,cult film,3
-14277,dark,3
-14277,dreamlike,3
-14277,nonlinear,3
+14277,dark,4
+14277,satire,3
 14277,surreal,5
 14277,visually appealing,2
 15037,Star Trek,3
 15037,action,5
 15037,adventure,4
 15037,aliens,4
-15037,atmospheric,3
+15037,atmospheric,2
 15037,dystopia,3
 15037,sci-fi,5
 15037,space,5
@@ -123,15 +126,15 @@ id,tag,rating
 15037,thought-provoking,2
 15037,time travel,4
 21815,007,3
-21815,Arnold Schwarzenegger,4
 21815,action,5
-21815,adventure,3
+21815,adventure,4
 21815,aliens,4
-21815,alternate reality,3
+21815,alternate reality,4
 21815,animation,2
 21815,anime,2
 21815,apocalypse,4
 21815,archaeology,3
+21815,arnold,3
 23659,action,5
 23659,dark,3
 23659,gothic,2
@@ -139,14 +142,14 @@ id,tag,rating
 23659,vampires,2
 24484,Arnold Schwarzenegger,3
 24484,action,5
-24484,adventure,2
-24484,aliens,1
+24484,adventure,3
+24484,aliens,2
 24484,apocalypse,2
 24484,atmospheric,3
-24484,bittersweet,2
-24484,comedy,1
-24484,romance,1
-24484,sci-fi,2
+24484,bittersweet,3
+24484,comedy,2
+24484,romance,2
+24484,sci-fi,3
 26326,"""damn dirty apes""",1
 26326,007 (series),1
 26326,16mm,1
@@ -154,10 +157,10 @@ id,tag,rating
 26326,1950s,1
 26326,action,5
 26326,atmospheric,5
-26326,funny,3
+26326,funny,4
 26326,sci-fi,5
-26326,violence,3
-28169,Disney,2
+26326,violence,4
+28169,Disney,3
 28169,adventure,3
 28169,animation,3
 28169,atmospheric,2
@@ -168,116 +171,113 @@ id,tag,rating
 28169,fantasy,5
 28169,funny,3
 29798,Anthony Hopkins,2
-29798,Disney,3
+29798,Disney,4
 29798,Tom Hanks,5
-29798,adventure,3
-29798,animation,3
+29798,adventure,4
+29798,animation,4
 29798,based on a true story,2
 29798,bittersweet,2
 29798,comedy,5
-29798,family,3
-29798,romance,2
+29798,family,4
+29798,romance,3
 30765,Jim Carrey,2
 30765,Robin Williams,2
 30765,Tom Hanks,2
-30765,adventure,5
-30765,comedy,5
-30765,dark comedy,4
+30765,comedy,4
+30765,dark comedy,3
 30765,psychology,5
 30765,sci-fi,5
 30765,space,3
-30765,thought-provoking,4
-31127,alternate reality,2
-31127,animation,1
-31127,anime,1
+30765,thought-provoking,3
+30765,twist ending,5
+31127,alternate reality,3
+31127,animation,2
+31127,anime,2
 31127,artistic,2
 31127,assassin,1
-31127,bittersweet,3
-31127,dreamlike,3
-31127,mindfuck,3
-31127,psychology,5
+31127,dreamlike,4
+31127,mindfuck,5
+31127,nonlinear,4
 31127,surreal,5
-31127,twist ending,5
-35710,Alfred Hitchcock,2
-35710,Cary Grant,2
+31127,surrealism,4
+35710,Alfred Hitchcock,5
+35710,Cary Grant,4
 35710,Paris,1
-35710,Tom Hanks,2
-35710,atmospheric,4
+35710,Tom Hanks,1
 35710,based on a true story,2
 35710,bittersweet,3
-35710,classic,2
-35710,coming of age,3
+35710,classic,3
+35710,coming of age,2
 35710,historical,2
 35710,psychology,5
-35710,twist ending,4
 36200,80's,2
 36200,Amy Adams,2
 36200,Bechdel Test:Pass,2
 36200,bad execution,2
 36200,bad luck,2
-36200,dark,4
+36200,dark,3
 36200,franchise,2
 36200,stupid,2
-36200,tense,4
+36200,tense,3
 36200,violent,3
 36475,Denzel Washington,2
-36475,Excellent use of dialogue,3
-36475,excellent script,3
+36475,Excellent use of dialogue,2
+36475,Samuel L. Jackson,2
+36475,excellent script,2
 36475,intellectual,3
-36475,mindfuck,4
-36475,sci-fi,5
-36475,science fiction,5
+36475,mindfuck,3
+36475,nonlinear,3
+36475,philosophical,3
 36475,thought-provoking,5
-36475,time travel,4
 36475,twist ending,5
 42517,1980s,2
 42517,Aardman,2
 42517,Alfred Hitchcock,4
 42517,Bill Murray,4
-42517,action,3
-42517,adventure,3
-42517,aliens,4
+42517,action,1
+42517,adventure,1
+42517,aliens,3
 42517,animation,2
 42517,atmospheric,3
-42517,based on a book,3
+42517,based on a book,2
 44799,Leonardo DiCaprio,2
 44799,Martin Scorsese,2
 44799,Pixar,2
 44799,Tom Hanks,5
 44799,World War II,4
 44799,based on a true story,3
-44799,emotional,4
-44799,funny,3
-44799,holocaust,4
+44799,emotional,3
+44799,funny,2
+44799,holocaust,3
 44799,inspirational,5
 50087,Arnold Schwarzenegger,2
 50087,Tom Hanks,2
 50087,action,5
-50087,adventure,2
-50087,animation,2
+50087,animation,1
 50087,atmospheric,3
 50087,classic,5
 50087,comedy,2
-50087,romance,4
+50087,historical,3
+50087,romance,3
 50087,sci-fi,2
-51619,Edward Norton,2
 51619,Uma Thurman,2
-51619,adventure,3
+51619,adventure,4
 51619,based on a comic,4
-51619,bloody,4
+51619,bloody,5
 51619,car chase,4
-51619,computers,4
-51619,stylized,3
-51619,violence,4
-51619,visually appealing,3
-51840,Akira Kurosawa,3
-51840,adventure,2
+51619,computers,3
+51619,double-crossing,3
+51619,stylized,4
+51619,violence,5
+51619,visually appealing,4
+51840,Akira Kurosawa,2
+51840,Alfred Hitchcock,3
+51840,adventure,1
 51840,atmospheric,5
 51840,classic,3
 51840,psychological,4
 51840,psychology,5
-51840,sci-fi,3
-51840,stylized,3
+51840,sci-fi,2
 51840,suspense,4
 51840,thought-provoking,5
 56276,dark comedy,4
@@ -287,25 +287,25 @@ id,tag,rating
 56276,unusual,3
 56276,violent,2
 56759,Pixar,2
-56759,action,5
-56759,adventure,3
+56759,Will Ferrell,2
+56759,action,4
 56759,animation,2
-56759,comedy,5
+56759,comedy,4
 56759,funny,5
 56759,inspirational,2
-56759,sci-fi,3
-56759,superhero,3
-56759,war,2
-57047,Amazing Cinematography,4
-57047,Guy from the Office,1
+56759,sci-fi,2
+56759,superhero,2
+56759,war,1
+57047,Amazing Cinematography,3
+57047,Funny when your 10. Less funny when your not.,2
 57047,amusing,4
 57047,better book,2
-57047,childish,2
+57047,childish,3
 57047,creepy good,3
 57047,disturbing,3
 57047,doll sex,1
-57047,terrible,1
-57047,too much 80's music,1
+57047,high brow stupidity,2
+57047,king of queens,1
 59214,Bruce Willis,2
 59214,Harrison Ford,2
 59214,Will Smith,2
@@ -320,55 +320,54 @@ id,tag,rating
 59357,Hayao Miyazaki,3
 59357,Studio Ghibli,3
 59357,adventure,4
-59357,animation,5
+59357,animation,4
 59357,anime,5
 59357,based on a book,2
 59357,dreamlike,3
 59357,fantasy,5
 59357,surreal,5
-59452,Al Pacino,2
-59452,action,5
+59452,Al Pacino,1
+59452,Brad Pitt,1
+59452,action,3
 59452,adventure,2
 59452,aliens,3
-59452,alternate reality,3
+59452,alternate reality,4
 59452,atmospheric,5
-59452,based on a book,2
 59452,based on a true story,2
 59452,bittersweet,2
 59452,black comedy,1
 59477,Al Pacino,2
-59477,Arnold Schwarzenegger,2
-59477,action,2
+59477,Arnold Schwarzenegger,1
+59477,action,3
 59477,adventure,2
-59477,aliens,2
-59477,alternate reality,2
-59477,animation,2
+59477,aliens,1
+59477,alternate reality,3
+59477,animation,1
 59477,atmospheric,5
-59477,based on a book,2
-59477,based on a true story,2
-62700,A24,3
-62700,Toni Collette,2
-62700,cinematography,3
-62700,great acting,3
-62700,horror,2
-62700,magic,4
-62700,mystery,5
-62700,rituals,3
+59477,based on a book,3
+59477,based on a true story,3
+62700,A24,4
+62700,Toni Collette,4
+62700,cinematography,2
+62700,great acting,2
+62700,horror,4
+62700,magic,3
+62700,mystery,4
+62700,rituals,4
 62976,Oscar (Best Picture),2
-62976,Steven Spielberg,1
-62976,adventure,2
-62976,aliens,1
+62976,Steven Spielberg,2
+62976,adventure,3
+62976,aliens,2
 62976,black comedy,4
-62976,comedy,5
+62976,comedy,4
 62976,dark comedy,5
-62976,love story,4
-62976,romance,5
-62976,sci-fi,2
+62976,love story,3
+62976,romance,4
+62976,sci-fi,5
 63056,action,5
-63056,adventure,5
 63056,amazing,2
 63056,dinosaurs,3
-63056,intense,2
+63056,intense,3
 63056,sci-fi,5
 65381,Star Wars,4
 65381,absurd,2
@@ -384,104 +383,104 @@ id,tag,rating
 66178,action,5
 66178,adventure,3
 66178,alien,4
-66178,aliens,4
-66178,alternate reality,3
+66178,aliens,3
+66178,alternate reality,2
 66178,animation,2
 66178,anime,2
 66178,apocalypse,3
 66178,artificial intelligence,4
-71780,action,4
-71780,adventure,4
+71780,action,5
+71780,adventure,5
 71780,animation,2
 71780,atmospheric,3
-71780,based on a book,2
-71780,comedy,1
-71780,epic,3
+71780,based on a book,3
+71780,comedy,2
+71780,dark,2
+71780,epic,4
 71780,fantasy,5
-71780,funny,1
-71780,harry potter,2
+71780,funny,2
 72928,Brad Pitt,2
 72928,action,5
 72928,adventure,3
 72928,animation,2
 72928,atmospheric,2
+72928,based on a book,2
 72928,based on a true story,2
 72928,black comedy,2
 72928,classic,2
 72928,comedy,5
-72928,crude humor,2
-73395,James McAvoy,5
-73395,Samuel L. Jackson,4
-73395,Star Wars,5
+73395,James McAvoy,3
+73395,Samuel L. Jackson,3
+73395,Star Wars,3
 73395,Will Ferrell,1
-73395,aliens,4
-73395,dissociative identity disorder,5
-73395,jedi,4
-73395,multiple personalities,5
+73395,aliens,3
+73395,dissociative identity disorder,3
+73395,jedi,3
+73395,multiple personalities,3
 73395,romantic comedy,1
-73395,space western,4
+73395,space western,3
 76668,Batman,5
 76668,Christian Bale,5
 76668,Christopher Nolan,5
-76668,Daniel Craig,4
+76668,Daniel Craig,2
 76668,Hans Zimmer,5
-76668,Morgan Freeman,5
+76668,Morgan Freeman,4
 76668,atmospheric,5
 76668,complicated,4
-76668,game theory,4
-76668,superhero,5
+76668,game theory,3
+76668,nonlinear,4
 78234,007,3
 78234,Adam Sandler,1
 78234,Arnold Schwarzenegger,3
 78234,action,5
 78234,adventure,3
-78234,aliens,4
+78234,aliens,3
 78234,alternate reality,4
-78234,animation,2
+78234,animation,1
 78234,apocalypse,3
-78234,artificial intelligence,4
+78234,artificial intelligence,3
 79959,Arnold Schwarzenegger,3
 79959,Bruce Willis,3
 79959,action,5
 79959,adventure,4
 79959,aliens,3
 79959,atmospheric,2
-79959,based on a true story,1
-79959,bittersweet,1
-79959,classic,2
-79959,comedy,1
-80812,black comedy,3
-80812,courtroom,3
-80812,courtroom drama,3
+79959,based on a true story,2
+79959,bittersweet,2
+79959,classic,3
+79959,comedy,2
+80812,black comedy,4
+80812,courtroom,2
+80812,courtroom drama,2
 80812,dark comedy,5
-80812,lawyer,3
-80812,lawyers,3
+80812,lawyer,2
+80812,lawyers,2
 80812,psychology,5
-80812,social commentary,2
-80812,thought-provoking,2
+80812,social commentary,3
+80812,thought-provoking,3
 80812,twist ending,5
 82914,action,2
 82914,adventure,2
 82914,aliens,1
-82914,animation,1
+82914,animation,2
 82914,atmospheric,5
 82914,based on a true story,3
 82914,bittersweet,3
 82914,classic,3
 82914,comedy,4
-82914,dark comedy,3
-86391,British,2
+82914,dark comedy,4
+86391,British,1
 86391,Harrison Ford,2
-86391,Julia Roberts,4
+86391,Julia Roberts,3
 86391,Tom Hanks,5
-86391,adventure,2
 86391,chick flick,4
-86391,classic,3
+86391,classic,2
 86391,comedy,5
-86391,heartwarming,4
+86391,love story,4
+86391,road trip,1
 86391,romance,5
 88490,absorbing,3
-88490,acting,2
+88490,acting,3
 88490,action,2
 88490,addiction,2
 88490,adult humor,1
@@ -490,16 +489,16 @@ id,tag,rating
 88490,suspense,4
 88490,thought-provoking,4
 88490,twist ending,5
-88986,Bruce Willis,2
+88986,Bruce Willis,3
 88986,action,5
 88986,adventure,4
-88986,aliens,3
-88986,alternate reality,2
-88986,artificial intelligence,3
+88986,aliens,4
+88986,alternate reality,4
+88986,artificial intelligence,4
 88986,atmospheric,2
-88986,based on a book,2
 88986,classic,2
 88986,comedy,1
+88986,comic book,2
 92212,adventure,2
 92212,classic,2
 92212,comedy,2
@@ -510,35 +509,35 @@ id,tag,rating
 92212,suspense,4
 92212,thought-provoking,5
 92212,twist ending,5
-93865,Arnold Schwarzenegger,3
+93865,Arnold Schwarzenegger,4
 93865,action,5
 93865,adventure,3
 93865,aliens,4
-93865,animation,1
+93865,animation,2
 93865,artificial intelligence,4
 93865,atmospheric,5
 93865,based on a book,2
-93865,based on a true story,2
-93865,bittersweet,2
-96631,Christmas,2
-96631,Disney,2
+93865,based on a true story,3
+93865,bittersweet,3
+96631,Christmas,1
+96631,Disney,1
 96631,adventure,2
-96631,animation,2
-96631,based on a true story,3
-96631,bittersweet,3
-96631,chick flick,3
+96631,animation,1
+96631,based on a true story,4
+96631,bittersweet,4
+96631,chick flick,4
 96631,classic,3
 96631,comedy,5
 96631,coming of age,3
 97099,Disney,2
 97099,Marvel,5
-97099,Pixar,2
+97099,Pixar,1
 97099,Robert Downey Jr.,4
 97099,animation,2
-97099,based on a book,3
+97099,based on a book,2
 97099,comedy,3
 97099,funny,5
-97099,sci-fi,4
+97099,sci-fi,5
 97099,superhero,5
 97296,Steven Spielberg,2
 97296,Tom Hanks,2
@@ -547,35 +546,35 @@ id,tag,rating
 97296,classic,5
 97296,comedy,4
 97296,epic,2
-97296,funny,3
+97296,funny,2
 97296,psychology,5
 97296,sci-fi,2
-98182,007,2
+98182,007,3
 98182,Africa,1
-98182,Al Pacino,2
-98182,action,4
+98182,Al Pacino,3
+98182,action,5
 98182,adventure,3
-98182,alien,3
-98182,aliens,3
-98182,alternate reality,3
+98182,aliens,4
+98182,alternate reality,4
 98182,animation,1
 98182,anime,1
-98607,British,1
-98607,Bruce Willis,4
-98607,Hugh Grant,1
+98182,archaeology,2
+98607,British,2
+98607,Bruce Willis,3
+98607,Hugh Grant,2
 98607,Quentin Tarantino,3
-98607,Tom Cruise,4
+98607,Tom Cruise,3
 98607,action,5
 98607,basketball,1
-98607,comedy,2
+98607,comedy,3
 98607,crime,4
 98607,dialogue,2
-99090,Disney,1
-99090,action,2
+99090,Disney,2
+99090,action,3
 99090,adventure,4
 99090,animation,2
 99090,comedy,4
-99090,coming of age,2
+99090,coming of age,3
 99090,dystopia,5
 99090,funny,3
 99090,musical,1
@@ -583,7 +582,7 @@ id,tag,rating
 99195,animation,2
 99195,classic,2
 99195,comedy,5
-99195,coming of age,2
+99195,coming of age,3
 99195,cult film,3
 99195,dark comedy,5
 99195,musical,2
@@ -605,32 +604,32 @@ id,tag,rating
 106603,Anthony Hopkins,4
 106603,Bill Murray,1
 106603,action,2
-106603,adventure,1
+106603,adventure,2
 106603,atmospheric,5
 106603,based on a book,3
 106603,based on a true story,3
-106603,biography,2
+106603,biography,3
 106660,Germany,2
-106660,Nazis,3
-106660,Post apocalyptic,4
+106660,Nazis,2
 106660,Tom Cruise,3
-106660,World War II,3
-106660,dystopia,5
-106660,history,3
+106660,World War II,2
+106660,dystopia,4
+106660,history,2
+106660,post-apocalyptic,4
 106660,sci-fi,5
 106660,social commentary,3
 106660,space,4
 107814,Al Pacino,2
-107814,Alfred Hitchcock,4
-107814,Arnold Schwarzenegger,2
-107814,Brad Pitt,4
-107814,Bruce Willis,5
-107814,action,3
+107814,Alfred Hitchcock,3
+107814,Arnold Schwarzenegger,3
+107814,Brad Pitt,2
+107814,Bruce Willis,3
+107814,action,4
 107814,aliens,3
 107814,artificial intelligence,4
-107814,atmospheric,4
+107814,atmospheric,3
 107814,black comedy,2
-109510,Star Wars,4
+109510,Star Wars,2
 109510,Wes Anderson,1
 109510,cinematography,3
 109510,classic,2
@@ -639,34 +638,35 @@ id,tag,rating
 109510,dystopia,5
 109510,quirky,2
 109510,sci-fi,5
+109510,stylized,3
 109510,visually appealing,3
 112538,Pixar,3
 112538,adventure,5
 112538,animation,4
 112538,based on a book,4
-112538,classic,2
-112538,comedy,2
+112538,classic,3
+112538,comedy,3
 112538,fantasy,5
 112538,funny,3
 112538,harry potter,4
 112538,magic,4
-113933,Intelligent Sc-Fi,4
+113933,Intelligent Sc-Fi,3
 113933,cerebral,4
 113933,future,3
-113933,futuristic,3
-113933,language,2
-113933,linguistics,2
-113933,sense of awe,4
+113933,futuristic,4
+113933,language,3
+113933,linguistics,3
+113933,sense of awe,3
 113933,spiritual,3
-113933,thoughtful sci-fi,4
+113933,thoughtful sci-fi,3
 115412,Angelina Jolie,3
-115412,Brad Pitt,3
-115412,Bruce Willis,4
+115412,Brad Pitt,2
+115412,Bruce Willis,3
 115412,action,5
 115412,adventure,4
 115412,aliens,3
-115412,animation,2
-115412,anime,2
+115412,animation,1
+115412,anime,1
 115412,atmospheric,5
 115412,based on a book,2
 121658,Bruce Willis,3
@@ -674,7 +674,7 @@ id,tag,rating
 121658,adventure,3
 121658,aliens,4
 121658,animation,2
-121658,apocalypse,3
+121658,apocalypse,4
 121658,artificial intelligence,4
 121658,atmospheric,3
 121658,comedy,2
@@ -683,19 +683,19 @@ id,tag,rating
 124415,action,4
 124415,adventure,3
 124415,aliens,4
-124415,alternate reality,5
-124415,animation,1
+124415,alternate reality,4
+124415,animation,2
+124415,anti-hero,4
 124415,apocalypse,4
-124415,artificial intelligence,5
-124415,atmospheric,4
-124415,based on a book,2
-127984,"imaginary world, characters, story, philosophical",1
+124415,artificial intelligence,4
+124415,atmospheric,3
+127984,"imaginary world, characters, story, philosophical",2
 127984,meaning of life,2
-127984,philosophical,3
+127984,philosophical,2
 127984,sci-fi,5
-127984,script,1
-129222,James Bond,1
-129222,Mike Myers,1
+127984,script,2
+129222,James Bond,2
+129222,Mike Myers,2
 129222,funny,3
 129222,hilarious,3
 129222,stupid,2
@@ -709,44 +709,44 @@ id,tag,rating
 131521,based on a true story,2
 131521,bittersweet,2
 131521,black comedy,2
-133109,Disney,1
-133109,Julia Roberts,1
+133109,British,2
+133109,Disney,2
+133109,Julia Roberts,2
 133109,black comedy,4
 133109,comedy,5
-133109,coming of age,2
 133109,dark comedy,5
 133109,funny,3
 133109,high school,2
-133109,quirky,2
-133109,romance,3
+133109,psychology,2
+133109,quirky,3
 133109,twist ending,3
-133675,action,2
-133675,based on a true story,1
-133675,biographical,1
-133675,biography,1
+133675,action,3
+133675,based on a true story,3
+133675,biographical,3
+133675,biography,3
 133675,blood,1
-133675,disturbing,1
+133675,brutal,1
+133675,hilarious,5
 133675,horrors of war,1
-133675,thriller,2
-133675,true story,1
-133675,violence,1
-135059,Aardman,1
+133675,true story,3
+133675,violence,2
+135059,Aardman,2
 135059,adventure,2
 135059,classic,5
-135059,claymation,1
+135059,claymation,2
 135059,dark comedy,4
 135059,organized crime,4
 135059,psychology,3
-135059,social commentary,4
+135059,social commentary,3
 135059,thought-provoking,5
 135059,twist ending,5
-136522,Paul Walker,5
-136522,Vin Diesel,5
+136522,Paul Walker,3
+136522,Vin Diesel,3
 136522,action,5
 136522,adventure,5
 136522,animation,1
-136522,cars,5
-136522,comedy,1
+136522,cars,3
+136522,comedy,2
 136522,robots,2
 136522,romantic comedy,1
 136522,sci-fi,5
@@ -755,7 +755,7 @@ id,tag,rating
 136880,Marvel,3
 136880,Nicolas Cage,3
 136880,action,5
-136880,adventure,5
+136880,adventure,4
 136880,comic book,3
 136880,sci-fi,5
 136880,superhero,3
@@ -763,11 +763,11 @@ id,tag,rating
 137460,Batman,3
 137460,Marvel,4
 137460,action,5
-137460,adventure,5
+137460,adventure,4
 137460,comic book,4
-137460,epic,3
+137460,epic,2
 137460,espionage,3
-137460,fantasy,2
+137460,fantasy,1
 137460,sci-fi,5
 137460,superhero,5
 138325,1980s,3
@@ -777,12 +777,12 @@ id,tag,rating
 138325,classic,5
 138325,comedy,4
 138325,coming of age,2
-138325,parody,3
+138325,parody,2
 138325,quirky,2
 138325,sci-fi,5
-139735,Arnold Schwarzenegger,2
-139735,Harrison Ford,2
-139735,Steven Spielberg,2
+139735,Arnold Schwarzenegger,3
+139735,Harrison Ford,3
+139735,Steven Spielberg,3
 139735,action,5
 139735,adventure,3
 139735,classic,5
@@ -798,38 +798,38 @@ id,tag,rating
 141560,anime,3
 141560,classic,2
 141560,fantasy,5
+141560,funny,2
 141560,sci-fi,5
-141560,social commentary,2
-144056,Leonardo DiCaprio,3
-144056,adventure,3
+144056,Leonardo DiCaprio,4
+144056,adventure,4
 144056,animation,1
-144056,comedy,1
+144056,atmospheric,4
+144056,comedy,2
 144056,fantasy,2
 144056,funny,1
-144056,great acting,4
+144056,great acting,3
 144056,psychological,5
 144056,psychology,4
-144056,social commentary,4
-144336,Tom Hanks,1
-144336,action,5
-144336,adventure,3
+144336,Tom Hanks,2
+144336,action,4
+144336,adventure,2
 144336,animation,1
-144336,boxing,2
-144336,comedy,1
-144336,inspirational,2
-144336,psychology,4
+144336,boxing,1
+144336,comedy,2
+144336,inspirational,1
+144336,psychology,3
 144336,romance,1
 144336,sci-fi,5
-145630,action,2
-145630,adventure,2
+145630,action,3
+145630,adventure,3
 145630,atmospheric,5
 145630,classic,3
-145630,comedy,2
+145630,comedy,3
 145630,dark,4
-145630,dark comedy,2
+145630,dark comedy,3
 145630,great acting,3
-145630,mindfuck,4
-145630,nonlinear,4
+145630,nonlinear,3
+145630,organized crime,4
 146992,Al Pacino,3
 146992,Alfred Hitchcock,3
 146992,Clint Eastwood,3
@@ -837,74 +837,75 @@ id,tag,rating
 146992,atmospheric,5
 146992,based on a true story,3
 146992,bittersweet,3
-146992,cinematography,3
-146992,classic,2
-146992,coming of age,2
+146992,cinematography,4
+146992,classic,3
+146992,coming of age,3
 147555,Arnold Schwarzenegger,3
-147555,Nudity (Topless),2
-147555,action,5
-147555,adventure,4
-147555,comedy,5
+147555,Nudity (Topless),1
+147555,action,4
+147555,adventure,3
+147555,comedy,4
 147555,dystopia,3
 147555,psychology,2
 147555,romance,2
 147555,sci-fi,5
 147555,space,5
 151438,1960s,1
-151438,Aaron Sorkin,3
-151438,Al Pacino,2
-151438,Alan Rickman,2
-151438,British,2
-151438,Emma Watson,2
-151438,Robert Downey Jr.,2
-151438,academia,3
+151438,Aaron Sorkin,2
+151438,Al Pacino,3
+151438,Alan Rickman,4
+151438,British,4
+151438,Emma Watson,4
+151438,Gwyneth Paltrow,4
+151438,Robert Downey Jr.,4
+151438,academia,2
 151438,action spoof,2
-151438,great soundtrack,1
-155140,black hole,4
-155140,father and daughter story,2
-155140,good vs evil,3
-155140,space,4
-155140,space adventure,4
+155140,black hole,5
+155140,father and daughter story,5
+155140,good vs evil,2
+155140,space,5
+155140,space adventure,3
 157714,action,5
 157714,adventure,5
-157714,aliens,3
+157714,aliens,4
 157714,animation,2
 157714,atmospheric,3
 157714,based on a book,2
-157714,comedy,2
-157714,dystopia,3
-157714,epic,3
-157714,fantasy,3
+157714,comedy,1
+157714,dark,3
+157714,dystopia,4
+157714,epic,4
 159080,action,4
 159080,adventure,4
-159080,aliens,3
-159080,artificial intelligence,2
+159080,aliens,4
+159080,artificial intelligence,3
 159080,atmospheric,5
-159080,dark comedy,1
+159080,classic,3
+159080,dark comedy,2
 159080,fantasy,3
 159080,sci-fi,5
-159080,space,3
+159080,space,4
 159080,thought-provoking,3
 159899,1980s,2
-159899,Adam Sandler,3
+159899,Adam Sandler,2
 159899,Alfred Hitchcock,2
-159899,acting,2
+159899,acting,3
 159899,action,5
+159899,action packed,4
 159899,adventure,3
-159899,alcoholism,2
-159899,alien,3
-159899,alien invasion,3
-159899,aliens,3
-160621,action,4
+159899,airplane,1
+159899,alien invasion,4
+159899,aliens,4
+160621,action,3
 160621,adventure,3
-160621,aliens,4
-160621,alternate reality,4
-160621,animation,1
-160621,apocalypse,4
+160621,aliens,3
+160621,alternate reality,3
+160621,animation,2
+160621,apocalypse,3
 160621,atmospheric,5
 160621,based on a book,2
-160621,beautifully filmed,2
-160621,bittersweet,3
+160621,beautifully filmed,3
+160621,bittersweet,2
 162010,Bruce Willis,4
 162010,action,3
 162010,adventure,2
@@ -913,65 +914,65 @@ id,tag,rating
 162010,animation,1
 162010,atmospheric,4
 162010,based on a book,3
-162010,bittersweet,4
+162010,bittersweet,3
 162010,chick flick,1
-165983,CLV,1
 165983,John Travolta,2
 165983,Nicolas Cage,2
-165983,Nudity (Topless),1
+165983,Nudity (Topless),2
 165983,action,2
 165983,action packed,2
 165983,classic,5
-165983,comedy,3
-165983,courtroom,1
+165983,comedy,4
+165983,courtroom,2
+165983,mafia,5
 165983,music,2
+170455,atmospheric,2
 170455,based on a book,3
-170455,based on a true story,5
-170455,biography,5
-170455,classic,3
+170455,based on a true story,4
+170455,biography,4
+170455,classic,2
 170455,comedy,4
-170455,coming of age,4
+170455,coming of age,3
 170455,corruption,2
 170455,emotional,4
-170455,family,3
-170455,fantasy,1
-172870,Marvel,2
+170455,fantasy,2
+172870,Marvel,3
 172870,Quentin Tarantino,2
+172870,action,5
 172870,atmospheric,3
 172870,cinematography,3
 172870,comedy,2
 172870,cyberpunk,4
 172870,dark comedy,2
 172870,dystopia,4
-172870,post-apocalyptic,3
-172870,sci-fi,5
+172870,post-apocalyptic,4
 187826,action,3
-187826,adventure,2
-187826,animation,2
+187826,adventure,3
+187826,animation,3
 187826,atmospheric,3
 187826,bittersweet,3
 187826,classic,5
 187826,comedy,5
-187826,funny,4
+187826,funny,3
 187826,parody,3
 187826,sci-fi,5
 192840,Arnold Schwarzenegger,2
 192840,Disney,2
 192840,Jim Carrey,2
-192840,action,4
-192840,animation,2
+192840,action,5
+192840,animation,3
 192840,atmospheric,5
-192840,comedy,4
+192840,comedy,5
 192840,dark comedy,3
 192840,gothic,3
 192840,quirky,3
-200067,Brad Pitt,2
+200067,Brad Pitt,3
 200067,Disney,1
-200067,Jim Carrey,2
-200067,action,4
-200067,adventure,3
-200067,animation,2
-200067,chick flick,2
-200067,comedy,3
+200067,Jim Carrey,1
+200067,action,5
+200067,adventure,2
+200067,animation,1
+200067,chick flick,1
+200067,comedy,2
 200067,dark comedy,3
-200067,romance,2
+200067,romance,1

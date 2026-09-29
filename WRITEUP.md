@@ -203,7 +203,7 @@ What the movie criterion did not show is more of the information of whether or n
 
 **The user-tag pairs I chose to judge, how many, and why those (about 100 words):**
 
-I want a random seed of 100 users to be in users.csv to ensure a random variety of users are chosen because I do not think it is fair to only select users with ratings and no tags or only users with tags. The judge should rate the top 10 tags just as we just had for the user_viewer page for each user.
+I want a random seed of 100 users to be in users.csv to ensure a random variety of users are chosen because I do not think it is fair to only select users with ratings and no tags or only users with tags. The judge should rate the top 10 tags just as we just had for the user_viewer page for each user. I chose the person top 10 tags for the judge to rate to have a more concise view of a person taste rather than considering all possible movies, especially when some movies rated were the low rated ones which would not accurately reflect someones taste in movies.
 
 **Improvement 1: what I changed in the scoring function, what the judge and the viewer showed before and after (about 150 words):**
 
@@ -211,7 +211,7 @@ I mean that movies that are rated 2 and up count towards the scoring function. T
 
 **Improvement 2: the same (about 150 words):**
 
-XXXX
+I want to change it and say that tags different by only a hyphen should count as the same tag in my scoring. The change after was that before the score() and judge rating was 1.68 and after it was lowered to only 1.61, therefore my score() and the judges rating is more similar, and also what changes is mainly the position of the tags score() as in my person change was black comedy went from 4 to 3.5 so it was actually lowered. While in other users there was some changes of tags such as user 23753 comedy moved from 4 to 4.5 and western moved from 4.5 to 4. 
 
 ## Part 4. Working with Claude
 

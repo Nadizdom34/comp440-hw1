@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 from load_data import REPO, load_all
-from part2_tags import clean_tag, tag_labels
+from part3_users import clean_tag, tag_labels
 from part3_users import KEEP_AT, ME, OWN_MIN, add_me, read_my_ratings, score, top_n
 
 SEED = 440     # which nine other users are shown: any fixed number, so a rerun shows the same

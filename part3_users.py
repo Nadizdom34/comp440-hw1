@@ -38,7 +38,22 @@ import numpy as np
 import pandas as pd
 
 from load_data import load_all
-from part2_tags import clean_tag, tag_labels
+from part2_tags import clean_tag as clean_tag_part2
+
+
+def clean_tag(raw):
+    """Part 3's rule for what counts as one tag: the Part 2 rule (ignore case and every
+    space), and also ignore hyphens (Improvement 2), so `post-apocalyptic` and
+    `Post apocalyptic` are one tag. Part 2's own scores are left as they were."""
+    return clean_tag_part2(raw).str.replace("-", "", regex=False)
+
+
+def tag_labels(tags_df):
+    """A readable name for each cleaned tag: its most-applied raw spelling (ties go to the
+    alphabetically first). The same as Part 2's, keyed by Part 3's `clean_tag`."""
+    counts = tags_df.assign(key=clean_tag(tags_df["tag"])).groupby(["key", "tag"]).size()
+    counts = counts.reset_index(name="n").sort_values(["key", "n", "tag"], ascending=[True, False, True])
+    return counts.drop_duplicates("key").set_index("key")["tag"]
 
 REPO = Path(__file__).resolve().parent
 WRITEUP = REPO / "WRITEUP.md"
@@ -114,7 +129,7 @@ def top_n(df: pd.DataFrame, by: str, n: int = TOP) -> pd.DataFrame:
 def score(ratings: pd.DataFrame, tags: pd.DataFrame, movies: pd.DataFrame):
     """The student's score(user, tag), as written in the WRITEUP.md slot.
 
-    Tags are cleaned by the Part 2 rule (`clean_tag`: ignore case and every space).
+    Tags are cleaned by `clean_tag` below: the Part 2 rule, and hyphens ignored too.
     - A user with at least OWN_MIN distinct tags of their own: 5 for a tag in their own top
       5 (by applications), 3 for every other tag they applied.
     - Everyone else: keep the movies they rated KEEP_AT or higher, take each movie's top 5
