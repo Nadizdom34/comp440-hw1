@@ -139,17 +139,17 @@ Then the three disagreements. A disagreement is a movie and a tag where your `sc
 judge are furthest apart. For each: the movie and the tag, where your `score()` put it and where
 the judge put it, and what you think accounts for the gap.
 
-**Disagreement 1:** XXXX
+**Disagreement 1:** Forrest Gump (1994), `tom hanks`: score() rank 1, judge rank 86 (`part2_tags.py`, section 7). I think the biggest thing that accounts for it is that the number of people who used the tom hanks tag far exceeded how descriptive writing that actors name described the movie, as the actors name does not say ANYTHING about the movie plot which is why the judge ranked it so lowly.
 
-**Disagreement 2:** XXXX
+**Disagreement 2:** Pulp Fiction (1994), `revenge`: score() rank 92, judge rank 10 (`part2_tags.py`, section 7). I think that there were way less different people that used revenge as a tag there, I checked the webpage and it shows only one user, which explains why my score ranked it so low, versus the judge uses a more holistic view of the movie thus matching that the plot relies heavily on it being revenge action happening therefore ranking this tag higher.
 
-**Disagreement 3:** XXXX
+**Disagreement 3:** Pulp Fiction (1994), `corruption`: score() rank 86, judge rank 5 (`part2_tags.py`, section 7). The thing that accounts for the gap is that only one user put the tag corruption on the movie, therefore my score() ranked it low, versus the judge ranked it highly because it is very indicative of the plot.
 
-**One other high-level pattern in the results, and what you think is behind it:** XXXX
+**One other high-level pattern in the results, and what you think is behind it:** One other high-level pattern I notice is that many of the tags are very similar to each other or the same with just a hyphen in between some words, therefore some tags could be considered separate even though they intend the same things, and this could be messing with some of the results in my scoring as different users can intend to tag it as the same thing, but word it ever so differently and this impacts my scoring to rank it lower because then it would technically be considered less unique users.
 
 ## Predictions revisited
 
-**Which of my three predictions were wrong, and what I make of each miss:** XXXX
+**Which of my three predictions were wrong, and what I make of each miss:** My prediction one was slightly incorrect as only my original prediction of comedy being included in the top three tags was correct, but action and drama were not in the top three tags for white chicks. For my second prediction, I was technically wrong as it was actually 59.8 percent of people who added tags, but I had a good intuition that at least 22 people out of 100 would add a tag and it resulted to be a higher number of people than I expected. My third prediction was correct and the number of tag applications per user can potentially overtake the tag applications per movie as the result showed the maximum tag application per user was 287,198 compared to the maximum tag applications per movie being 6,688.
 
 ## Part 3. What tags best describe a user?
 

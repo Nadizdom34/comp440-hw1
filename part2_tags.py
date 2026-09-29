@@ -239,6 +239,24 @@ def part2_tags(ratings, tags, movies, links):
         s = out[out["movieId"] == m].sort_values(["score", "tag"], ascending=[False, True])
         print("my score()'s:    ", ", ".join(f"{t} ({v:g})" for t, v in zip(s["tag"], s["score"])))
 
+    print("== (7) disagreements over every movie the judge rated ==")
+    # The same ranks and cutoff as results_viewer.py: only tags the judge rated, best first,
+    # ties alphabetical, a gap of at least GAP places.
+    from results_viewer import GAP, ranked
+    titles = movies.set_index("movieId")["title"]
+    rows = []
+    for m, j in judged.groupby("id"):
+        sc = dict(zip(out.loc[out["movieId"] == m, "tag"], out.loc[out["movieId"] == m, "score"]))
+        rated_tags = [(t, int(r)) for t, r in zip(j["tag"], j["rating"]) if t in sc]
+        jr, sr = ranked(rated_tags), ranked([(t, sc[t]) for t, _ in rated_tags])
+        rows += [(abs(sr[t] - jr[t]), titles.get(m, m), t, sr[t], jr[t]) for t in jr
+                 if abs(sr[t] - jr[t]) >= GAP]
+    rows.sort(key=lambda r: (-r[0], str(r[1]), r[2]))
+    print(f"{len(rows):,} disagreements (gap of at least {GAP}) over {judged['id'].nunique()} movies; "
+          f"the 25 largest, sorted by gap, then title, then tag:")
+    print(pd.DataFrame(rows[:25], columns=["gap", "movie", "tag", "score() rank", "judge rank"])
+          .to_string(index=False))
+
 
 if __name__ == "__main__":
     ratings, tags, movies, links = load_all()
