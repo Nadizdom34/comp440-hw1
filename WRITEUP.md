@@ -106,9 +106,9 @@ An order line looks like `296: nonlinear, hit men, dark comedy, ...`, the tags b
 6155: chick flick, romantic comedy, girlie movie, funny, classic chick flick, Kate Hudson, battle of the sexes, Good Romantic Comedies, Matthew McConaughey, not funny
 60069: Sci-Fi, robots, Animation, dystopia, post-apocalyptic, pixar, artificial intelligence, social commentary, Post apocalyptic, space
 
-**One criterion I considered for the judge and rejected, and why** (the one I used is in `judge/criterion.md`)**:** XXXX
+**One criterion I considered for the judge and rejected, and why** (the one I used is in `judge/criterion.md`)**:** Favor tags for more than 3 words but less than 7-10 words. I dropped it because I found out that most of the tags are very brief, and therefore judging a tag by its length would not be indicative of how someone else would rate the tag.
 
-**Agreement. The number `agreement.py` gives for your `score()`, for popularity and for your own order, and which of the three came closest to the judge:** XXXX
+**Agreement. The number `agreement.py` gives for your `score()`, for popularity and for your own order, and which of the three came closest to the judge:** The three number were score() with 1.12 of 5, popularity 1.12 of 5, and my own order with 0.50 of 5. The closest one is tied between score() and popularity.
 
 **How the judge skill is built: the files it is made of and what each one does (about 150 words):**
 

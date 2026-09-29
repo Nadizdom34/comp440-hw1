@@ -88,9 +88,16 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from agreement import my_order_lines
 from load_data import REPO, load_all
 
 MY_MOVIE = 8531   # White Chicks (2004), the student's claim for Part 2
+
+
+def my_ten_movies():
+    """The movieIds in the "My ten movies" slot of WRITEUP.md, one per line, in slot order."""
+    slot = (REPO / "WRITEUP.md").read_text().split("**My ten movies:**")[1].split("\n**")[0]
+    return [int(line.split(",")[0]) for line in slot.splitlines() if line.split(",")[0].strip().isdigit()]
 
 
 def clean_tag(raw):
@@ -202,8 +209,35 @@ def part2_tags(ratings, tags, movies, links):
               f"e.g. " + ", ".join(repr(s) for s in spellings.index[:4]))
 
     print("== (5) scores.csv ==")
+    judge_movies = pd.read_csv(REPO / "judge" / "movies.csv", keep_default_na=False)
+    asked = [(int(r.id), t) for r in judge_movies.itertuples() for t in r.tags.split("|")]
+    vocab = set((REPO / "judge" / "vocabulary.txt").read_text().split("\n")) - {""}
+    ten = my_ten_movies()
+    on_ten = tags[tags["movieId"].isin(ten)].assign(tag=tags["tag"].str.strip().str.lower())
+    asked += sorted({(int(m), t) for m, t in zip(on_ten["movieId"], on_ten["tag"]) if t in vocab})
+    asked = pd.DataFrame(sorted(set(asked)), columns=["movieId", "tag"])
+    # Each asked tag gets the score of its cleaned key, by the student's own cleaning rule.
+    out = asked.assign(key=clean_tag(asked["tag"])).merge(
+        scores.rename(columns={"tag": "key"}), on=["movieId", "key"], how="left")
+    out[["movieId", "tag", "score"]].to_csv(REPO / "scores.csv", index=False)
+    print(f"{len(asked):,} movie-tag pairs asked for ({len(judge_movies)} judge movies + "
+          f"{len(ten)} of mine), {out['score'].notna().sum():,} written with a score")
 
     print("== (6) the four rankings ==")
+    rated_path = REPO / "judge" / "ratings_movies.csv"
+    if not rated_path.exists():
+        print("judge/ratings_movies.csv is not there yet; run /judge first")
+        return
+    judged = pd.read_csv(rated_path, keep_default_na=False)
+    mine_order = my_order_lines()
+    for m in ten:
+        print(f"-- {movies.set_index('movieId').loc[m, 'title']} --")
+        print("the counts:      ", ", ".join(tags.loc[tags["movieId"] == m, "tag"].value_counts().head(10).index))
+        print("my own order:    ", ", ".join(mine_order.get(m, ["(not in the slot)"])))
+        j = judged[judged["id"] == m].sort_values(["rating", "tag"], ascending=[False, True])
+        print("the judge's:     ", ", ".join(f"{t} ({r})" for t, r in zip(j["tag"], j["rating"])))
+        s = out[out["movieId"] == m].sort_values(["score", "tag"], ascending=[False, True])
+        print("my score()'s:    ", ", ".join(f"{t} ({v:g})" for t, v in zip(s["tag"], s["score"])))
 
 
 if __name__ == "__main__":
