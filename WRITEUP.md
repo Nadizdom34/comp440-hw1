@@ -124,16 +124,16 @@ XXXX
 
 ### The viewer and the disagreements
 
-**One thing `movie_results.html` showed me that was useful, and one thing about it that got in my way:** XXXX
+**One thing `movie_results.html` showed me that was useful, and one thing about it that got in my way:** One thing on the page that was very useful was the bold font of the headers such as "Your Order" which made it easy to identify the section on the page along with "summary" esque box at the end that has biggest disagreement to easily compare my own score/tags with the judges. One thing that got in the way was how much scrolling I had to do when scrolling through EACH tag attached to the movie, it was very distracting and messy to scroll through so many tags with the user and the date for each, it just felt like something I can't stare at for too long and confusing to analyze when there are a LOT of tags.
 
 Then three improvements. For each: what the page would not let you see, what you had Claude
 change, and what the changed page shows that the first draft did not.
 
-**Improvement 1:** XXXX
+**Improvement 1:** The page would not show me my score versus the judges ranking when the rankings were less than 5 gaps apart, so it made it difficult to analyze how many disagreements there were on my terms, therefore I had Claude change the gap to be 3 differences in ranking, and now the changed page shows more revealing disagreements than just a gap of 5.
 
-**Improvement 2:** XXXX
+**Improvement 2:** The page was overly cluttered in each of the tags being listed individually and it made it hard to scroll through the webpage and analyze the tag, user, and date. Therefore I had Claude change the table to have a dropbox for each unique tag and now the changed page is more organized and less cluttered, now I have a dropdown option on the tags to show the specific user and date associated.
 
-**Improvement 3:** XXXX
+**Improvement 3:** The page layout in between my score() the judges, my order, and by count was in a weird layout where they were vertical scroll instead of being right next to each other in a table for easier comparison, so I told Claude to place them all into a table side by side for better accessibility to comparing them, and now the changed page looks neater.
 
 Then the three disagreements. A disagreement is a movie and a tag where your `score()` and the
 judge are furthest apart. For each: the movie and the tag, where your `score()` put it and where

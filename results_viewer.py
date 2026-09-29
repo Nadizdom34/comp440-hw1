@@ -42,7 +42,7 @@ from agreement import ORDER_FORMAT, my_order_lines
 
 REPO = Path(__file__).resolve().parent
 
-GAP = 5     # how far two ranks must differ before we call the pair a disagreement
+GAP = 3     # how far two ranks must differ before we call the pair a disagreement
 TOP = 10    # how many tags to show in each ranked list
 SHOWN = 10  # how many disagreements to show per movie
 
@@ -147,6 +147,7 @@ def build(scores_path, judge_path, data_dir, writeup_path):
             "judge": sorted(judge_rank, key=lambda t: judge_rank[t])[:TOP],
             "score": sorted(score_rank, key=lambda t: score_rank[t])[:TOP],
             "gaps": gaps[:SHOWN],
+            "n_gaps": len(gaps),
             "apps": sorted(((row.tag, row.userId, as_date(row.timestamp))
                             for row in applied.itertuples()),
                            key=lambda app: (app[0], app[2])),
@@ -159,6 +160,33 @@ def table_html(headers, rows):
     body = "".join("<tr>%s</tr>" % "".join("<td>%s</td>" % html.escape(str(c)) for c in row)
                    for row in rows)
     return "<table><tr>%s</tr>%s</table>" % (head, body)
+
+
+def tag_counts(apps):
+    """(tag, how many applications) for each distinct tag, in the order apps arrive."""
+    counts = {}
+    for tag, _, _ in apps:
+        counts[tag] = counts.get(tag, 0) + 1
+    return list(counts.items())
+
+
+def tags_html(apps):
+    """One table row per distinct tag with its count; each row opens to show its applications."""
+    rows = []
+    for tag, n in tag_counts(apps):
+        mine = [(user, date) for t, user, date in apps if t == tag]
+        rows.append("<tr><td>%s</td><td>%d</td><td><details><summary>show</summary>%s"
+                    "</details></td></tr>" % (html.escape(tag), n, table_html(["User", "Date"], mine)))
+    return ("<table><tr><th>Tag</th><th>Applications</th><th>Who and when</th></tr>%s</table>"
+            % "".join(rows))
+
+
+def side_by_side(movie):
+    """Headers and rows for one table: rank, then the four rankings in columns."""
+    cols = [movie["counts"], movie["mine"] or ["not written yet"], movie["judge"], movie["score"]]
+    rows = [[i + 1] + [col[i] if i < len(col) else "" for col in cols]
+            for i in range(max(len(col) for col in cols))]
+    return ["Rank", "By count", "Your order", "The judge's order", "Your score()"], rows
 
 
 def list_html(tags):
@@ -174,14 +202,13 @@ def render(movies):
     for movie in movies:
         body += [
             "<h2>%s</h2>" % html.escape(movie["title"]),
-            "<h3>By count</h3>", list_html(movie["counts"]),
-            "<h3>Your order</h3>", list_html(movie["mine"]),
-            "<h3>The judge's order</h3>", list_html(movie["judge"]),
-            "<h3>Your score()</h3>", list_html(movie["score"]),
+            "<h3>The four rankings, side by side</h3>",
+            table_html(*side_by_side(movie)),
             "<h3>Tags on this movie</h3>",
-            table_html(["Tag", "User", "Date"], movie["apps"]),
+            tags_html(movie["apps"]),
             "<p>%d applications by %d people.</p>" % (len(movie["apps"]), movie["people"]),
             "<h3>Biggest disagreements, score() against the judge</h3>",
+            "<p>%d disagreement(s), farthest apart first.</p>" % movie["n_gaps"],
             table_html(["Tag", "score() rank", "Judge rank"], movie["gaps"]),
         ]
     body = "\n".join(body)
@@ -213,14 +240,13 @@ def render_text(movies):
     out = ["Results Viewer", DEFINITION, ""]
     for movie in movies:
         out += [movie["title"],
-                "  By count", numbered(movie["counts"]),
-                "  Your order", numbered(movie["mine"]),
-                "  The judge's order", numbered(movie["judge"]),
-                "  Your score()", numbered(movie["score"]),
+                "  The four rankings, side by side",
+                table_text(*side_by_side(movie)),
                 "  Tags on this movie",
-                table_text(["Tag", "User", "Date"], movie["apps"]),
+                table_text(["Tag", "Applications"], tag_counts(movie["apps"])),
                 "  %d applications by %d people." % (len(movie["apps"]), movie["people"]),
                 "  Biggest disagreements, score() against the judge",
+                "  %d disagreement(s), farthest apart first." % movie["n_gaps"],
                 table_text(["Tag", "score() rank", "Judge rank"], movie["gaps"]), ""]
     return "\n".join(out)
 
