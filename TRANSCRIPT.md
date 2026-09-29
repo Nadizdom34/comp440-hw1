@@ -1842,7 +1842,7 @@ Before I run it: which of the three do you expect to come closest to the judge?
 <!-- transcript-session: 050fec7e-dc9f-4f51-bc77-e174692e6bf4 | 2026-09-29T01:11:03.805Z -->
 ## Session `050fec7e` — 2026-09-29 01:11:03
 
-*101 user turns. Tool outputs and reasoning omitted.*
+*115 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 lets continue the homework
@@ -3957,5 +3957,266 @@ Shall I commit this first?
 
 **User:**
 yes
+
+**Claude:**
+- 🔧 `Bash` — Update transcript and commit Part 3 step 3
+Committed: `a99635f Part 3 step 3: user viewer, users.csv, people criterion, judge run, score vs judge table`. The working tree is clean.
+
+Next is Improvement 1. The slot asks three things: what you changed in the scoring function, what the judge and the viewer showed before, and what they showed after. So a change has to start from something you saw.
+
+You have two places to look:
+
+- **`user_agreement.csv`:** your score, the judge's rating and the difference for each of the 968 person-tag pairs. The mean difference is 1.64.
+- **`user_results.html`:** the viewer, for you and nine others, with where each tag came from.
+
+Look through those. What do you notice that makes you want to change your score, and what would you change?
+
+**User:**
+can you show me them?
+
+**Claude:**
+- 🔧 `Bash` — Open the viewer and table, and print summaries
+I opened both in your browser: `user_results.html`, and `user_agreement.csv` with all 968 rows. Here are three summaries of the table.
+
+**How many pairs have each difference:**
+```
+difference   0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5  4.0
+pairs        177   35  205   50  233   43  177    5   43
+```
+
+**Your score (rows) against the judge's rating (columns), counting pairs:**
+```
+judge rating   1    2    3    4    5
+my score
+3.0           19   37   30   19    5
+3.5            5   19    5    4    2
+4.0            7   38   15   11   16
+4.5            5   38   29    8   18
+5.0           43  170  171  118  136
+```
+
+**The next two people in the file, after 1451:**
+```
+ userId             tag  my score  judge rating  difference
+   3552       animation       5.0             5         0.0
+   3552          comedy       5.0             5         0.0
+   3552          family       5.0             4         1.0
+   3552      friendship       5.0             3         2.0
+   3552           funny       5.0             5         0.0
+   3552           Pixar       5.0             5         0.0
+   3552          quirky       5.0             2         3.0
+   3552          sci-fi       5.0             2         3.0
+   3552           magic       4.5             2         2.5
+   3552       superhero       4.5             2         2.5
+   3891          action       5.0             5         0.0
+   3891          comedy       5.0             2         3.0
+   3891     good acting       5.0             2         3.0
+   3891          sci-fi       5.0             5         0.0
+   3891 special effects       5.0             4         1.0
+   3891           adult       3.0             1         2.0
+   3891  Angelina Jolie       3.0             1         2.0
+   3891       animation       3.0             1         2.0
+   3891       Brad Pitt       3.0             1         2.0
+   3891      comic book       3.0             4         1.0
+```
+
+What do you notice here that makes you want to change your score?
+
+**User:**
+I notice that towards the bottom and specifically for names of actors tags I have a hgiher score than the judge ratings
+
+**Claude:**
+You're pointing at 3891's actor tags. On those, the table shows `Angelina Jolie` and `Brad Pitt` at `3.0` from your score and `1` from the judge.
+
+To make this an improvement, the change has to go into your scoring function. What would you change in `score(user, tag)` because of this, and what do you expect it to do to the table?
+
+**User:**
+I want to change to arbitraily place any names of actors as a score of 2, and I expect the table to change singificantly when actors names are in the top 10.
+
+**Claude:**
+- 🔧 `Edit` — /Users/logan/Documents/GitHub/comp440-hw1/WRITEUP.md
+- 🔧 `Bash` — Restore the student's original verb tense
+I put your observation and your planned change into Improvement 1. I fixed "higher", "arbitrarily" and "significantly". At first I also changed "notice" to "noticed", which changed your words, so I put it back. The slot reads:
+
+> I notice that towards the bottom and specifically for names of actors tags I have a higher score than the judge ratings. I want to change to arbitrarily place any names of actors as a score of 2, and I expect the table to change significantly when actors names are in the top 10.
+
+Before I can code it, one problem: nothing in the data marks a tag as an actor's name. The tags are free text, and the movie files have no cast lists. So the rule for which tags count as actors' names has to come from you.
+
+How should the code decide which tags are actor names?
+
+**User:**
+cross reference with a csv that has all celebratiy or actors names
+
+**Claude:**
+There's no list of actor names in this repo. I searched `data/`, and the only files are ratings, tags, movies and links. So the CSV would have to come from outside. I know of three ways to get one:
+
+- **IMDb's `name.basics` file.** It's the free public IMDb dataset of people. Each person has a name and professions, so it can be filtered to actors and actresses. It covers millions of people, so some ordinary tag words may match a name. I haven't checked its size.
+- **IMDb's cast lists per movie** (`title.principals`), joined to your movies through the `imdbId` column in `data/links.csv`. A tag would count as an actor only if it names someone in *that movie's* cast. This is narrower, but it's two large downloads.
+- **A list you write yourself** of the names to treat as actors, kept in a small CSV in the repo. It covers only the names you think of.
+
+Downloading from IMDb means fetching files from an outside site into your repo. The data itself stays unedited.
+
+Which do you want?
+
+**User:**
+ok nevermind forget changing the actors name tags
+
+**Claude:**
+Okay, the actor-name change is dropped. For now the Improvement 1 slot still holds what you said about it. When you pick a different change, I'll replace that text with your new words, unless you want to keep the observation.
+
+To find another change, look back at the two tables from before: the difference counts, and your score against the judge's rating. Or look at a few people on the viewer, in their dropdowns. Anything where your score and the judge often land far apart could be where a change starts.
+
+What else do you notice that you'd want your score to handle differently?
+
+**User:**
+i erased it because i want the score to handle the rating of 3 differently
+
+**Claude:**
+- 🔧 `Bash` — Read the Improvement 1 slot as it is now
+I see you cleared the Improvement 1 slot. It's empty now, which is fine, and your new change will go there.
+
+"The rating of 3" could mean two different parts of your score:
+
+- **The cutoff:** a movie counts only if the person rated it 3.0 or higher, so a 3.0 movie is kept.
+- **The score of 3:** a tag scores 3 when it's in the top 5 of just one kept movie. On the own-tags path, 3 is also the score for a tag outside the user's own top 5.
+
+In the table, the `3.0` row of your score is the second meaning.
+
+Which of these do you want to change, and to what?
+
+**User:**
+i want to change to consider movies that are above a 2 threshold
+
+**Claude:**
+So the change is to the cutoff, which is currently "rated 3.0 or higher". "Above 2" can be read two ways:
+
+- **Strictly above 2:** movies rated 2.5 and up count, and 2.0 is left out.
+- **2 and above:** movies rated 2.0 and up count.
+
+Which do you mean?
+
+**User:**
+I mean that movies that are rated 2 and up count towards the scoring function and before the judges views were farther off in difference with my scoring versus after
+
+**Claude:**
+- 🔧 `Bash` — Find every use of the rating cutoff
+- 🔧 `Bash` — Lower the score cutoff to 2.0 and regenerate users.csv
+- 🔧 `Bash` — Write the change into the Improvement 1 slot
+I made the change in `part3_users.py`. `KEEP_AT` is now 2.0 (it was 3.0), so movies rated 2.0 and up count toward your score. Your own top ten moved:
+
+```
+comedy 5.0, funny 4.5, animation 4.0, atmospheric 4.0, black comedy 4.0,
+dark comedy 4.0, drugs 4.0, horror 4.0, cult film 3.5, dark 3.5
+```
+
+The description still uses 3.0 and up. That was a separate rule you set, so I gave it its own setting, `DESC_KEEP_AT`, instead of letting it change along with the score. Tell me if you want the description to move to 2.0 as well.
+
+`judge/users.csv` is rebuilt. It has the same 100 people, and 50 of their rows have a different top-10 list.
+
+I wrote the change into Improvement 1:
+
+> I mean that movies that are rated 2 and up count towards the scoring function.
+
+I held back the second half of what you said, that the judge was farther off before than after. There's no "after" result yet, so for now that's an expectation. It can go in once the numbers exist.
+
+To get an "after", the judge has to rate the new lists. That means running again with `--force`, which replaces `judge/ratings_users.csv`. It should cost about $0.65 and take about 2 minutes. The "before" ratings are kept in commit `a99635f`, and the before mean difference was 1.64.
+
+Shall I run it?
+
+**User:**
+yes run it
+
+**Claude:**
+- 🔧 `Bash` — Rerun the people judge and the score-vs-judge table
+- 🔧 `Bash` — Rebuild and open the user viewer with the new score
+The judge finished. Then I reran section (4) and rebuilt the viewer, which is open again with the new score.
+
+```
+100 items rated on claude-sonnet-5, 976 tag ratings; 0 came back short.
+$0.65, 148 seconds.
+968 user-tag pairs asked; 968 have a judge rating; 8 judge rows match no asked tag
+mean |my score - judge rating| over the pairs with both: 1.68
+```
+
+Before, with the 3.0 cutoff, the mean difference was 1.64, from commit `a99635f`. After, with the 2.0 cutoff, it is 1.68.
+
+This contradicts what you said you expected, that the judge would be farther off before than after. That's why I kept that part out of the slot. It belongs in the Improvement 1 slot, written as what the numbers showed.
+
+Before you read the two means against each other, look again at the rows for the 50 people whose top-10 lists didn't change. The new `user_agreement.csv` has them next to the old one in `a99635f`.
+
+What do you make of the before and after?
+
+**User:**
+There is very little difference in the before and after of adjusting the scoring function therefore what I thought would an improvement did not actually help at all, and actaully worsed the difference between my score() and the judges rating
+
+**Claude:**
+- 🔧 `Bash` — Add the before/after reading to Improvement 1
+I added your reading to Improvement 1. I fixed "actually" and changed "worsed" to "worsened". The slot now reads:
+
+> I mean that movies that are rated 2 and up count towards the scoring function. There is very little difference in the before and after of adjusting the scoring function therefore what I thought would an improvement did not actually help at all, and actually worsened the difference between my score() and the judges rating.
+
+Three things you might want to add:
+
+- **A missing word.** "What I thought would an improvement" seems to be missing "be". I didn't add it, since that would change your words.
+- **The numbers and where they came from.** The slot doesn't give them yet: 1.64 before and 1.68 after, both from `part3_users.py` section (4).
+- **The viewer.** The slot asks what both the judge *and the viewer* showed before and after. On your own table, 3.0 → 2.0 brought in `horror` and `cult film`, and moved `comedy` to 5.0.
+
+What did the viewer show you, before and after?
+
+**User:**
+the viewer showed me before and after the rank, tag, score, and where it came from before and after
+
+**Claude:**
+- 🔧 `Bash` — Add the viewer sentence to Improvement 1
+I added your sentence to the end of Improvement 1, with a capital "The". It reads:
+
+> The viewer showed me before and after the rank, tag, score, and where it came from before and after.
+
+As written, the sentence names the viewer's columns. It doesn't say what was in them before or after. The slot asks what the viewer *showed*, meaning what changed on the page. For example: which tags entered or left your top ten, which scores moved, or what the dropdowns now list that they didn't before. You don't have to use those.
+
+Would you like to add what changed, or leave it as it is?
+
+**User:**
+i am unsure what has changed can you list the differrences in the before and after?
+
+**Claude:**
+- 🔧 `Bash` — List top-ten changes on the viewer from cutoff 3 to 2
+I compared each person's top ten under the old cutoff (3.0) and the new one (2.0), for the ten people on the viewer. Scores are in brackets:
+
+```
+999999 (you): entered: horror (4), cult film (3.5)
+              left:    Jonah Hill (3.5), musical (3.5)
+              moved:   comedy 4->5, funny 4->4.5, black comedy 3.5->4,
+                       dark comedy 3.5->4, drugs 3.5->4
+11912:  entered: zombies (5)             left: revenge (4.5)           moved: funny 4.5->5
+23753:  no change
+66408:  no change
+73741:  no change
+132067: entered: 007 (5), apocalypse (5) left: based on a book (5), based on a true story (5)
+144545: entered: surreal (4.5)           left: Stanley Kubrick (4)     moved: atmospheric 4.5->5, drugs 4->4.5
+158334: entered: aliens (5), Bond (5)    left: conspiracy (5), dark comedy (5)
+167647: no change
+189485: entered: black comedy (5)        left: documentary (5)
+```
+
+Look again at the rows for 132067, 158334 and 189485 before you write about them. The tags that entered and the tags that left all have the same score.
+
+Which of these changes do you want to say in the slot, and in what words?
+
+**User:**
+The biggest change is that my score() actually went up and it is an even better prediction to the type of movies that I like to watch. There are some changes in tags of the selected users as user 11912 has a new tag of zombies that entered, and one tag actually left of revenge, and one tagged moved which was funny based on it getting a higher rating after the improvement. Overall I would sya there are some small changes
+
+**Claude:**
+- 🔧 `Bash` — Add the viewer changes to Improvement 1 and read it back
+I added your words to the end of Improvement 1. I fixed "tagged" to "tag" and "sya" to "say", and added a full stop. The full slot now reads:
+
+> I mean that movies that are rated 2 and up count towards the scoring function. There is very little difference in the before and after of adjusting the scoring function therefore what I thought would an improvement did not actually help at all, and actually worsened the difference between my score() and the judges rating. The viewer showed me before and after the rank, tag, score, and where it came from before and after. The biggest change is that my score() actually went up and it is an even better prediction to the type of movies that I like to watch. There are some changes in tags of the selected users as user 11912 has a new tag of zombies that entered, and one tag actually left of revenge, and one tag moved which was funny based on it getting a higher rating after the improvement. Overall I would say there are some small changes.
+
+That completes Improvement 1. The cutoff change, the new judge run, the new table and this slot are all uncommitted.
+
+Shall I commit before we start Improvement 2?
+
+**User:**
+ok commit my work because i have to close my laptop
 
 <!-- end-session: 050fec7e-dc9f-4f51-bc77-e174692e6bf4 -->
