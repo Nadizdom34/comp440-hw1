@@ -207,7 +207,7 @@ I want a random seed of 100 users to be in users.csv to ensure a random variety 
 
 **Improvement 1: what I changed in the scoring function, what the judge and the viewer showed before and after (about 150 words):**
 
-XXXX
+I mean that movies that are rated 2 and up count towards the scoring function. There is very little difference in the before and after of adjusting the scoring function therefore what I thought would an improvement did not actually help at all, and actually worsened the difference between my score() and the judges rating. The viewer showed me before and after the rank, tag, score, and where it came from before and after. The biggest change is that my score() actually went up and it is an even better prediction to the type of movies that I like to watch. There are some changes in tags of the selected users as user 11912 has a new tag of zombies that entered, and one tag actually left of revenge, and one tag moved which was funny based on it getting a higher rating after the improvement. Overall I would say there are some small changes.
 
 **Improvement 2: the same (about 150 words):**
 

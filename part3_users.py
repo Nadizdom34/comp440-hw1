@@ -92,7 +92,7 @@ def add_me(ratings: pd.DataFrame, mine: pd.DataFrame) -> pd.DataFrame:
 # ------------------------------------------------------------------- yours to write ---
 
 SEED = 440          # the seed for breaking ties at 5th place: arbitrary, but the same every run
-KEEP_AT = 3.0       # a rated movie counts only when its rating is at least this
+KEEP_AT = 2.0       # a rated movie counts only when its rating is at least this (Improvement 1: was 3.0)
 TOP = 5             # "top 5", for a movie's tags and for a user's own tags
 OWN_MIN = 5         # a user needs this many distinct tags of their own for the own-tags path
 # The ratings path: how many kept movies have the tag in their top 5 -> score. Capped at 5.
@@ -143,6 +143,7 @@ def score(ratings: pd.DataFrame, tags: pd.DataFrame, movies: pd.DataFrame):
 USERS_SEED = 440        # which 100 people go in judge/users.csv: any fixed number
 USERS_N = 100           # how many people the judge is asked about; you are not one of them
 DESC_TOP = 3            # how many tags and how many genres the description lists
+DESC_KEEP_AT = 3.0      # the description's own cutoff, set separately from the score's
 JUDGE_TOP = 10          # how many of a person's tags the judge rates: their top 10 by score
 
 
@@ -160,7 +161,7 @@ def write_users_csv(ratings, tags, movies, scores, path=REPO / "judge" / "users.
 
     description: the person's number of ratings, first and most recent rating date, and the
     DESC_TOP most common genres and most-applied tags (by everyone, cleaned) over the movies
-    they rated KEEP_AT or higher. tags: their JUDGE_TOP tags by score(user, tag), ties
+    they rated DESC_KEEP_AT or higher. tags: their JUDGE_TOP tags by score(user, tag), ties
     alphabetical as on the user viewer, shown by each tag's most-used spelling."""
     import datetime
     day = lambda t: datetime.datetime.fromtimestamp(int(t), datetime.UTC).strftime("%Y-%m-%d")
@@ -172,13 +173,13 @@ def write_users_csv(ratings, tags, movies, scores, path=REPO / "judge" / "users.
     rows = []
     for user in picked:
         rated = ratings[ratings["userId"] == user]
-        kept = rated[rated["rating"] >= KEEP_AT]["movieId"]
+        kept = rated[rated["rating"] >= DESC_KEEP_AT]["movieId"]
         g = pd.DataFrame({"value": genres.reindex(kept).dropna().str.split("|").explode()})
         t = pd.DataFrame({"value": cleaned.loc[cleaned["movieId"].isin(kept), "tag"]})
         top_tags = [labels.get(x, x) for x in top_counted(t)]
         desc = (f"A MovieLens user with {len(rated)} ratings, the first on {day(rated['timestamp'].min())} "
                 f"and the most recent on {day(rated['timestamp'].max())}. Over the movies they rated "
-                f"{KEEP_AT:g} or higher, the most common genres are {', '.join(top_counted(g))} and the "
+                f"{DESC_KEEP_AT:g} or higher, the most common genres are {', '.join(top_counted(g))} and the "
                 f"most-applied tags are {', '.join(top_tags)}.")
         mine = scores[scores["userId"] == user].sort_values(["score", "tag"], ascending=[False, True])
         judged = [labels.get(x, x) for x in mine["tag"].head(JUDGE_TOP)]

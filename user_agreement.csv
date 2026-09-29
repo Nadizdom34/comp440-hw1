@@ -5,9 +5,9 @@ userId,tag,my score,judge rating,difference
 1451,sci-fi,5.0,5,0.0
 1451,animation,4.5,3,1.5
 1451,atmospheric,4.5,2,2.5
+1451,fantasy,4.5,3,1.5
 1451,satire,4.5,2,2.5
 1451,action,4.0,4,0.0
-1451,fantasy,4.0,3,1.0
 1451,film noir,4.0,1,3.0
 3552,animation,5.0,5,0.0
 3552,comedy,5.0,5,0.0
@@ -15,10 +15,10 @@ userId,tag,my score,judge rating,difference
 3552,friendship,5.0,3,2.0
 3552,funny,5.0,5,0.0
 3552,Pixar,5.0,5,0.0
-3552,quirky,5.0,2,3.0
+3552,quirky,5.0,3,2.0
 3552,sci-fi,5.0,2,3.0
 3552,magic,4.5,2,2.5
-3552,superhero,4.5,2,2.5
+3552,music,4.5,2,2.5
 3891,action,5.0,5,0.0
 3891,comedy,5.0,2,3.0
 3891,good acting,5.0,2,3.0
@@ -31,8 +31,8 @@ userId,tag,my score,judge rating,difference
 3891,comic book,3.0,4,1.0
 6124,art house,5.0,3,2.0
 6124,hallucinatory,5.0,4,1.0
-6124,Lynchianoir,5.0,3,2.0
-6124,mindfuck,5.0,5,0.0
+6124,Lynchianoir,5.0,2,3.0
+6124,mindfuck,5.0,4,1.0
 6124,nonlinear,5.0,4,1.0
 6124,atmospheric,3.0,5,2.0
 6124,dark,3.0,4,1.0
@@ -40,56 +40,56 @@ userId,tag,my score,judge rating,difference
 6124,disturbing,3.0,4,1.0
 6124,dreamlike,3.0,4,1.0
 6783,action,5.0,3,2.0
-6783,adventure,5.0,4,1.0
-6783,animation,5.0,4,1.0
+6783,adventure,5.0,5,0.0
+6783,animation,5.0,5,0.0
 6783,atmospheric,5.0,3,2.0
 6783,fantasy,5.0,5,0.0
-6783,animated,3.0,3,0.0
-6783,anime,3.0,2,1.0
-6783,beautifully filmed,3.0,2,1.0
-6783,beautiful scenery,3.0,2,1.0
+6783,animated,3.0,4,1.0
+6783,anime,3.0,3,0.0
+6783,beautifully filmed,3.0,3,0.0
+6783,beautiful scenery,3.0,3,0.0
 6783,Ben Kingsley,3.0,1,2.0
-9046,007,5.0,2,3.0
+9046,007,5.0,3,2.0
 9046,action,5.0,5,0.0
 9046,adventure,5.0,4,1.0
-9046,Alfred Hitchcock,5.0,1,4.0
+9046,Alfred Hitchcock,5.0,2,3.0
 9046,aliens,5.0,3,2.0
 9046,animation,5.0,2,3.0
-9046,anime,5.0,1,4.0
+9046,anime,5.0,2,3.0
+9046,artificial intelligence,5.0,3,2.0
 9046,atmospheric,5.0,5,0.0
-9046,based on a book,5.0,2,3.0
-9046,bittersweet,5.0,3,2.0
+9046,Audrey Hepburn,5.0,1,4.0
 11160,action,5.0,4,1.0
+11160,artificial intelligence,5.0,3,2.0
 11160,comedy,5.0,4,1.0
-11160,parody,5.0,2,3.0
+11160,parody,5.0,3,2.0
 11160,sci-fi,5.0,5,0.0
 11160,time travel,5.0,5,0.0
-11160,artificial intelligence,4.5,2,2.5
 11160,Bruce Willis,4.5,2,2.5
 11160,classic,4.5,2,2.5
-11160,thought-provoking,4.5,5,0.5
-11160,aliens,4.0,2,2.0
+11160,dystopia,4.5,3,1.5
+11160,funny,4.5,3,1.5
 11818,action,5.0,5,0.0
-11818,adventure,5.0,4,1.0
+11818,adventure,5.0,5,0.0
 11818,aliens,5.0,3,2.0
 11818,animation,5.0,2,3.0
 11818,Arnold Schwarzenegger,5.0,3,2.0
 11818,atmospheric,5.0,5,0.0
+11818,Bruce Willis,5.0,3,2.0
 11818,classic,5.0,3,2.0
-11818,comedy,5.0,4,1.0
+11818,comedy,5.0,5,0.0
 11818,comic book,5.0,3,2.0
-11818,cult film,5.0,2,3.0
-11864,007,5.0,2,3.0
+11864,007,5.0,3,2.0
+11864,1980s,5.0,2,3.0
 11864,Aardman,5.0,1,4.0
 11864,action,5.0,2,3.0
-11864,Adam Sandler,5.0,2,3.0
+11864,Adam Sandler,5.0,3,2.0
 11864,adventure,5.0,2,3.0
 11864,Akira Kurosawa,5.0,3,2.0
 11864,Alfred Hitchcock,5.0,5,0.0
 11864,aliens,5.0,4,1.0
 11864,Al Pacino,5.0,4,1.0
-11864,alternate reality,5.0,5,0.0
-13868,cute,5.0,1,4.0
+13868,cute,5.0,2,3.0
 13868,deception,5.0,3,2.0
 13868,ghosts/afterlife,5.0,3,2.0
 13868,surreal,5.0,3,2.0
@@ -98,7 +98,7 @@ userId,tag,my score,judge rating,difference
 13868,dreams,3.0,3,0.0
 13868,entertaining,3.0,2,1.0
 13868,funny,3.0,2,1.0
-13868,ghosts,3.0,2,1.0
+13868,ghosts,3.0,3,0.0
 14277,alternate reality,5.0,3,2.0
 14277,dreamlike,5.0,3,2.0
 14277,nonlinear,5.0,3,2.0
@@ -112,22 +112,22 @@ userId,tag,my score,judge rating,difference
 15037,aliens,5.0,4,1.0
 15037,sci-fi,5.0,5,0.0
 15037,space,5.0,5,0.0
-15037,time travel,4.5,3,1.5
+15037,time travel,4.5,4,0.5
 15037,adventure,4.0,4,0.0
-15037,atmospheric,4.0,2,2.0
-15037,dystopia,4.0,2,2.0
+15037,atmospheric,4.0,3,1.0
+15037,dystopia,4.0,3,1.0
 15037,Star Trek,4.0,3,1.0
+15037,suspense,4.0,2,2.0
 15037,thought-provoking,4.0,2,2.0
-15037,classic,3.5,2,1.5
 21815,007,5.0,3,2.0
 21815,action,5.0,5,0.0
-21815,adventure,5.0,4,1.0
+21815,adventure,5.0,3,2.0
 21815,aliens,5.0,4,1.0
 21815,alternate reality,5.0,3,2.0
 21815,animation,5.0,2,3.0
 21815,anime,5.0,2,3.0
-21815,apocalypse,5.0,3,2.0
-21815,archaeology,5.0,2,3.0
+21815,apocalypse,5.0,4,1.0
+21815,archaeology,5.0,3,2.0
 21815,Arnold Schwarzenegger,5.0,4,1.0
 23659,action,5.0,5,0.0
 23659,dark,5.0,3,2.0
@@ -140,10 +140,10 @@ userId,tag,my score,judge rating,difference
 24484,comedy,4.0,1,3.0
 24484,romance,4.0,1,3.0
 24484,aliens,3.5,1,2.5
-24484,apocalypse,3.5,1,2.5
-24484,Arnold Schwarzenegger,3.5,4,0.5
-24484,atmospheric,3.5,2,1.5
-24484,bittersweet,3.5,3,0.5
+24484,apocalypse,3.5,2,1.5
+24484,Arnold Schwarzenegger,3.5,3,0.5
+24484,atmospheric,3.5,3,0.5
+24484,bittersweet,3.5,2,1.5
 26326,action,5.0,5,0.0
 26326,atmospheric,5.0,5,0.0
 26326,funny,5.0,3,2.0
@@ -154,16 +154,16 @@ userId,tag,my score,judge rating,difference
 26326,16mm,3.0,1,2.0
 26326,17th century,3.0,1,2.0
 26326,1950s,3.0,1,2.0
-28169,comedy,4.0,5,1.0
+28169,comedy,4.0,4,0.0
 28169,fantasy,4.0,5,1.0
 28169,adventure,3.5,3,0.5
 28169,animation,3.5,3,0.5
 28169,atmospheric,3.5,2,1.5
 28169,beautifully filmed,3.5,2,1.5
 28169,classic,3.5,2,1.5
-28169,Disney,3.5,3,0.5
+28169,Disney,3.5,2,1.5
 28169,epic,3.5,2,1.5
-28169,funny,3.5,4,0.5
+28169,funny,3.5,3,0.5
 29798,comedy,5.0,5,0.0
 29798,adventure,4.5,3,1.5
 29798,animation,4.5,3,1.5
@@ -171,19 +171,19 @@ userId,tag,my score,judge rating,difference
 29798,family,4.5,3,1.5
 29798,based on a true story,4.0,2,2.0
 29798,bittersweet,4.0,2,2.0
-29798,romance,4.0,3,1.0
+29798,romance,4.0,2,2.0
 29798,Tom Hanks,4.0,5,1.0
-29798,children,3.5,5,1.5
+29798,Anthony Hopkins,3.5,2,1.5
+30765,dark comedy,5.0,4,1.0
 30765,psychology,5.0,5,0.0
-30765,thought-provoking,5.0,3,2.0
-30765,Tom Hanks,5.0,1,4.0
+30765,thought-provoking,5.0,4,1.0
+30765,Tom Hanks,5.0,2,3.0
 30765,adventure,4.5,5,0.5
 30765,comedy,4.5,5,0.5
-30765,dark comedy,4.5,2,2.5
-30765,Jim Carrey,4.5,1,3.5
+30765,Jim Carrey,4.5,2,2.5
+30765,Robin Williams,4.5,2,2.5
 30765,sci-fi,4.5,5,0.5
-30765,space,4.5,2,2.5
-30765,twist ending,4.5,5,0.5
+30765,space,4.5,3,1.5
 31127,bittersweet,5.0,3,2.0
 31127,dreamlike,5.0,3,2.0
 31127,mindfuck,5.0,3,2.0
@@ -194,18 +194,18 @@ userId,tag,my score,judge rating,difference
 31127,anime,3.0,1,2.0
 31127,artistic,3.0,2,1.0
 31127,assassin,3.0,1,2.0
-35710,Alfred Hitchcock,5.0,3,2.0
-35710,based on a true story,5.0,3,2.0
+35710,Alfred Hitchcock,5.0,2,3.0
+35710,based on a true story,5.0,2,3.0
 35710,bittersweet,5.0,3,2.0
 35710,Cary Grant,5.0,2,3.0
-35710,classic,5.0,3,2.0
+35710,classic,5.0,2,3.0
 35710,coming of age,5.0,3,2.0
 35710,historical,5.0,2,3.0
-35710,Paris,5.0,2,3.0
+35710,Paris,5.0,1,4.0
 35710,psychology,5.0,5,0.0
 35710,Tom Hanks,5.0,2,3.0
 36200,dark,5.0,4,1.0
-36200,franchise,5.0,3,2.0
+36200,franchise,5.0,2,3.0
 36200,stupid,5.0,2,3.0
 36200,tense,5.0,4,1.0
 36200,violent,5.0,3,2.0
@@ -215,139 +215,139 @@ userId,tag,my score,judge rating,difference
 36200,bad luck,3.0,2,1.0
 36200,Bechdel Test:Pass,3.0,2,1.0
 36475,sci-fi,5.0,5,0.0
-36475,science fiction,5.0,4,1.0
+36475,science fiction,5.0,5,0.0
 36475,thought-provoking,5.0,5,0.0
-36475,time travel,5.0,3,2.0
+36475,time travel,5.0,4,1.0
 36475,twist ending,5.0,5,0.0
 36475,Denzel Washington,3.0,2,1.0
-36475,excellent script,3.0,2,1.0
-36475,Excellent use of dialogue,3.0,2,1.0
+36475,excellent script,3.0,3,0.0
+36475,Excellent use of dialogue,3.0,3,0.0
 36475,intellectual,3.0,3,0.0
-36475,mindfuck,3.0,3,0.0
-42517,1980s,5.0,3,2.0
+36475,mindfuck,3.0,4,1.0
+42517,1980s,5.0,2,3.0
 42517,Aardman,5.0,2,3.0
+42517,action,5.0,3,2.0
 42517,adventure,5.0,3,2.0
-42517,Alfred Hitchcock,5.0,2,3.0
+42517,Alfred Hitchcock,5.0,4,1.0
 42517,aliens,5.0,4,1.0
-42517,animation,5.0,3,2.0
-42517,atmospheric,5.0,4,1.0
-42517,based on a book,5.0,4,1.0
+42517,animation,5.0,2,3.0
+42517,atmospheric,5.0,3,2.0
+42517,based on a book,5.0,3,2.0
 42517,Bill Murray,5.0,4,1.0
-42517,bittersweet,5.0,5,0.0
+44799,based on a true story,4.5,3,1.5
 44799,Tom Hanks,4.5,5,0.5
 44799,World War II,4.5,4,0.5
-44799,based on a true story,4.0,4,0.0
 44799,emotional,4.0,4,0.0
 44799,funny,4.0,3,1.0
-44799,holocaust,4.0,3,1.0
+44799,holocaust,4.0,4,0.0
 44799,inspirational,4.0,5,1.0
+44799,Leonardo DiCaprio,4.0,2,2.0
+44799,Martin Scorsese,4.0,2,2.0
 44799,Pixar,4.0,2,2.0
-44799,true story,4.0,4,0.0
-44799,action,3.5,2,1.5
 50087,action,5.0,5,0.0
 50087,classic,5.0,5,0.0
-50087,comedy,5.0,3,2.0
+50087,comedy,5.0,2,3.0
 50087,romance,5.0,4,1.0
-50087,sci-fi,5.0,3,2.0
+50087,sci-fi,5.0,2,3.0
 50087,Tom Hanks,5.0,2,3.0
 50087,animation,4.5,2,2.5
-50087,atmospheric,4.0,3,1.0
-50087,bittersweet,4.0,2,2.0
-50087,Disney,4.0,2,2.0
+50087,Arnold Schwarzenegger,4.5,2,2.5
+50087,atmospheric,4.5,3,1.5
+50087,adventure,4.0,2,2.0
 51619,Edward Norton,5.0,2,3.0
-51619,stylized,5.0,2,3.0
+51619,stylized,5.0,3,2.0
 51619,Uma Thurman,5.0,2,3.0
 51619,violence,5.0,4,1.0
 51619,visually appealing,5.0,3,2.0
 51619,adventure,3.0,3,0.0
-51619,based on a comic,3.0,2,1.0
-51619,bloody,3.0,3,0.0
-51619,car chase,3.0,2,1.0
-51619,computers,3.0,2,1.0
+51619,based on a comic,3.0,4,1.0
+51619,bloody,3.0,4,1.0
+51619,car chase,3.0,4,1.0
+51619,computers,3.0,4,1.0
 51840,classic,5.0,3,2.0
 51840,psychology,5.0,5,0.0
 51840,thought-provoking,5.0,5,0.0
 51840,atmospheric,4.5,5,0.5
-51840,Akira Kurosawa,4.0,2,2.0
+51840,suspense,4.5,4,0.5
+51840,Akira Kurosawa,4.0,3,1.0
 51840,psychological,4.0,4,0.0
+51840,sci-fi,4.0,3,1.0
 51840,stylized,4.0,3,1.0
-51840,suspense,4.0,3,1.0
-51840,Alfred Hitchcock,3.5,2,1.5
-51840,based on a true story,3.5,2,1.5
+51840,adventure,3.5,2,1.5
 56276,dark comedy,5.0,4,1.0
 56276,edgy,5.0,3,2.0
 56276,historical,5.0,2,3.0
 56276,inspiring,5.0,2,3.0
-56276,violent,5.0,1,4.0
-56276,unusual,3.0,4,1.0
+56276,violent,5.0,2,3.0
+56276,unusual,3.0,3,0.0
 56759,action,5.0,5,0.0
 56759,animation,5.0,2,3.0
 56759,comedy,5.0,5,0.0
 56759,funny,5.0,5,0.0
 56759,inspirational,5.0,2,3.0
-56759,Pixar,5.0,1,4.0
-56759,sci-fi,5.0,2,3.0
-56759,superhero,5.0,2,3.0
+56759,Pixar,5.0,2,3.0
+56759,sci-fi,5.0,3,2.0
+56759,superhero,5.0,3,2.0
 56759,war,5.0,2,3.0
 56759,adventure,4.5,3,1.5
 57047,childish,5.0,2,3.0
-57047,disturbing,5.0,4,1.0
+57047,disturbing,5.0,3,2.0
 57047,Guy from the Office,5.0,1,4.0
-57047,terrible,5.0,2,3.0
+57047,terrible,5.0,1,4.0
 57047,too much 80's music,5.0,1,4.0
 57047,Amazing Cinematography,3.0,4,1.0
-57047,amusing,3.0,3,0.0
-57047,better book,3.0,1,2.0
+57047,amusing,3.0,4,1.0
+57047,better book,3.0,2,1.0
 57047,creepy good,3.0,3,0.0
 57047,doll sex,3.0,1,2.0
 59214,action,5.0,5,0.0
-59214,adventure,5.0,5,0.0
-59214,Bruce Willis,5.0,3,2.0
-59214,comedy,5.0,5,0.0
-59214,Harrison Ford,5.0,3,2.0
-59214,romance,5.0,1,4.0
+59214,adventure,5.0,4,1.0
+59214,aliens,5.0,3,2.0
+59214,Bruce Willis,5.0,2,3.0
+59214,comedy,5.0,4,1.0
+59214,Harrison Ford,5.0,2,3.0
+59214,romance,5.0,2,3.0
 59214,sci-fi,5.0,5,0.0
-59214,space,5.0,4,1.0
-59214,Will Smith,5.0,4,1.0
-59214,aliens,4.5,4,0.5
-59357,adventure,5.0,5,0.0
+59214,space,5.0,3,2.0
+59214,Will Smith,5.0,2,3.0
+59357,adventure,5.0,4,1.0
 59357,animation,5.0,5,0.0
 59357,anime,5.0,5,0.0
-59357,based on a book,5.0,3,2.0
-59357,dreamlike,5.0,4,1.0
+59357,based on a book,5.0,2,3.0
+59357,Disney,5.0,3,2.0
+59357,dreamlike,5.0,3,2.0
 59357,fantasy,5.0,5,0.0
-59357,Hayao Miyazaki,5.0,4,1.0
-59357,Studio Ghibli,5.0,4,1.0
+59357,Hayao Miyazaki,5.0,3,2.0
+59357,Studio Ghibli,5.0,3,2.0
 59357,surreal,5.0,5,0.0
-59357,magic,4.5,4,0.5
-59452,action,5.0,4,1.0
-59452,adventure,5.0,3,2.0
-59452,aliens,5.0,4,1.0
+59452,action,5.0,5,0.0
+59452,adventure,5.0,2,3.0
+59452,aliens,5.0,3,2.0
 59452,Al Pacino,5.0,2,3.0
+59452,alternate reality,5.0,3,2.0
 59452,atmospheric,5.0,5,0.0
 59452,based on a book,5.0,2,3.0
 59452,based on a true story,5.0,2,3.0
 59452,bittersweet,5.0,2,3.0
-59452,black comedy,5.0,2,3.0
-59452,Brad Pitt,5.0,2,3.0
+59452,black comedy,5.0,1,4.0
 59477,action,5.0,2,3.0
 59477,adventure,5.0,2,3.0
 59477,aliens,5.0,2,3.0
-59477,alternate reality,5.0,3,2.0
+59477,Al Pacino,5.0,2,3.0
+59477,alternate reality,5.0,2,3.0
 59477,animation,5.0,2,3.0
+59477,Arnold Schwarzenegger,5.0,2,3.0
 59477,atmospheric,5.0,5,0.0
-59477,based on a true story,5.0,3,2.0
-59477,Ben Stiller,5.0,3,2.0
-59477,Bill Murray,5.0,4,1.0
-59477,bittersweet,5.0,4,1.0
-62700,A24,5.0,5,0.0
+59477,based on a book,5.0,2,3.0
+59477,based on a true story,5.0,2,3.0
+62700,A24,5.0,3,2.0
 62700,great acting,5.0,3,2.0
 62700,magic,5.0,4,1.0
-62700,rituals,5.0,4,1.0
-62700,Toni Collette,5.0,4,1.0
+62700,rituals,5.0,3,2.0
+62700,Toni Collette,5.0,2,3.0
 62700,cinematography,3.0,3,0.0
-62700,horror,3.0,3,0.0
-62700,mystery,3.0,4,1.0
+62700,horror,3.0,2,1.0
+62700,mystery,3.0,5,2.0
 62976,sci-fi,4.5,2,2.5
 62976,adventure,4.0,2,2.0
 62976,dark comedy,4.0,5,1.0
@@ -361,7 +361,7 @@ userId,tag,my score,judge rating,difference
 63056,action,5.0,5,0.0
 63056,amazing,5.0,2,3.0
 63056,dinosaurs,5.0,3,2.0
-63056,intense,5.0,3,2.0
+63056,intense,5.0,2,3.0
 63056,sci-fi,5.0,5,0.0
 65381,adventure,5.0,5,0.0
 65381,great soundtrack,5.0,2,3.0
@@ -374,164 +374,164 @@ userId,tag,my score,judge rating,difference
 65381,androids,3.0,3,0.0
 65381,anti-hero,3.0,2,1.0
 66178,action,5.0,5,0.0
-66178,adventure,5.0,4,1.0
+66178,adventure,5.0,3,2.0
+66178,alien,5.0,4,1.0
 66178,aliens,5.0,4,1.0
-66178,alternate reality,5.0,2,3.0
+66178,alternate reality,5.0,3,2.0
+66178,animation,5.0,2,3.0
 66178,anime,5.0,2,3.0
 66178,apocalypse,5.0,3,2.0
 66178,Arnold Schwarzenegger,5.0,3,2.0
 66178,artificial intelligence,5.0,4,1.0
-66178,atmospheric,5.0,5,0.0
-66178,black comedy,5.0,2,3.0
-71780,action,5.0,5,0.0
-71780,adventure,5.0,5,0.0
-71780,animation,5.0,1,4.0
-71780,atmospheric,5.0,2,3.0
-71780,based on a book,5.0,3,2.0
+71780,action,5.0,4,1.0
+71780,adventure,5.0,4,1.0
+71780,animation,5.0,2,3.0
+71780,atmospheric,5.0,3,2.0
+71780,based on a book,5.0,2,3.0
 71780,comedy,5.0,1,4.0
-71780,epic,5.0,4,1.0
+71780,epic,5.0,3,2.0
 71780,fantasy,5.0,5,0.0
 71780,funny,5.0,1,4.0
-71780,harry potter,5.0,4,1.0
+71780,harry potter,5.0,2,3.0
 72928,action,5.0,5,0.0
 72928,adventure,5.0,3,2.0
 72928,animation,5.0,2,3.0
 72928,atmospheric,5.0,2,3.0
 72928,based on a true story,5.0,2,3.0
+72928,black comedy,5.0,2,3.0
 72928,Brad Pitt,5.0,2,3.0
 72928,classic,5.0,2,3.0
 72928,comedy,5.0,5,0.0
 72928,crude humor,5.0,2,3.0
-72928,cult film,5.0,2,3.0
-73395,aliens,5.0,3,2.0
-73395,multiple personalities,5.0,3,2.0
+73395,aliens,5.0,4,1.0
+73395,multiple personalities,5.0,5,0.0
 73395,romantic comedy,5.0,1,4.0
-73395,space western,5.0,3,2.0
+73395,space western,5.0,4,1.0
 73395,Will Ferrell,5.0,1,4.0
-73395,dissociative identity disorder,3.0,3,0.0
-73395,James McAvoy,3.0,3,0.0
+73395,dissociative identity disorder,3.0,5,2.0
+73395,James McAvoy,3.0,5,2.0
 73395,jedi,3.0,4,1.0
-73395,Samuel L. Jackson,3.0,3,0.0
-73395,Star Wars,3.0,4,1.0
-76668,Christian Bale,5.0,4,1.0
+73395,Samuel L. Jackson,3.0,4,1.0
+73395,Star Wars,3.0,5,2.0
+76668,Christian Bale,5.0,5,0.0
 76668,Christopher Nolan,5.0,5,0.0
-76668,Hans Zimmer,5.0,3,2.0
-76668,Morgan Freeman,5.0,3,2.0
-76668,superhero,5.0,4,1.0
+76668,Hans Zimmer,5.0,5,0.0
+76668,Morgan Freeman,5.0,5,0.0
+76668,superhero,5.0,5,0.0
 76668,atmospheric,3.0,5,2.0
-76668,Batman,3.0,4,1.0
-76668,complicated,3.0,3,0.0
-76668,Daniel Craig,3.0,3,0.0
-76668,game theory,3.0,2,1.0
+76668,Batman,3.0,5,2.0
+76668,complicated,3.0,4,1.0
+76668,Daniel Craig,3.0,4,1.0
+76668,game theory,3.0,4,1.0
+78234,007,5.0,3,2.0
 78234,action,5.0,5,0.0
+78234,Adam Sandler,5.0,1,4.0
 78234,adventure,5.0,3,2.0
 78234,aliens,5.0,4,1.0
-78234,Arnold Schwarzenegger,5.0,4,1.0
+78234,alternate reality,5.0,4,1.0
+78234,animation,5.0,2,3.0
+78234,apocalypse,5.0,3,2.0
+78234,Arnold Schwarzenegger,5.0,3,2.0
 78234,artificial intelligence,5.0,4,1.0
-78234,atmospheric,5.0,2,3.0
-78234,based on a book,5.0,2,3.0
-78234,based on a true story,5.0,2,3.0
-78234,bittersweet,5.0,1,4.0
-78234,black comedy,5.0,1,4.0
 79959,action,5.0,5,0.0
-79959,adventure,5.0,5,0.0
-79959,aliens,5.0,4,1.0
-79959,atmospheric,5.0,3,2.0
-79959,based on a true story,5.0,2,3.0
-79959,bittersweet,5.0,2,3.0
-79959,Bruce Willis,5.0,4,1.0
-79959,classic,5.0,3,2.0
-79959,comedy,5.0,2,3.0
-79959,dystopia,5.0,4,1.0
-80812,courtroom,5.0,2,3.0
-80812,courtroom drama,5.0,2,3.0
+79959,adventure,5.0,4,1.0
+79959,aliens,5.0,3,2.0
+79959,Arnold Schwarzenegger,5.0,3,2.0
+79959,atmospheric,5.0,2,3.0
+79959,based on a true story,5.0,1,4.0
+79959,bittersweet,5.0,1,4.0
+79959,Bruce Willis,5.0,3,2.0
+79959,classic,5.0,2,3.0
+79959,comedy,5.0,1,4.0
+80812,courtroom,5.0,3,2.0
+80812,courtroom drama,5.0,3,2.0
 80812,dark comedy,5.0,5,0.0
-80812,lawyers,5.0,2,3.0
+80812,lawyers,5.0,3,2.0
 80812,psychology,5.0,5,0.0
-80812,thought-provoking,5.0,3,2.0
+80812,thought-provoking,5.0,2,3.0
 80812,twist ending,5.0,5,0.0
-80812,lawyer,4.5,2,2.5
-80812,social commentary,4.5,3,1.5
+80812,lawyer,4.5,3,1.5
+80812,social commentary,4.5,2,2.5
 80812,black comedy,4.0,3,1.0
-82914,action,5.0,3,2.0
-82914,adventure,5.0,3,2.0
-82914,animation,5.0,2,3.0
+82914,action,5.0,2,3.0
+82914,adventure,5.0,2,3.0
+82914,aliens,5.0,1,4.0
+82914,animation,5.0,1,4.0
 82914,atmospheric,5.0,5,0.0
+82914,based on a true story,5.0,3,2.0
+82914,bittersweet,5.0,3,2.0
 82914,classic,5.0,3,2.0
 82914,comedy,5.0,4,1.0
 82914,dark comedy,5.0,3,2.0
-82914,dystopia,5.0,2,3.0
-82914,funny,5.0,3,2.0
-82914,Johnny Depp,5.0,2,3.0
 86391,British,5.0,2,3.0
 86391,comedy,5.0,5,0.0
-86391,Julia Roberts,5.0,3,2.0
+86391,Julia Roberts,5.0,4,1.0
 86391,romance,5.0,5,0.0
 86391,Tom Hanks,5.0,5,0.0
-86391,adventure,4.5,3,1.5
-86391,chick flick,4.5,3,1.5
-86391,Harrison Ford,4.5,3,1.5
-86391,heartwarming,4.5,3,1.5
-86391,love story,4.5,3,1.5
+86391,adventure,4.5,2,2.5
+86391,chick flick,4.5,4,0.5
+86391,classic,4.5,3,1.5
+86391,Harrison Ford,4.5,2,2.5
+86391,heartwarming,4.5,4,0.5
 88490,psychology,5.0,5,0.0
-88490,sci-fi,5.0,1,4.0
-88490,suspense,5.0,5,0.0
+88490,sci-fi,5.0,2,3.0
+88490,suspense,5.0,4,1.0
 88490,thought-provoking,5.0,4,1.0
 88490,twist ending,5.0,5,0.0
 88490,absorbing,3.0,3,0.0
 88490,acting,3.0,2,1.0
 88490,action,3.0,2,1.0
-88490,addiction,3.0,3,0.0
+88490,addiction,3.0,2,1.0
 88490,adult humor,3.0,1,2.0
 88986,action,5.0,5,0.0
-88986,adventure,5.0,5,0.0
-88986,aliens,5.0,4,1.0
-88986,alternate reality,5.0,3,2.0
-88986,artificial intelligence,5.0,4,1.0
-88986,atmospheric,5.0,3,2.0
+88986,adventure,5.0,4,1.0
+88986,aliens,5.0,3,2.0
+88986,alternate reality,5.0,2,3.0
+88986,artificial intelligence,5.0,3,2.0
+88986,atmospheric,5.0,2,3.0
+88986,based on a book,5.0,2,3.0
 88986,Bruce Willis,5.0,2,3.0
-88986,comedy,5.0,2,3.0
-88986,comic book,5.0,3,2.0
-88986,cyberpunk,5.0,4,1.0
+88986,classic,5.0,2,3.0
+88986,comedy,5.0,1,4.0
 92212,thought-provoking,5.0,5,0.0
 92212,dark comedy,4.5,2,2.5
 92212,psychology,4.5,5,0.5
-92212,surreal,4.0,2,2.0
+92212,adventure,4.0,2,2.0
+92212,sci-fi,4.0,3,1.0
+92212,surreal,4.0,3,1.0
+92212,suspense,4.0,4,0.0
 92212,twist ending,4.0,5,1.0
 92212,classic,3.5,2,1.5
 92212,comedy,3.5,2,1.5
-92212,drugs,3.5,2,1.5
-92212,inspirational,3.5,2,1.5
-92212,Kevin Spacey,3.5,2,1.5
 93865,action,5.0,5,0.0
-93865,adventure,5.0,4,1.0
+93865,adventure,5.0,3,2.0
 93865,aliens,5.0,4,1.0
-93865,animation,5.0,2,3.0
+93865,animation,5.0,1,4.0
+93865,Arnold Schwarzenegger,5.0,3,2.0
 93865,artificial intelligence,5.0,4,1.0
 93865,atmospheric,5.0,5,0.0
-93865,based on a book,5.0,3,2.0
-93865,based on a true story,5.0,3,2.0
-93865,bittersweet,5.0,3,2.0
-93865,black comedy,5.0,2,3.0
+93865,based on a book,5.0,2,3.0
+93865,based on a true story,5.0,2,3.0
+93865,bittersweet,5.0,2,3.0
 96631,adventure,5.0,2,3.0
 96631,animation,5.0,2,3.0
-96631,bittersweet,5.0,2,3.0
-96631,chick flick,5.0,2,3.0
-96631,classic,5.0,2,3.0
+96631,based on a true story,5.0,3,2.0
+96631,bittersweet,5.0,3,2.0
+96631,chick flick,5.0,3,2.0
+96631,Christmas,5.0,2,3.0
+96631,classic,5.0,3,2.0
 96631,comedy,5.0,5,0.0
-96631,coming of age,5.0,2,3.0
+96631,coming of age,5.0,3,2.0
 96631,Disney,5.0,2,3.0
-96631,funny,5.0,4,1.0
-96631,heartwarming,5.0,3,2.0
 97099,animation,5.0,2,3.0
-97099,based on a book,5.0,2,3.0
+97099,based on a book,5.0,3,2.0
 97099,comedy,5.0,3,2.0
 97099,Disney,5.0,2,3.0
 97099,funny,5.0,5,0.0
 97099,Marvel,5.0,5,0.0
 97099,Pixar,5.0,2,3.0
 97099,Robert Downey Jr.,5.0,4,1.0
-97099,sci-fi,5.0,5,0.0
+97099,sci-fi,5.0,4,1.0
 97099,superhero,5.0,5,0.0
 97296,adventure,5.0,4,1.0
 97296,comedy,5.0,4,1.0
@@ -540,304 +540,304 @@ userId,tag,my score,judge rating,difference
 97296,animation,4.0,2,2.0
 97296,classic,4.0,5,1.0
 97296,epic,4.0,2,2.0
-97296,funny,4.0,2,2.0
+97296,funny,4.0,3,1.0
 97296,psychology,4.0,5,1.0
 97296,Tom Hanks,4.0,2,2.0
 98182,007,5.0,2,3.0
 98182,action,5.0,4,1.0
-98182,adventure,5.0,2,3.0
+98182,adventure,5.0,3,2.0
 98182,Africa,5.0,1,4.0
 98182,alien,5.0,3,2.0
 98182,aliens,5.0,3,2.0
 98182,Al Pacino,5.0,2,3.0
+98182,alternate reality,5.0,3,2.0
 98182,animation,5.0,1,4.0
 98182,anime,5.0,1,4.0
-98182,Arnold Schwarzenegger,5.0,3,2.0
 98607,basketball,5.0,1,4.0
 98607,comedy,5.0,2,3.0
 98607,dialogue,5.0,2,3.0
 98607,Hugh Grant,5.0,1,4.0
 98607,Quentin Tarantino,5.0,3,2.0
 98607,action,3.0,5,2.0
-98607,British,3.0,2,1.0
-98607,Bruce Willis,3.0,3,0.0
+98607,British,3.0,1,2.0
+98607,Bruce Willis,3.0,4,1.0
 98607,crime,3.0,4,1.0
-98607,Tom Cruise,3.0,2,1.0
+98607,Tom Cruise,3.0,4,1.0
 99090,animation,5.0,2,3.0
 99090,comedy,5.0,4,1.0
-99090,Disney,5.0,2,3.0
+99090,Disney,5.0,1,4.0
 99090,sci-fi,5.0,5,0.0
 99090,funny,4.5,3,1.5
+99090,action,4.0,2,2.0
+99090,adventure,4.0,4,0.0
 99090,coming of age,4.0,2,2.0
 99090,dystopia,4.0,5,1.0
-99090,musical,4.0,2,2.0
-99090,parody,4.0,2,2.0
-99090,quirky,4.0,2,2.0
+99090,musical,4.0,1,3.0
 99195,comedy,5.0,5,0.0
 99195,dark comedy,5.0,5,0.0
 99195,parody,5.0,3,2.0
 99195,quirky,5.0,3,2.0
 99195,animation,4.5,2,2.5
-99195,classic,4.5,3,1.5
-99195,coming of age,4.5,3,1.5
+99195,classic,4.5,2,2.5
+99195,coming of age,4.5,2,2.5
 99195,cult film,4.5,3,1.5
 99195,musical,4.5,2,2.5
 99195,satire,4.5,3,1.5
-99198,action,5.0,5,0.0
+99198,action,5.0,4,1.0
 99198,espionage,5.0,2,3.0
 99198,mindfuck,5.0,4,1.0
 99198,sci-fi,5.0,5,0.0
 99198,time travel,5.0,4,1.0
-99198,action packed,3.0,4,1.0
+99198,action packed,3.0,3,0.0
 99198,animation,3.0,1,2.0
 99198,artificial intelligence,3.0,3,0.0
 99198,bad dialogue,3.0,1,2.0
 99198,car chase,3.0,2,1.0
-106603,action,5.0,1,4.0
+106603,action,5.0,2,3.0
 106603,adventure,5.0,1,4.0
 106603,Al Pacino,5.0,4,1.0
+106603,Angelina Jolie,5.0,2,3.0
+106603,Anthony Hopkins,5.0,4,1.0
 106603,atmospheric,5.0,5,0.0
 106603,based on a book,5.0,3,2.0
-106603,based on a true story,5.0,2,3.0
+106603,based on a true story,5.0,3,2.0
 106603,Bill Murray,5.0,1,4.0
 106603,biography,5.0,2,3.0
-106603,black and white,5.0,3,2.0
-106603,black comedy,5.0,2,3.0
 106660,Nazis,5.0,3,2.0
 106660,Post apocalyptic,5.0,4,1.0
 106660,sci-fi,5.0,5,0.0
 106660,Tom Cruise,5.0,3,2.0
 106660,World War II,5.0,3,2.0
-106660,dystopia,3.0,4,1.0
-106660,Germany,3.0,3,0.0
+106660,dystopia,3.0,5,2.0
+106660,Germany,3.0,2,1.0
 106660,history,3.0,3,0.0
-106660,social commentary,3.0,2,1.0
+106660,social commentary,3.0,3,0.0
 106660,space,3.0,4,1.0
-107814,action,5.0,4,1.0
-107814,Alfred Hitchcock,5.0,2,3.0
+107814,action,5.0,3,2.0
+107814,Alfred Hitchcock,5.0,4,1.0
 107814,aliens,5.0,3,2.0
 107814,Al Pacino,5.0,2,3.0
 107814,Arnold Schwarzenegger,5.0,2,3.0
 107814,artificial intelligence,5.0,4,1.0
 107814,atmospheric,5.0,4,1.0
 107814,black comedy,5.0,2,3.0
-107814,Brad Pitt,5.0,2,3.0
-107814,Bruce Willis,5.0,2,3.0
+107814,Brad Pitt,5.0,4,1.0
+107814,Bruce Willis,5.0,5,0.0
+109510,dark comedy,5.0,2,3.0
+109510,quirky,5.0,2,3.0
 109510,sci-fi,5.0,5,0.0
-109510,visually appealing,5.0,2,3.0
+109510,visually appealing,5.0,3,2.0
 109510,Wes Anderson,5.0,1,4.0
-109510,dark comedy,4.5,2,2.5
 109510,dystopia,4.5,5,0.5
-109510,quirky,4.5,2,2.5
-109510,cinematography,4.0,2,2.0
-109510,Star Wars,4.0,3,1.0
-109510,strong female lead,4.0,2,2.0
-109510,classic,3.5,2,1.5
+109510,cinematography,4.0,3,1.0
+109510,classic,4.0,2,2.0
+109510,comedy,4.0,2,2.0
+109510,Star Wars,4.0,4,0.0
 112538,adventure,5.0,5,0.0
-112538,animation,5.0,3,2.0
-112538,based on a book,5.0,3,2.0
+112538,animation,5.0,4,1.0
+112538,based on a book,5.0,4,1.0
 112538,classic,5.0,2,3.0
 112538,fantasy,5.0,5,0.0
 112538,funny,5.0,3,2.0
-112538,harry potter,5.0,3,2.0
+112538,harry potter,5.0,4,1.0
 112538,magic,5.0,4,1.0
 112538,Pixar,5.0,3,2.0
 112538,comedy,4.5,2,2.5
-113933,cerebral,5.0,5,0.0
-113933,language,5.0,3,2.0
-113933,linguistics,5.0,3,2.0
+113933,cerebral,5.0,4,1.0
+113933,language,5.0,2,3.0
+113933,linguistics,5.0,2,3.0
 113933,sense of awe,5.0,4,1.0
-113933,thoughtful sci-fi,5.0,5,0.0
-113933,future,3.0,4,1.0
-113933,futuristic,3.0,4,1.0
-113933,Intelligent Sc-Fi,3.0,5,2.0
+113933,thoughtful sci-fi,5.0,4,1.0
+113933,future,3.0,3,0.0
+113933,futuristic,3.0,3,0.0
+113933,Intelligent Sc-Fi,3.0,4,1.0
 113933,spiritual,3.0,3,0.0
 115412,action,5.0,5,0.0
 115412,adventure,5.0,4,1.0
-115412,aliens,5.0,4,1.0
+115412,aliens,5.0,3,2.0
+115412,Angelina Jolie,5.0,3,2.0
 115412,animation,5.0,2,3.0
 115412,anime,5.0,2,3.0
 115412,atmospheric,5.0,5,0.0
 115412,based on a book,5.0,2,3.0
 115412,Brad Pitt,5.0,3,2.0
 115412,Bruce Willis,5.0,4,1.0
-115412,car chase,5.0,4,1.0
 121658,action,5.0,5,0.0
 121658,adventure,5.0,3,2.0
 121658,aliens,5.0,4,1.0
-121658,animation,5.0,1,4.0
-121658,apocalypse,5.0,4,1.0
+121658,animation,5.0,2,3.0
+121658,apocalypse,5.0,3,2.0
 121658,artificial intelligence,5.0,4,1.0
-121658,atmospheric,5.0,2,3.0
+121658,atmospheric,5.0,3,2.0
 121658,Bruce Willis,5.0,3,2.0
-121658,comedy,5.0,1,4.0
+121658,comedy,5.0,2,3.0
 121658,comic book,5.0,3,2.0
 124415,action,5.0,4,1.0
+124415,Adam Sandler,5.0,1,4.0
 124415,adventure,5.0,3,2.0
 124415,aliens,5.0,4,1.0
+124415,alternate reality,5.0,5,0.0
 124415,animation,5.0,1,4.0
-124415,artificial intelligence,5.0,4,1.0
-124415,atmospheric,5.0,3,2.0
+124415,apocalypse,5.0,4,1.0
+124415,artificial intelligence,5.0,5,0.0
+124415,atmospheric,5.0,4,1.0
 124415,based on a book,5.0,2,3.0
-124415,based on a true story,5.0,2,3.0
-124415,bittersweet,5.0,2,3.0
-124415,black comedy,5.0,1,4.0
 127984,"imaginary world, characters, story, philosophical",5.0,1,4.0
 127984,meaning of life,5.0,2,3.0
 127984,philosophical,5.0,3,2.0
 127984,sci-fi,5.0,5,0.0
-127984,script,5.0,2,3.0
-129222,funny,5.0,4,1.0
-129222,hilarious,5.0,4,1.0
-129222,James Bond,5.0,3,2.0
-129222,Mike Myers,5.0,3,2.0
+127984,script,5.0,1,4.0
+129222,funny,5.0,3,2.0
+129222,hilarious,5.0,3,2.0
+129222,James Bond,5.0,1,4.0
+129222,Mike Myers,5.0,1,4.0
 129222,stupid,5.0,2,3.0
-131521,action,5.0,4,1.0
+131521,action,5.0,3,2.0
 131521,adventure,5.0,3,2.0
-131521,aliens,5.0,3,2.0
-131521,animation,5.0,1,4.0
+131521,aliens,5.0,2,3.0
+131521,animation,5.0,2,3.0
 131521,atmospheric,5.0,5,0.0
 131521,based on a true story,5.0,2,3.0
 131521,bittersweet,5.0,2,3.0
 131521,black comedy,5.0,2,3.0
 131521,Brad Pitt,5.0,2,3.0
-131521,Bruce Willis,5.0,3,2.0
+131521,Bruce Willis,5.0,2,3.0
 133109,black comedy,5.0,4,1.0
 133109,comedy,5.0,5,0.0
-133109,coming of age,5.0,3,2.0
+133109,coming of age,5.0,2,3.0
 133109,dark comedy,5.0,5,0.0
-133109,funny,5.0,4,1.0
+133109,Disney,5.0,1,4.0
+133109,funny,5.0,3,2.0
 133109,high school,5.0,2,3.0
-133109,quirky,5.0,3,2.0
-133109,romance,5.0,4,1.0
-133109,animation,4.5,1,3.5
-133109,atmospheric,4.5,1,3.5
-133675,disturbing,5.0,2,3.0
-133675,horrors of war,5.0,2,3.0
+133109,Julia Roberts,5.0,1,4.0
+133109,quirky,5.0,2,3.0
+133109,romance,5.0,3,2.0
+133675,disturbing,5.0,1,4.0
+133675,horrors of war,5.0,1,4.0
 133675,thriller,5.0,2,3.0
-133675,true story,5.0,3,2.0
-133675,violence,5.0,3,2.0
-133675,action,3.0,4,1.0
-133675,based on a true story,3.0,3,0.0
-133675,biographical,3.0,3,0.0
-133675,biography,3.0,3,0.0
-133675,blood,3.0,2,1.0
-135059,dark comedy,5.0,3,2.0
+133675,true story,5.0,1,4.0
+133675,violence,5.0,1,4.0
+133675,action,3.0,2,1.0
+133675,based on a true story,3.0,1,2.0
+133675,biographical,3.0,1,2.0
+133675,biography,3.0,1,2.0
+133675,blood,3.0,1,2.0
+135059,dark comedy,5.0,4,1.0
 135059,classic,4.5,5,0.5
 135059,psychology,4.5,3,1.5
 135059,twist ending,4.5,5,0.5
 135059,Aardman,4.0,1,3.0
 135059,adventure,4.0,2,2.0
 135059,claymation,4.0,1,3.0
-135059,social commentary,4.0,3,1.0
+135059,organized crime,4.0,4,0.0
+135059,social commentary,4.0,4,0.0
 135059,thought-provoking,4.0,5,1.0
-135059,based on a true story,3.5,2,1.5
 136522,action,5.0,5,0.0
-136522,cars,5.0,3,2.0
+136522,cars,5.0,5,0.0
+136522,comedy,5.0,1,4.0
+136522,robots,5.0,2,3.0
 136522,sci-fi,5.0,5,0.0
-136522,animation,4.5,2,2.5
-136522,comedy,4.5,3,1.5
-136522,Paul Walker,4.5,3,1.5
-136522,robots,4.5,3,1.5
-136522,Vin Diesel,4.5,3,1.5
-136522,adventure,4.0,5,1.0
-136522,happy ending,4.0,2,2.0
+136522,adventure,4.5,5,0.5
+136522,animation,4.5,1,3.5
+136522,Paul Walker,4.5,5,0.5
+136522,romantic comedy,4.5,1,3.5
+136522,Vin Diesel,4.5,5,0.5
 136880,action,5.0,5,0.0
 136880,Bruce Willis,5.0,3,2.0
 136880,comic book,5.0,3,2.0
 136880,Marvel,5.0,3,2.0
 136880,Nicolas Cage,5.0,3,2.0
+136880,sci-fi,5.0,5,0.0
 136880,superhero,5.0,3,2.0
-136880,sci-fi,4.5,5,0.5
+136880,adventure,4.5,5,0.5
 136880,time travel,4.5,3,1.5
-136880,adventure,4.0,4,0.0
 136880,Arnold Schwarzenegger,4.0,3,1.0
 137460,action,5.0,5,0.0
-137460,adventure,5.0,4,1.0
+137460,adventure,5.0,5,0.0
+137460,fantasy,5.0,2,3.0
 137460,Marvel,5.0,4,1.0
 137460,sci-fi,5.0,5,0.0
 137460,superhero,5.0,5,0.0
 137460,comic book,4.5,4,0.5
 137460,epic,4.5,3,1.5
-137460,espionage,4.5,2,2.5
-137460,fantasy,4.5,3,1.5
-137460,Batman,4.0,2,2.0
-138325,1980s,5.0,2,3.0
+137460,espionage,4.5,3,1.5
+137460,Batman,4.0,3,1.0
+138325,1980s,5.0,3,2.0
 138325,action,5.0,5,0.0
 138325,adventure,5.0,3,2.0
-138325,comedy,5.0,3,2.0
+138325,classic,5.0,5,0.0
+138325,comedy,5.0,4,1.0
+138325,parody,5.0,3,2.0
 138325,quirky,5.0,2,3.0
 138325,sci-fi,5.0,5,0.0
-138325,classic,4.5,5,0.5
+138325,Bill Murray,4.5,2,2.5
 138325,coming of age,4.5,2,2.5
-138325,high school,4.5,2,2.5
-138325,parody,4.5,2,2.5
 139735,action,5.0,5,0.0
-139735,adventure,5.0,4,1.0
-139735,Arnold Schwarzenegger,5.0,3,2.0
-139735,Harrison Ford,5.0,3,2.0
+139735,adventure,5.0,3,2.0
+139735,Arnold Schwarzenegger,5.0,2,3.0
+139735,Harrison Ford,5.0,2,3.0
 139735,sci-fi,5.0,5,0.0
-139735,space,5.0,4,1.0
+139735,space,5.0,3,2.0
 139735,suspense,5.0,3,2.0
+139735,classic,4.5,5,0.5
+139735,Steven Spielberg,4.5,2,2.5
 139735,thriller,4.5,5,0.5
-139735,aliens,4.0,4,0.0
-139735,archaeology,4.0,2,2.0
 141560,adventure,5.0,5,0.0
-141560,animation,5.0,4,1.0
+141560,animation,5.0,5,0.0
 141560,anime,5.0,3,2.0
 141560,Hayao Miyazaki,5.0,3,2.0
+141560,Pixar,5.0,3,2.0
 141560,sci-fi,5.0,5,0.0
+141560,social commentary,5.0,2,3.0
 141560,Studio Ghibli,5.0,3,2.0
 141560,classic,4.5,2,2.5
 141560,fantasy,4.5,5,0.5
-141560,Pixar,4.5,3,1.5
-141560,social commentary,4.5,1,3.5
-144056,adventure,5.0,4,1.0
+144056,adventure,5.0,3,2.0
 144056,animation,5.0,1,4.0
 144056,comedy,5.0,1,4.0
-144056,fantasy,5.0,1,4.0
+144056,fantasy,5.0,2,3.0
 144056,funny,5.0,1,4.0
-144056,psychological,5.0,3,2.0
-144056,psychology,5.0,2,3.0
-144056,social commentary,5.0,3,2.0
-144056,thought-provoking,5.0,5,0.0
-144056,Tom Hanks,5.0,1,4.0
-144336,action,5.0,4,1.0
-144336,comedy,5.0,2,3.0
-144336,romance,5.0,2,3.0
+144056,great acting,5.0,4,1.0
+144056,Leonardo DiCaprio,5.0,3,2.0
+144056,psychological,5.0,5,0.0
+144056,psychology,5.0,4,1.0
+144056,social commentary,5.0,4,1.0
+144336,action,5.0,5,0.0
+144336,adventure,5.0,3,2.0
+144336,comedy,5.0,1,4.0
+144336,romance,5.0,1,4.0
 144336,sci-fi,5.0,5,0.0
-144336,Tom Hanks,5.0,2,3.0
-144336,adventure,4.5,3,1.5
-144336,animation,4.5,2,2.5
+144336,Tom Hanks,5.0,1,4.0
+144336,animation,4.5,1,3.5
 144336,boxing,4.5,2,2.5
-144336,suspense,4.5,4,0.5
-144336,time travel,4.5,4,0.5
+144336,inspirational,4.5,2,2.5
+144336,psychology,4.5,4,0.5
 145630,action,5.0,2,3.0
 145630,adventure,5.0,2,3.0
 145630,atmospheric,5.0,5,0.0
-145630,classic,5.0,2,3.0
+145630,classic,5.0,3,2.0
 145630,comedy,5.0,2,3.0
-145630,dark,5.0,3,2.0
+145630,dark,5.0,4,1.0
 145630,dark comedy,5.0,2,3.0
-145630,great acting,5.0,2,3.0
-145630,mindfuck,5.0,3,2.0
-145630,nonlinear,5.0,2,3.0
+145630,great acting,5.0,3,2.0
+145630,mindfuck,5.0,4,1.0
+145630,nonlinear,5.0,4,1.0
 146992,adventure,5.0,2,3.0
-146992,Alfred Hitchcock,5.0,4,1.0
+146992,Alfred Hitchcock,5.0,3,2.0
 146992,Al Pacino,5.0,3,2.0
 146992,atmospheric,5.0,5,0.0
 146992,based on a true story,5.0,3,2.0
 146992,bittersweet,5.0,3,2.0
-146992,cinematography,5.0,4,1.0
+146992,cinematography,5.0,3,2.0
 146992,classic,5.0,2,3.0
 146992,Clint Eastwood,5.0,3,2.0
-146992,coming of age,5.0,3,2.0
-147555,comedy,5.0,4,1.0
+146992,coming of age,5.0,2,3.0
+147555,comedy,5.0,5,0.0
+147555,Nudity (Topless),5.0,2,3.0
 147555,sci-fi,5.0,5,0.0
-147555,Nudity (Topless),4.5,2,2.5
 147555,space,4.5,5,0.5
 147555,action,4.0,5,1.0
-147555,adventure,4.0,3,1.0
+147555,adventure,4.0,4,0.0
 147555,Arnold Schwarzenegger,4.0,3,1.0
 147555,dystopia,4.0,3,1.0
 147555,psychology,4.0,2,2.0
@@ -845,125 +845,125 @@ userId,tag,my score,judge rating,difference
 151438,Alan Rickman,5.0,2,3.0
 151438,British,5.0,2,3.0
 151438,Emma Watson,5.0,2,3.0
-151438,great soundtrack,5.0,2,3.0
-151438,Robert Downey Jr.,5.0,3,2.0
-151438,1960s,3.0,2,1.0
-151438,Aaron Sorkin,3.0,2,1.0
-151438,academia,3.0,2,1.0
-151438,action spoof,3.0,3,0.0
+151438,great soundtrack,5.0,1,4.0
+151438,Robert Downey Jr.,5.0,2,3.0
+151438,1960s,3.0,1,2.0
+151438,Aaron Sorkin,3.0,3,0.0
+151438,academia,3.0,3,0.0
+151438,action spoof,3.0,2,1.0
 151438,Al Pacino,3.0,2,1.0
-155140,black hole,5.0,2,3.0
-155140,father and daughter story,5.0,1,4.0
-155140,good vs evil,5.0,2,3.0
-155140,space,5.0,3,2.0
-155140,space adventure,5.0,2,3.0
+155140,black hole,5.0,4,1.0
+155140,father and daughter story,5.0,2,3.0
+155140,good vs evil,5.0,3,2.0
+155140,space,5.0,4,1.0
+155140,space adventure,5.0,4,1.0
 157714,action,5.0,5,0.0
 157714,adventure,5.0,5,0.0
-157714,aliens,5.0,4,1.0
+157714,aliens,5.0,3,2.0
 157714,animation,5.0,2,3.0
 157714,atmospheric,5.0,3,2.0
 157714,based on a book,5.0,2,3.0
-157714,comedy,5.0,1,4.0
-157714,dystopia,5.0,4,1.0
-157714,epic,5.0,4,1.0
+157714,comedy,5.0,2,3.0
+157714,dystopia,5.0,3,2.0
+157714,epic,5.0,3,2.0
 157714,fantasy,5.0,3,2.0
 159080,adventure,5.0,4,1.0
 159080,aliens,5.0,3,2.0
+159080,atmospheric,5.0,5,0.0
 159080,fantasy,5.0,3,2.0
 159080,sci-fi,5.0,5,0.0
 159080,space,5.0,3,2.0
-159080,atmospheric,4.5,5,0.5
-159080,dark comedy,4.5,2,2.5
-159080,thought-provoking,4.5,2,2.5
+159080,dark comedy,4.5,1,3.5
+159080,thought-provoking,4.5,3,1.5
 159080,action,4.0,4,0.0
-159080,based on a true story,4.0,2,2.0
+159080,artificial intelligence,4.0,2,2.0
 159899,1980s,5.0,2,3.0
 159899,acting,5.0,2,3.0
 159899,action,5.0,5,0.0
-159899,Adam Sandler,5.0,2,3.0
+159899,Adam Sandler,5.0,3,2.0
 159899,adventure,5.0,3,2.0
-159899,alcoholism,5.0,1,4.0
+159899,alcoholism,5.0,2,3.0
 159899,Alfred Hitchcock,5.0,2,3.0
+159899,alien,5.0,3,2.0
 159899,alien invasion,5.0,3,2.0
 159899,aliens,5.0,3,2.0
-159899,Al Pacino,5.0,2,3.0
 160621,action,5.0,4,1.0
 160621,adventure,5.0,3,2.0
 160621,aliens,5.0,4,1.0
 160621,alternate reality,5.0,4,1.0
-160621,animation,5.0,2,3.0
+160621,animation,5.0,1,4.0
+160621,apocalypse,5.0,4,1.0
 160621,atmospheric,5.0,5,0.0
 160621,based on a book,5.0,2,3.0
-160621,beautifully filmed,5.0,3,2.0
+160621,beautifully filmed,5.0,2,3.0
 160621,bittersweet,5.0,3,2.0
-160621,black comedy,5.0,3,2.0
 162010,action,5.0,3,2.0
 162010,adventure,5.0,2,3.0
 162010,aliens,5.0,3,2.0
-162010,alternate reality,5.0,4,1.0
+162010,alternate reality,5.0,5,0.0
 162010,animation,5.0,1,4.0
 162010,atmospheric,5.0,4,1.0
 162010,based on a book,5.0,3,2.0
-162010,bittersweet,5.0,3,2.0
+162010,bittersweet,5.0,4,1.0
 162010,Bruce Willis,5.0,4,1.0
 162010,chick flick,5.0,1,4.0
 165983,action,4.5,2,2.5
-165983,comedy,4.5,4,0.5
+165983,comedy,4.5,3,1.5
 165983,action packed,3.5,2,1.5
+165983,classic,3.5,5,1.5
 165983,CLV,3.5,1,2.5
-165983,courtroom,3.5,3,0.5
-165983,John Travolta,3.5,4,0.5
+165983,courtroom,3.5,1,2.5
+165983,John Travolta,3.5,2,1.5
 165983,music,3.5,2,1.5
+165983,Nicolas Cage,3.5,2,1.5
 165983,Nudity (Topless),3.5,1,2.5
-165983,airplane,3.0,1,2.0
-165983,Alcatraz,3.0,2,1.0
 170455,based on a book,5.0,3,2.0
-170455,based on a true story,5.0,4,1.0
-170455,biography,5.0,4,1.0
+170455,based on a true story,5.0,5,0.0
+170455,biography,5.0,5,0.0
 170455,classic,5.0,3,2.0
-170455,comedy,5.0,3,2.0
-170455,coming of age,5.0,3,2.0
+170455,comedy,5.0,4,1.0
+170455,coming of age,5.0,4,1.0
 170455,corruption,5.0,2,3.0
 170455,emotional,5.0,4,1.0
-170455,fantasy,5.0,2,3.0
-170455,friendship,5.0,3,2.0
+170455,family,5.0,3,2.0
+170455,fantasy,5.0,1,4.0
 172870,atmospheric,5.0,3,2.0
 172870,cinematography,5.0,3,2.0
 172870,comedy,5.0,2,3.0
-172870,cyberpunk,5.0,3,2.0
+172870,cyberpunk,5.0,4,1.0
 172870,dark comedy,5.0,2,3.0
-172870,dystopia,5.0,3,2.0
+172870,dystopia,5.0,4,1.0
 172870,Marvel,5.0,2,3.0
 172870,post-apocalyptic,5.0,3,2.0
 172870,Quentin Tarantino,5.0,2,3.0
 172870,sci-fi,5.0,5,0.0
 187826,action,5.0,3,2.0
-187826,adventure,5.0,3,2.0
+187826,adventure,5.0,2,3.0
 187826,comedy,5.0,5,0.0
-187826,funny,5.0,3,2.0
+187826,funny,5.0,4,1.0
 187826,sci-fi,5.0,5,0.0
-187826,animation,4.5,3,1.5
-187826,atmospheric,4.0,2,2.0
-187826,bittersweet,4.0,2,2.0
+187826,animation,4.5,2,2.5
+187826,atmospheric,4.0,3,1.0
+187826,bittersweet,4.0,3,1.0
 187826,classic,4.0,5,1.0
-187826,parody,4.0,2,2.0
+187826,parody,4.0,3,1.0
 192840,atmospheric,5.0,5,0.0
 192840,comedy,5.0,4,1.0
 192840,animation,4.5,2,2.5
-192840,dark comedy,4.5,2,2.5
-192840,quirky,4.5,2,2.5
+192840,dark comedy,4.5,3,1.5
+192840,quirky,4.5,3,1.5
 192840,action,4.0,4,0.0
 192840,Arnold Schwarzenegger,4.0,2,2.0
-192840,Disney,4.0,1,3.0
-192840,gothic,4.0,2,2.0
+192840,Disney,4.0,2,2.0
+192840,gothic,4.0,3,1.0
 192840,Jim Carrey,4.0,2,2.0
-200067,comedy,5.0,2,3.0
+200067,chick flick,5.0,2,3.0
+200067,comedy,5.0,3,2.0
+200067,romance,5.0,2,3.0
 200067,action,4.5,4,0.5
+200067,adventure,4.5,3,1.5
+200067,animation,4.5,2,2.5
 200067,Brad Pitt,4.5,2,2.5
-200067,chick flick,4.5,1,3.5
-200067,dark comedy,4.5,2,2.5
+200067,dark comedy,4.5,3,1.5
+200067,Disney,4.5,1,3.5
 200067,Jim Carrey,4.5,2,2.5
-200067,twist ending,4.5,5,0.5
-200067,atmospheric,4.0,5,1.0
-200067,high school,4.0,2,2.0
-200067,Morgan Freeman,4.0,2,2.0
