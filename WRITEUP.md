@@ -160,15 +160,34 @@ and no numbering, the movieId first and the rating last, as in `296, Pulp Fictio
 
 **My 20 ratings:**
 
-XXXX
+8531, White Chicks (2004), 4.0
+551, Nightmare Before Christmas, The (1993), 5.0
+50872, Ratatouille (2007), 3.5
+93510, 21 Jump Street (2012), 4.0
+296, Pulp Fiction (1994), 4.5
+69122, Hangover, The (2009), 4.5
+202439, Parasite (2019), 5.0
+58559, Dark Knight, The (2008), 3.0
+81847, Tangled (2010), 4.0
+3785, Scary Movie (2000), 2.0
+5679, Ring, The (2002), 2.5
+84944, Rango (2011), 1.5
+71379, Paranormal Activity (2009), 3.0
+1994, Poltergeist (1982), 2.0
+103688, Conjuring, The (2013), 4.0
+66097, Coraline (2009), 5.0
+1721, Titanic (1997), 3.0
+1732, Big Lebowski, The (1998), 2.5
+61024, Pineapple Express (2008), 2.0
+161131, War Dogs (2016), 4.5
 
 **My `score(user, tag)`, in a sentence, and why I started there (about 100 words):**
 
-XXXX
+First check if a user has associated tags, if they do not or if they have less than 5 associated tags, review the ratings they have given and grab the top 5 most common tags of each of those movies and cross reference the top 5 tags of their movies with each other to come up with a final common tags for the user to give them a characteristic, if they do have associated tags then continue to the following steps. If the movie score is below 3 do not include in the analysis, because I want the user's most common tags to belong from movies that they at least were ok with. It should get a higher score because it is more frequent between movies and it should get a neutral score of 3 until it is associated with more than one movie. I want the tag to score 3 at one movie, 3.5 at two, 4 at 3 movies, 4.5 at 4 movies, and 5 for 5 or more movies. It should stay at 5. It would be considered irrelevant and should be scored 2. I want to aggregate the tags a user has placed on movies, and find the top 5 most common tags used for this user, then if the tag we are checking belongs to the top 5 the score should be higher. The score a tag gets when it is in their own top 5 is a 5. When it is not in their own top 5 the tag gets a score of 3. I started here because to characterize a user we must first take a look at their most common tags and get a sense for what type of movies they like.
 
 **What my score says about me: my top ten tags, and whether they describe my taste (about 100 words):**
 
-XXXX
+My top ten tags are animation, atmospheric, comedy, funny, black comedy, dark, dark comedy, drugs, jonah hill, and musical. My tags are very describing and curated to my taste in movies as I love to watch funny movies, animated movies typically of Pixar or Disney, and action movies that most of the time include plots about drugs like the movie war dogs. I think my top tags do a great job describing my taste and the variety in movie selections that I typically like, as there is not one specific genre that I'm always interested in.
 
 **What my user viewer shows and why I chose that (about 100 words):**
 
