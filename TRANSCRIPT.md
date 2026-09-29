@@ -1842,7 +1842,7 @@ Before I run it: which of the three do you expect to come closest to the judge?
 <!-- transcript-session: 050fec7e-dc9f-4f51-bc77-e174692e6bf4 | 2026-09-29T01:11:03.805Z -->
 ## Session `050fec7e` — 2026-09-29 01:11:03
 
-*44 user turns. Tool outputs and reasoning omitted.*
+*54 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 lets continue the homework
@@ -2738,6 +2738,172 @@ yes but what is empty in part 2?
 
 **Claude:**
 - 🔧 `Bash` — Show which writeup slots are still missing
+- 🔧 `Read` — /Users/logan/Documents/GitHub/comp440-hw1/WRITEUP.md
+- 🔧 `Bash` — Update transcript and commit the Part 2 slots
+- 🔧 `Bash` — List the judge skill's files and read its skill file
+Committed: `aeeb47d Part 2: disagreements, high-level pattern, predictions revisited`. I updated `TRANSCRIPT.md` first, and the working tree is clean.
+
+`run_all.py` says three slots are still empty in Part 2:
+
+1. How the judge skill is built: the files and what each one does
+2. What happens when I run `/judge`, from the first check to the CSV
+3. Why a skill: what it gives you that a script or a prompt alone doesn't, and where you'd use one next
+
+Everything else in Part 2 is filled. These three are yours to write, so we'll open the files together first. The skill is made of these files:
+
+- `.claude/skills/judge/SKILL.md`: a short file that tells Claude to read `judge/README.md` and do what it says
+- `judge/README.md`: the rules for running the judge
+- `judge/system.md`: the system prompt, which is the same for everyone
+- `judge/criterion.md`: your paragraph, which goes into the user prompt
+- `judge/judge.py`: the loop that sends one request per movie
+- `judge/movies.csv` and `judge/vocabulary.txt`: the movies, and the 300 tags the judge may rate
+- `judge/ratings_movies.csv` and `judge/ratings_movies.log`: what the run writes
+
+Which file do you want to open first? I'll go through what its lines do.
+
+**User:**
+im confused how the judge skill is built do i have to run through each of these files?
+
+**Claude:**
+- 🔧 `Bash` — Read the system prompt and outline judge.py
+No, you don't need to study every file in detail. The slot asks for the pieces the skill is made of and what each one does. Here is how they fit together:
+
+1. **`SKILL.md`** is the entry point. When you type `/judge`, Claude reads it. It just says: read `judge/README.md` and follow it.
+2. **`README.md`** is the instruction page. It covers the files, how to run the judge, and what Claude may say about the results.
+3. **`judge.py`** does the work.
+   - It reads your `criterion.md` (line 117) and `system.md` (line 120).
+   - It reads the movies from `movies.csv` (line 121), adds your ten movies from the writeup (line 56), and keeps only tags on the vocabulary list (line 67).
+   - It sends Claude one request per movie (line 85). The system prompt is `system.md`. The user prompt is your criterion, then the movie, then its tags.
+   - It writes every rating to `ratings_movies.csv` (line 135).
+4. **`system.md`** tells the judge how to answer. It must apply your criterion as written, and reply with one `tag, rating` line per tag, rated 1 to 5.
+
+So the structure is: a skill file that points to instructions, which run a script, which sends two prompts to Claude.
+
+Do you want to open `judge.py` together, or are you ready to say how the skill is built in your own words?
+
+**User:**
+ok i just wrote an answer for how the judge skill is built
+
+**Claude:**
+- 🔧 `Read` — /Users/logan/Documents/GitHub/comp440-hw1/WRITEUP.md
+- 🔧 `Bash` — Fix four spelling typos in the judge-skill slot
+- 🔧 `Bash` — Read judge.py's request and main functions
+I read your slot back. I fixed four spellings: "judge", "criterion", "to" and "vocabulary". Nothing else changed. It reads:
+
+> The files it is made out of is a first a short file that explains to Claude to look at the judge readme and execute what it states, then the judge readme file that has the rules for running the judge, third the judge system file which has the system prompt that is the same for everyone. The fourth file is the judge criterion which includes my paragraph that is provided to the user prompt, then the judge file itself that has the loop which sends the one request per movie. Then we have the movies and vocabulary files that has the movies themselves, and the vocabulary which has all possible tags (300) that the judge can rate. Finally we have the ratings_movies csv and log where we store what the run records. Therefore the skill has a set of instruction that run a given script that then prompts claude.
+
+Next is "What happens when I run `/judge`, from the first check to the CSV." Two places cover it. `judge/README.md:75` has a numbered section called "What happens when you run it". `main()` in `judge/judge.py:99` is the code for it:
+
+- **Line 106:** stops if the items file isn't there.
+- **Line 110:** stops if the ratings CSV already exists, unless you pass `--force`.
+- **Lines 115–119:** picks your criterion file, and stops if it's missing or still the template's version.
+- **Lines 120–123:** reads `system.md` and the movies, then adds your ten.
+- **Line 131:** sends several movies at once. Each request is your criterion, the movie and its tags (`judge_item`, line 77). If fewer ratings come back than tags were sent, it asks once more.
+- **Lines 135–140:** writes `ratings_movies.csv`, then prints the count, the cost and the time, and saves those lines to the `.log`.
+
+Write the slot yourself, or tell me what it should say.
+
+**User:**
+when you run this command, it first checks if the items file is there, then if the rating CSV already exists, and then it picks the criterion file only if it is not missing or it is not the template version, and then it reads the system file and the movie which it then adds my ten chioces to. Next it sends multiple movies at once, with each request being my criterion with the movie and the tags, which can be asked again if there are less ratings than the tags that were sent. Finally it write the ratings_movies csv and also prints the count, and the cost and time which it saves to the log.
+
+**Claude:**
+- 🔧 `Edit` — /Users/logan/Documents/GitHub/comp440-hw1/WRITEUP.md
+- 🔧 `Read` — /Users/logan/Documents/GitHub/comp440-hw1/WRITEUP.md
+I wrote your words into the `/judge` slot. I capitalized "When" and fixed two typos: "choices" and "writes". It reads:
+
+> When you run this command, it first checks if the items file is there, then if the rating CSV already exists, and then it picks the criterion file only if it is not missing or it is not the template version, and then it reads the system file and the movie which it then adds my ten choices to. Next it sends multiple movies at once, with each request being my criterion with the movie and the tags, which can be asked again if there are less ratings than the tags that were sent. Finally it writes the ratings_movies csv and also prints the count, and the cost and time which it saves to the log.
+
+One point where the slot doesn't match the code. In `judge.py`, lines 116–119 stop the run if the criterion file is missing, and also stop it if the file is still the template's version. So the run goes ahead only when both are true: the file exists *and* you've replaced it. Your sentence says "or". Tell me if you want to change that wording.
+
+The last Part 2 slot is "Why a skill". It asks what a skill gives you that a script or a prompt alone doesn't, and where you'd use one next.
+
+What's your thinking?
+
+**User:**
+what is a skill?
+
+**Claude:**
+A skill is a small packet of instructions for Claude, kept in the repo. Here's how it works mechanically:
+
+- **Where it lives.** Each skill is a folder under `.claude/skills/` with a `SKILL.md` file inside. Yours is `.claude/skills/judge/SKILL.md`.
+- **What's in it.** A header gives the skill a `name` and a one-line `description`. Below that are plain-English instructions. The judge's instructions say: "Read `judge/README.md` and do what it says."
+- **How it runs.** Claude always sees the name and description. When you type `/judge`, or ask for something that matches the description, Claude loads the full instructions and follows them. Those instructions can point to other files and tell Claude to run scripts, the way the judge's point to `README.md`, which runs `judge.py`.
+- **Others in this repo.** `setup` and `checkpoint` are skills too. You've already used them, for example when a part was committed.
+
+For comparison:
+- A **script** is code you run yourself.
+- A **prompt** is text you type to Claude once.
+
+With that in mind: what does the skill version give you that you wouldn't get from running `judge.py` yourself, or from typing the instructions to Claude each time? And where else might you use one?
+
+**User:**
+the skill verson gives me extra safety checks to ensure that everything is proper before running and recieving the results. correct?
+
+**Claude:**
+Partly, but check where those checks live. The ones you described in the last slot (items file there, CSV already exists, criterion not the template) are all in `judge.py`. You'd get them if you ran `python judge/judge.py judge/movies.csv` yourself, with no skill involved.
+
+So the question is what the skill layer adds on top of the script. It's the `SKILL.md` and `README.md` that Claude reads. Look again at what `README.md` contains beyond "how to run it", for example its last section at `judge/README.md:102`, "What the answer is for".
+
+What does having those instructions loaded give you that the script alone wouldn't?
+
+**User:**
+The skill helps me show the disagreements one movie at a time and that way I am able to compare the judge and my score(), which I would otherwise not be able to do without the skill
+
+**Claude:**
+- 🔧 `Bash` — Read the README's run and answer sections
+That line comes from `README.md:104`, but it's describing `results_viewer.py`, not the skill. The viewer is what shows the disagreements one movie at a time, and you could run it without the skill. So that isn't something only the skill gives you.
+
+Here's what's in the README, which is what the skill loads into Claude:
+
+- **Lines 45–53:** the exact command to run, a warning that running it again costs allowance, and when to use `--force`.
+- **Lines 55–71:** that Part 3 must use a file named `users.csv`, and why.
+- **Lines 102–110:** what Claude may and may not do with the results. It won't open `ratings_movies.csv` any other way, and won't say which disagreements are worth reviewing.
+
+Your question is still: what does it give you to have Claude read and follow those instructions every time you type `/judge`, compared with running the script yourself or typing a prompt? And where else would you use one?
+
+**User:**
+The reason it is valauble is because it makes its answers independent from mine, as it sees my criterion, the one itme and its tags, and nothing else. Versus If I ran it I would be able to see everything
+
+**Claude:**
+- 🔧 `Bash` — Find where the README describes what the judge sees
+That sentence comes from `judge/README.md:90–92`. The independence it describes is built into `judge.py`, though. Line 85 starts a fresh Claude session and pipes in only your criterion, the movie and its tags. You get the same independence when you run `uv run python judge/judge.py judge/movies.csv` yourself. So this is also a property of the script, not the skill.
+
+Here's a question that might help. Picture a new Claude session in this repo with no `.claude/skills/judge/` folder, and you type "run the judge". What would that Claude know, and what would it have to guess or have you explain? Then compare that with the session where the skill exists.
+
+**User:**
+the session where the skill exists provides claude with the setup of the judge and criterion and the rules it should folow, versus if i ran it
+
+**Claude:**
+That's heading somewhere. Your sentence stops at "versus if i ran it", though.
+
+The slot has two parts:
+
+1. What the skill gives you that a script alone, or a prompt alone, doesn't. You've started this: Claude gets the setup and the rules to follow. Finish the comparison. What happens without it?
+2. Where you would use a skill next. This can be anything, in this class or outside it.
+
+Say both parts however you like, and I'll write them into the slot.
+
+**User:**
+Without it, the chonrological order and creation of the csv or log would not happen or be automated, I would use a skill next for comparison between my favorite places to visit and have them rank by them
+
+**Claude:**
+- 🔧 `Edit` — /Users/logan/Documents/GitHub/comp440-hw1/WRITEUP.md
+I wrote the "Why a skill" slot by putting together what you said across your last two messages. I fixed case, full stops and three spellings: "Claude", "follow" and "chronological". I left out "versus if i ran it", because your next message finished that thought. It reads:
+
+> The session where the skill exists provides Claude with the setup of the judge and criterion and the rules it should follow. Without it, the chronological order and creation of the csv or log would not happen or be automated. I would use a skill next for comparison between my favorite places to visit and have them rank by them.
+
+One check against your previous slot. There you wrote that `judge.py` itself writes the CSV and the log, and it does that even when you run it without the skill. Keep the sentence or change it, it's your call.
+
+That fills every Part 2 slot. What's left before the `checkpoint` skill can close the part is the transcript and a commit.
+
+Do you want to keep that second sentence as it is, or change it?
+
+**User:**
+i want to keep it
+
+**Claude:**
+- 🔧 `Skill` — checkpoint
+- 🔧 `Bash` — Run the full form check
 - 🔧 `Read` — /Users/logan/Documents/GitHub/comp440-hw1/WRITEUP.md
 
 <!-- end-session: 050fec7e-dc9f-4f51-bc77-e174692e6bf4 -->
